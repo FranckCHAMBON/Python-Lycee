@@ -211,7 +211,8 @@ On simplifiera l'écriture de l'exemple précédent en :
 ####        Pterothorax
 ```
 
-> **À noter** : `#` est un croisillon, et non un dièse. En anglais, on dit _sharp_ ou _hash_.
+> **À noter** : `#` est un croisillon, et non un dièse. En anglais, on dit _sharp_ ou _hash_.  
+> L'indentation n'est ici pas obligatoire, mais uniquement à but pédagogique.
 
 
 
