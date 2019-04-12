@@ -79,7 +79,7 @@ Un _notebook_ peut ensuite être converti en divers formats ouverts :
 
 ## Exemples de _notebooks_ créés avec Jupyter et Python
 Les carnets sont [très utilisés dans le monde éducatif](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks), mais aussi pour une simple publication.
-* Mathématiques, (auto-promotion)
+* [Mathématiques](https://github.com/FranckCHAMBON/L1-Math-Info---Arith), (auto-promotion)
 * [Informatique](https://nbviewer.jupyter.org/github/ganeshutah/Jove/blob/master/notebooks/driver/Drive_Jove_Gallery_Examples.ipynb)
 * [Physique](https://nbviewer.jupyter.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/01_phugoid/01_01_Phugoid_Theory.ipynb), [Chimie](https://nbviewer.jupyter.org/gist/greglandrum/4316433),
 * [SVT](http://readiab.org/),
