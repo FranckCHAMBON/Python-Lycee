@@ -210,6 +210,6 @@ Après cette introduction, présentation de _Jupyter_, le programme à venir :
     + ~~les jeux en 3D~~,
     + ~~le montage vidéo~~,
     + etc.
-6. Découvrir [SageMath](6-Intro-Sagemath.ipynb) ; plutôt pour les enseignants de mathématiques.
+6. [Découvrir SageMath](6-Intro-Sagemath.ipynb) ; plutôt pour les enseignants de mathématiques.
 
-Pour finir, après une bonne phase d'apprentissage, pour les utilisateurs avancés, il faut savoir que Jupyter est aussi utilisé pour travailler avec [SageMath](http://www.sagemath.org/fr/ "Site officel"), un logiciel puissant de calcul formel utilisé par les plus grands scientifiques. On peut s'en servir en maths dès le lycée.
+Pour finir, après une bonne phase d'apprentissage, pour les utilisateurs avancés, il faut savoir que Jupyter est aussi utilisé pour travailler avec [SageMath](http://www.sagemath.org/fr/ "Site officel"), un logiciel puissant de calcul formel utilisé par les plus grands scientifiques. C'est un logiciel libre, alternative à MatLab, Mathematica, Magma et Maple. On peut s'en servir en maths dès le lycée.
