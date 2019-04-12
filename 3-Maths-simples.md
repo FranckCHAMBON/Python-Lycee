@@ -1,3 +1,17 @@
+Tests :
+
+$x+y$
+
+\(x+y\)
+
+\\(x+y\\)
+
+\[x+y\]
+
+\\[x+y\\]
+
+$$x+y$$
+
 # Écrire des mathématiques simples avec LaTeX
 Dans la plupart des pages HTML, on peut écrire des maths avec les bonnes balises et les bonnes commandes.
 
