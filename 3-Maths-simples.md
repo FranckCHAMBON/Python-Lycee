@@ -1,7 +1,7 @@
 # Écrire des mathématiques simples avec LaTeX
 Dans la plupart des pages HTML, on peut écrire des maths avec les bonnes balises et les bonnes commandes.
 
-\[\sum\limits_{k\in\mathbb N^*} \frac 1 {k^2} = \frac {\pi^2}6 \quad \text{: Problème de Bâle, résolu par Leonhard Euler.}\]
+$$\sum\limits_{k\in\mathbb N^*} \frac 1 {k^2} = \frac {\pi^2}6 \quad \text{: Problème de Bâle, résolu par Leonhard Euler.}$$
 
 Commençons par un tour d'horizon des possibilités en [comparant les deux moteurs](https://www.intmath.com/cg5/katex-mathjax-comparison.php "KaTeX vs MathJax") de rendu les plus répandus.
 
@@ -16,17 +16,17 @@ Il y a deux façons de placer des maths dans un document Jupyter :
         - mais parfois, on trouve `\(`_<code math à écrire là>_`\)`
         - avec Moodle, il s'agira de `$$`_<code math à écrire là>_`$$`
 * Dans un paragraphe dédié, centré ; en mode équation.
-    + la méthode conseillée est `\[`_<code math à écrire là>_`\]`,
-        - mais on trouve souvent `$$`_<code math à écrire là>_`$$`
+    + la méthode conseillée en markdown est `$$`_<code math à écrire là>_`$$`,
+        - mais on trouve souvent `\[`_<code math à écrire là>_`\]` pour les vrais documents LaTeX.
 
 
 > **Attention** : pas d'espaces après la balise ouvrante, ni avant la balise fermante.
 
 #### Exemples
 ```markdown
-\[x+y= y + x\]
+$$x+y= y + x$$
 ```
-\[x+y= y + x\]
+$$x+y= y + x$$
 
 ```markdown
 La somme de $123$ et 123 est égale à $123 +123$.
