@@ -3,8 +3,6 @@
 <img src="images/EducNat.jpg" alt="Logo de l'Éducation Nationale" width="400px">
 </center>
 
-[hoho](test.html)
-
 # _Python_ au lycée - une présentation
 Auteur : <a href="mailto:franck.chambon@ac-aix-marseille.fr">Franck CHAMBON</a>
 
@@ -202,7 +200,7 @@ Après cette introduction, présentation de _Jupyter_, le programme à venir :
 
 1. Acquérir des [notions de base sur les balises _HTML_](1-Notions-HTML.md) ;
 2. Découvrir le [_Markdown_, par l'exemple](2-Markdown-exemples.md) ;
-3. Écrire des [maths simples](3-Maths-simples.md) dans un document ;
+3. Écrire des [maths simples](3-Maths-simples.html) dans un document ;
 4. Découvrir [_Python_](4-Python-bases.md) et les cellules de code.
 5. [Activités complètes avec _Jupyter_](5-Acti-Python.md), _Markdown_ et _Python_.
     + le gros de l'apprentissage, surtout pour _Python_ et l'algorithmique,
