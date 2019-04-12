@@ -1,3 +1,6 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+
 # Écrire des mathématiques simples avec LaTeX
 Dans la plupart des pages HTML, on peut écrire des maths avec les bonnes balises et les bonnes commandes.
 
