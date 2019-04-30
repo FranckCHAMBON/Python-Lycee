@@ -5,6 +5,7 @@
 
 # _Python_ au lycée - une présentation
 Auteur : <a href="mailto:franck.chambon@ac-aix-marseille.fr">Franck CHAMBON</a>
+Version [GitHub Pages](https://franckchambon.github.io/Python-Lycee/)
 
 ## Le choix de _Python_, et de _Jupyter_
 
