@@ -1,17 +1,3 @@
-Tests :
-
-$x+y$
-
-\(x+y\)
-
-\\(x+y\\)
-
-\[x+y\]
-
-\\[x+y\\]
-
-$$x+y$$
-
 # Écrire des mathématiques simples avec LaTeX
 Dans la plupart des pages HTML, on peut écrire des maths avec les bonnes balises et les bonnes commandes.
 
@@ -216,7 +202,7 @@ Exemples :
 Si on veut placer un bloc (une expression) entre parenthèses, et que l'expression est plus haute que la normale (avec des fractions par exemple), alors les parenthèses normales ne sont pas assez hautes.
 > `$( \dfrac ab )$` donne $( \dfrac ab )$ ; qui est disgracieux.
 
-> `$\left( \dfrac ab \rigth)$` donne $\left( \dfrac ab \right)$ ; qui est correct
+> `$\left( \dfrac ab \right)$` donne $\left( \dfrac ab \right)$ ; qui est correct
 
 
 
