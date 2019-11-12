@@ -283,7 +283,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <li><a href="#la-fonction-round-avec-deux-param%C3%A8tres">La fonction <code>round</code>, avec deux param&#xE8;tres</a></li>
 <li><a href="#fonctions-directement-accessibles-ou-natives">Fonctions directement accessibles, ou natives</a></li>
 <li><a href="#fonctions-du-module-math">Fonctions du module math</a></li>
-<li><a href="#fonctions-cr%C3%A9es-par-lutilisateur">Fonctions cr&#xE9;es par l&apos;utilisateur</a>
+<li><a href="#fonctions-cr%C3%A9%C3%A9es-par-lutilisateur">Fonctions cr&#xE9;&#xE9;es par l&apos;utilisateur</a>
 <ul>
 <li><a href="#constructeur-lambda">Constructeur <code>lambda</code></a></li>
 <li><a href="#constructeur-def">Constructeur <code>def</code></a></li>
@@ -339,7 +339,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <li><a href="https://www.gnu.org/software/emacs/" title="Site offciel">GNU Emacs</a> ou <a href="https://www.vim.org/" title="Site officel">Vim</a> ; &#xE9;diteurs modaux et historiques, non conseill&#xE9;s pour d&#xE9;buter,</li>
 <li><a href="http://www.pydev.org/index.html" title="Site officiel">Eclipse+PyDev</a> ; pour les professionnels.</li>
 </ul>
-<p><em>Spyder</em> est inclus dans <em>Anaconda</em>, non sans raisons, nous le pr&#xE9;sentons en particulier, mais tout ce qu&apos;on verra est transposable avec un autre &#xE9;diteur.</p>
+<p><em>Spyder</em> est inclus dans <em>Anaconda</em>, non sans raisons, nous le pr&#xE9;sentons ici en particulier, mais tout ce qu&apos;on verra est transposable avec un autre &#xE9;diteur.</p>
 <h3 class="mume-header" id="exemple-avec-spyder">Exemple avec <em>Spyder</em></h3>
 
 <p><img src="assets/Spyder.png" alt title="Logo de Spyder"></p>
@@ -429,7 +429,7 @@ La r&#xE9;ponse &#xE0; la question universelle est 42
 </blockquote>
 <ul>
 <li>prend en argument un nombre <code>nbr</code> de type entier ou flottant,</li>
-<li>retourne un nombre de <strong>type entier</strong>, son arrondi,</li>
+<li>retourne un nombre de <strong>type entier</strong>, le plus proche de <code>nbr</code>,</li>
 <li>en cas d&apos;&#xE9;galit&#xE9;, retourne l&apos;entier <strong>pair</strong>.</li>
 </ul>
 <div class="code-chunk" data-id="code-chunk-id-1" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=1, .line-numbers cmd=&quot;python3&quot; output=&quot;text&quot;}" class="language-python line-numbers"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">3.14</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
@@ -494,7 +494,7 @@ On a constat&#xE9; &#xE9;galement que le comportement de <code>round</code> est 
 <p>Nous avons d&#xE9;j&#xE0; crois&#xE9; certains de ces types de base. (<code>int</code>, <code>float</code>, <code>bool</code>).</p>
 <p>Pr&#xE9;sentons rapidement les autres.</p>
 <ul>
-<li><code>complex</code> : pour les nombres complexes, que l&apos;on &#xE9;tudie en terminale sp&#xE9; maths.</li>
+<li><code>complex</code> : pour les nombres complexes, que l&apos;on &#xE9;tudie en terminale (maths expertes et certaines sections scientifiques).</li>
 <li><code>str</code> : pour les cha&#xEE;nes de caract&#xE8;res (<em>string</em>), du texte. Une fois cr&#xE9;e on ne peut pas la modifier. En fran&#xE7;ais, on dit <strong>immuable</strong> (<em>immutable</em> en anglais).</li>
 <li><code>list</code> : pour une liste ordonn&#xE9;e d&apos;objets. On peut ajouter des objets, en enlever, et de mani&#xE8;re g&#xE9;n&#xE9;rale la modifier. En fran&#xE7;ais, on dit <strong>muable</strong> (<em>mutable</em> en anglais).</li>
 <li><code>tuple</code> : ressemble &#xE0; <code>list</code>, mais en version immuable.</li>
@@ -535,7 +535,7 @@ On a constat&#xE9; &#xE9;galement que le comportement de <code>round</code> est 
 Il ne faut pas utiliser <code>from math import *</code> comme l&apos;on voit trop souvent. Cela importe tout le module <code>math</code>, et &#xE9;crase la fonction <code>pow</code> qui existait avant par une nouvelle qui est moins puissante en arithm&#xE9;tique.<br>
 <strong>On n&apos;importe que ce dont on a r&#xE9;ellement besoin</strong>.</p>
 </blockquote>
-<h3 class="mume-header" id="fonctions-cr%C3%A9es-par-lutilisateur">Fonctions cr&#xE9;es par l&apos;utilisateur</h3>
+<h3 class="mume-header" id="fonctions-cr%C3%A9%C3%A9es-par-lutilisateur">Fonctions cr&#xE9;&#xE9;es par l&apos;utilisateur</h3>
 
 <p>L&apos;utilisateur poss&#xE8;de deux fa&#xE7;ons de cr&#xE9;er des fonctions.</p>
 <h4 class="mume-header" id="constructeur-lambda">Constructeur <code>lambda</code></h4>
@@ -751,7 +751,7 @@ print(lnp[0])    # affiche l&apos;&#xE9;l&#xE9;ment lnp num&#xE9;rot&#xE9; 0
 <li>Les &#xE9;l&#xE9;ments de <code>truc</code> sont num&#xE9;rot&#xE9;s de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> &#xE0; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo>&#x2212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">l-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2212;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>. <strong>Il est tr&#xE8;s commode</strong> de dire num&#xE9;rot&#xE9;s de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> inclus &#xE0; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi></mrow><annotation encoding="application/x-tex">l</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span></span></span></span> exclu.</li>
 <li>Si <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo mathvariant="normal">&#x2260;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">l\neq0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mrel"><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel">&#xE020;</span></span><span class="fix"></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>, <code>truc[0]</code> est le premier &#xE9;l&#xE9;ment,</li>
 <li>et <code>truc[l-1]</code> est le dernier &#xE9;l&#xE9;ment,</li>
-<li>sinon ni <code>truc[0]</code> ni <code>truc[-1]</code> n&apos;existe.</li>
+<li>sinon ni <code>truc[0]</code> ni <code>truc[l-1]</code> n&apos;existe.</li>
 <li>On peut it&#xE9;rer (comme dans la question 4 de l&apos;exercice pr&#xE9;c&#xE9;dent).
 <ul>
 <li><code>for bidule in truc: faire_avec(bidule)</code></li>
@@ -777,8 +777,8 @@ Les exemples suivants sont &#xE9;valu&#xE9;s &#xE0; <code>True</code> :
 <li><code>[2, 3, 5, 7, 11] &gt;= [2, 3, 4, 5, 6, 7]</code></li>
 </ul>
 </li>
-<li>On peut obtenir une tranche (<em>slice</em>) de <code>truc</code> avec <code>truc[i:j]</code> du i<sup>&#xE8;me</sup> &#xE9;l&#xE9;ment inclus, jusqu&apos;au j<sup>&#xE8;me</sup> exclu.<br>
-Cette tranche aura <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>&#x2212;</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">j-i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2212;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> &#xE9;l&#xE9;ments, <strong>c&apos;est pratique</strong> !
+<li>On peut obtenir la copie d&apos;une tranche (<em>slice</em>) de <code>truc</code> avec <code>truc[i:j]</code> du i<sup>&#xE8;me</sup> &#xE9;l&#xE9;ment inclus, jusqu&apos;au j<sup>&#xE8;me</sup> exclu.<br>
+Cette copie de tranche aura <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>&#x2212;</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">j-i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2212;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> &#xE9;l&#xE9;ments, <strong>c&apos;est pratique</strong> !
 <ul>
 <li><code>lnp = [2, 3, 5, 7, 11, 13, 17]</code> ; une liste</li>
 <li><code>lnp[2:5] == [5, 7, 11]</code> ; de 5 inclus, jusqu&apos;&#xE0; 13 exclu.</li>
@@ -800,11 +800,12 @@ truc<span class="token punctuation">[</span><span class="token number">0</span><
 </blockquote>
 <p><i class="fa fa-key" aria-hidden="true"></i> Exp&#xE9;rimenter les diff&#xE9;rents cas o&#xF9; <code>i</code> et <code>j</code> sont de m&#xEA;me signe ou non !</p>
 <blockquote>
-<p><strong>Remarque 3</strong> : Pour les tranches, on peut aussi ne pas sp&#xE9;cifier <code>i</code> ou <code>j</code>.<br>
+<p><strong>Remarque 3</strong> : Pour les copies de tranches, on peut aussi ne pas sp&#xE9;cifier <code>i</code> ou <code>j</code>.<br>
 Avec <code>i</code> et <code>j</code> positifs :</p>
 <ul>
-<li><code>truc[:j]</code> correspond aux <code>j</code> premiers &#xE9;l&#xE9;ments de <code>truc</code>.</li>
-<li><code>truc[i:]</code> correspond &#xE0; tout <code>truc</code> sauf ses <code>i</code> premiers &#xE9;l&#xE9;ments.</li>
+<li><code>truc[:j]</code> correspond aux <code>j</code> premiers &#xE9;l&#xE9;ments d&apos;une copie de <code>truc</code>.</li>
+<li><code>truc[i:]</code> correspond &#xE0; une copie de tout <code>truc</code> sauf ses <code>i</code> premiers &#xE9;l&#xE9;ments.</li>
+<li><code>truc[:]</code> correspond &#xE0; une copie de tout <code>truc</code>.</li>
 </ul>
 </blockquote>
 <p><i class="fa fa-key" aria-hidden="true"></i> De m&#xEA;me, traduire ce que r&#xE9;alisent les expressions suivantes avec <code>i</code> et <code>j</code> positifs :</p>
@@ -812,6 +813,25 @@ Avec <code>i</code> et <code>j</code> positifs :</p>
 <li><code>truc[:-j]</code></li>
 <li><code>truc[-i:]</code></li>
 </ul>
+<blockquote>
+<p><strong>Remarque 4</strong> : Pour les copies de tranches, on peut aussi sp&#xE9;cifier un pas <code>k</code>.<br>
+<code>truc[i:j:k]</code> correspond &#xE0; une copie des &#xE9;l&#xE9;ments de <code>truc</code> du num&#xE9;ro <code>i</code> inclus au num&#xE9;ro <code>j</code> exclu, par pas de <code>k</code>.<br>
+Par exemple :</p>
+<ul>
+<li><code>truc[5:17:5]</code> donnera les &#xE9;l&#xE9;ments num&#xE9;ro 5, 10 et 15 de <code>truc</code></li>
+<li><code>truc[11:20:3]</code> donnera les &#xE9;l&#xE9;ments num&#xE9;ro 11, 14 et 17 de <code>truc</code>, mais pas le 20.</li>
+</ul>
+</blockquote>
+<p><i class="fa fa-key" aria-hidden="true"></i> Donner des &#xE9;critures de tranches pour avoir une copie :</p>
+<ol>
+<li>De tous &#xE9;l&#xE9;ments de rang pair de <code>truc</code></li>
+<li>De tous &#xE9;l&#xE9;ments de rang impair de <code>truc</code></li>
+<li>De tous les &#xE9;l&#xE9;ments de <code>truc</code>, mais rang&#xE9;s dans l&apos;ordre inverse.
+<ul>
+<li>Aide : le pas peut &#xEA;tre n&#xE9;gatif.</li>
+</ul>
+</li>
+</ol>
 <h4 class="mume-header" id="fa-key-conjugaisons"><i class="fa fa-key" aria-hidden="true"></i> Conjugaisons</h4>
 
 <ol>
@@ -862,7 +882,7 @@ Ils mangent
 
 <dl>
 <dt>Le type <code>range</code></dt>
-<dd>un objet de type <code>range</code> permet essentiellement d&apos;it&#xE9;rer sur une liste d&apos;entiers cons&#xE9;cutifs sans avoir &#xE0; cr&#xE9;er cette liste enti&#xE8;rement &#xE0; l&apos;avance.</dd>
+<dd>un objet de type <code>range</code> permet essentiellement d&apos;it&#xE9;rer sur une liste d&apos;entiers, en progression arithm&#xE9;tique, sans avoir &#xE0; cr&#xE9;er cette liste enti&#xE8;rement &#xE0; l&apos;avance.</dd>
 </dl>
 <p>Exemples &#xE0; tester dans la console de <em>Spyder</em> :</p>
 <pre data-role="codeBlock" data-info="python {.line-numbers}" class="language-python line-numbers"><span class="token keyword">for</span> une_variable <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -875,7 +895,13 @@ Ils mangent
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Bizarre ?&quot;</span><span class="token punctuation">)</span>
 ma_liste <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>un_range<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;ma_liste&quot;</span><span class="token punctuation">,</span> ma_liste<span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></pre><h3 class="mume-header" id="fa-key-obtenir-et-utiliser-un-tableau-de-valeurs-dune-fonction"><i class="fa fa-key" aria-hidden="true"></i> Obtenir et utiliser un tableau de valeurs d&apos;une fonction</h3>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></pre><pre data-role="codeBlock" data-info="python {.line-numbers}" class="language-python line-numbers"><span class="token keyword">for</span> ma_variable <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>ma_variable<span class="token punctuation">)</span>
+    <span class="token comment"># range s&apos;&#xE9;crit aussi avec deux ou trois param&#xE8;tres, comme pour une tranche</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></pre><pre data-role="codeBlock" data-info="python {.line-numbers}" class="language-python line-numbers"><span class="token keyword">for</span> ma_variable <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>ma_variable<span class="token punctuation">)</span>
+    <span class="token comment"># Anticiper le r&#xE9;sultat avant de lancer le code !</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></pre><h3 class="mume-header" id="fa-key-obtenir-et-utiliser-un-tableau-de-valeurs-dune-fonction"><i class="fa fa-key" aria-hidden="true"></i> Obtenir et utiliser un tableau de valeurs d&apos;une fonction</h3>
 
 <p>On consid&#xE8;re la fonction num&#xE9;rique <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span></span> d&#xE9;finie sur <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\mathbb R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68889em;vertical-align:0em;"></span><span class="mord mathbb">R</span></span></span></span> par</p>
 <blockquote>
@@ -942,8 +968,11 @@ ma_liste <span class="token operator">=</span> <span class="token builtin">list<
 <li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>=</mo><mn>3</mn><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">4 = 3+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></li>
 </ul>
 <ol>
-<li>De combien de mani&#xE8;res le nombre 10 peut-il s&apos;&#xE9;crire comme une somme d&apos;entiers naturels non nuls ? Faire un programme qui les affiche toutes.</li>
-<li><i class="fa fa-shield" aria-hidden="true"></i> Sans tenir compte de l&apos;ordre de la somme. <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">1+3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> et <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">3+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> comptent pour la m&#xEA;me somme. 4 poss&#xE8;de alors 4 mani&#xE8;res de s&apos;&#xE9;crire. Combien de mani&#xE8;res pour 10 ?</li>
+<li>De combien de mani&#xE8;res le nombre 10 peut-il s&apos;&#xE9;crire comme une somme d&apos;entiers naturels non nuls ?<br>
+Faire un programme qui les affiche toutes.</li>
+<li><i class="fa fa-shield" aria-hidden="true"></i> Sans tenir compte de l&apos;ordre de la somme. <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">1+3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> et <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">3+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> comptent pour la m&#xEA;me somme.<br>
+4 poss&#xE8;de alors 4 mani&#xE8;res de s&apos;&#xE9;crire comme somme.<br>
+Combien y a-t-il de mani&#xE8;res pour &#xE9;crire 10 comme une somme ?</li>
 </ol>
 <ul>
 <li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>=</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">4 = 1+2+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></li>
@@ -968,7 +997,7 @@ ma_liste <span class="token operator">=</span> <span class="token builtin">list<
 <li><a href="#la-fonction-round-avec-deux-param%C3%A8tres">La fonction <code>round</code>, avec deux param&#xE8;tres</a></li>
 <li><a href="#fonctions-directement-accessibles-ou-natives">Fonctions directement accessibles, ou natives</a></li>
 <li><a href="#fonctions-du-module-math">Fonctions du module math</a></li>
-<li><a href="#fonctions-cr%C3%A9es-par-lutilisateur">Fonctions cr&#xE9;es par l&apos;utilisateur</a>
+<li><a href="#fonctions-cr%C3%A9%C3%A9es-par-lutilisateur">Fonctions cr&#xE9;&#xE9;es par l&apos;utilisateur</a>
 <ul>
 <li><a href="#constructeur-lambda">Constructeur <code>lambda</code></a></li>
 <li><a href="#constructeur-def">Constructeur <code>def</code></a></li>

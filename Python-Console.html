@@ -263,7 +263,7 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <p><img src="assets/python-java.jpg?0.6645243818938282" alt></p>
+      <p><img src="assets/python-java.jpg?0.6868610227314504" alt></p>
 <h1 class="mume-header undefined" id="d%C3%A9couverte-de-python-en-console">D&#xE9;couverte de Python en console</h1>
 
 <h2 class="mume-header undefined" id="sommaire">Sommaire</h2>
@@ -275,6 +275,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <li><a href="#fa-android-avec-une-tablette-android"><i class="fa fa-android" aria-hidden="true"></i> Avec une tablette Android</a></li>
 </ul>
 </li>
+<li><a href="#fa-windows-avec-windows"><i class="fa fa-windows" aria-hidden="true"></i> Avec Windows&#xA9;</a></li>
 <li><a href="#fa-calculator-la-console-python-comme-calculatrice"><i class="fa fa-calculator" aria-hidden="true"></i> La console Python comme calculatrice</a>
 <ul>
 <li><a href="#travail-avec-des-entiers">Travail avec des entiers</a>
@@ -338,11 +339,12 @@ Type <span class="token string">&quot;help&quot;</span>, <span class="token stri
 <p>Il s&apos;agit d&apos;envoyer le caract&#xE8;re EOF (<em>End Of File</em>)</p>
 </blockquote>
 </blockquote>
+<p>On pourra aussi avantageusement utiliser <em>Spyder</em> qui dispose &#xE9;galement d&apos;une console.</p>
 <h3 class="mume-header" id="fa-android-avec-une-tablette-android"><i class="fa fa-android" aria-hidden="true"></i> Avec une tablette Android</h3>
 
 <p>On lance l&apos;application <a href="https://play.google.com/store/apps/details?id=com.termux&amp;hl=fr"><em>Termux</em></a>. On obtient &#xE9;galement une invite de commande <code>bash</code>, comme sous Linux. Si on entre <code>python</code> la premi&#xE8;re fois, il indique comment l&apos;installer.</p>
 <pre data-role="codeBlock" data-info="bash" class="language-bash">$ python
-<span class="token punctuation">(</span><span class="token punctuation">..</span>.please type<span class="token punctuation">..</span><span class="token punctuation">)</span>
+<span class="token punctuation">(</span><span class="token punctuation">..</span>.please type<span class="token punctuation">..</span>.<span class="token punctuation">)</span>
 pkg <span class="token function">install</span> python
 </pre><p>Il faut donc entrer &#xE0; la suite la commande <code>pkg install python</code></p>
 <pre data-role="codeBlock" data-info="bash" class="language-bash">$ pkg <span class="token function">install</span> python
@@ -355,17 +357,27 @@ Type <span class="token string">&quot;help&quot;</span>, <span class="token stri
 </pre><p>Ensuite, on peut tester un premier calcul :</p>
 <pre data-role="codeBlock" data-info="python" class="language-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">2</span><span class="token operator">*</span><span class="token number">3</span>
 <span class="token number">7</span>
-</pre><h2 class="mume-header" id="fa-calculator-la-console-python-comme-calculatrice"><i class="fa fa-calculator" aria-hidden="true"></i> La console Python comme calculatrice</h2>
+</pre><h2 class="mume-header" id="fa-windows-avec-windows"><i class="fa fa-windows" aria-hidden="true"></i> Avec Windows&#xA9;</h2>
+
+<p>Pour commencer, en ayant install&#xE9; la distribution <em>Anaconda</em>, <em>Spyder</em> est accessible, il dispose d&apos;une console, on peut donc tester imm&#xE9;diatement quelques instructions.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">Python 3.7.5 <span class="token punctuation">(</span>default, Oct 25 2019, 15:51:11<span class="token punctuation">)</span>
+Type <span class="token string">&quot;copyright&quot;</span>, <span class="token string">&quot;credits&quot;</span> or <span class="token string">&quot;license&quot;</span> <span class="token keyword">for</span> <span class="token function">more</span> information.
+
+IPython 7.9.0 -- An enhanced Interactive Python.
+
+In <span class="token punctuation">[</span>1<span class="token punctuation">]</span>:
+</pre><p><em>Spyder</em> offre de nombreux avantages pour utiliser Python les premi&#xE8;res fois.</p>
+<h2 class="mume-header" id="fa-calculator-la-console-python-comme-calculatrice"><i class="fa fa-calculator" aria-hidden="true"></i> La console Python comme calculatrice</h2>
 
 <h3 class="mume-header" id="travail-avec-des-entiers">Travail avec des entiers</h3>
 
 <p>Python est capable de travailler avec des nombres aussi grands que la m&#xE9;moire du syst&#xE8;me d&apos;exploitation le permet.</p>
 <blockquote>
-<p><i class="fa fa-bolt" aria-hidden="true"></i> Attention, l&apos;affichage de nombres tr&#xE8;s grands peut prendre beaucoup de temps. Le calcul de sa repr&#xE9;sentation binaire peut &#xEA;tre tr&#xE8;s rapide en revanche !</p>
+<p><i class="fa fa-bolt" aria-hidden="true"></i> Attention, l&apos;affichage de nombres tr&#xE8;s grands peut prendre beaucoup de temps. Les calculs en repr&#xE9;sentation binaire peuvent &#xEA;tre tr&#xE8;s rapides en revanche !</p>
 </blockquote>
 <h4 class="mume-header" id="op%C3%A9rations-%C3%A9l%C3%A9mentaires-">Op&#xE9;rations &#xE9;l&#xE9;mentaires  <code>+</code> <code>-</code> <code>*</code></h4>
 
-<p>Rien de particulier &#xE0; signaler, si ce n&apos;est que</p>
+<p>Rien de particulier &#xE0; signaler, si ce n&apos;est que :</p>
 <ul>
 <li>les priorit&#xE9;s sont respect&#xE9;es,</li>
 <li>on peut aussi utiliser des parenth&#xE8;ses,</li>
@@ -373,21 +385,25 @@ Type <span class="token string">&quot;help&quot;</span>, <span class="token stri
 </ul>
 <h4 class="mume-header" id="division-enti%C3%A8re-et-modulo">Division enti&#xE8;re et modulo <code>//</code> <code>%</code></h4>
 
-<p>Lorsqu&apos;on travaille avec des entiers l&apos;op&#xE9;rateur de la division est //</p>
-<blockquote>
+<p>Commen&#xE7;ons &#xE0; travailler avec des entiers.</p>
+<ul>
+<li>L&apos;op&#xE9;rateur du quotient de la division enti&#xE8;re est <code>//</code></li>
+<li>Pour obtenir le reste dans la division enti&#xE8;re, on utilise l&apos;op&#xE9;rateur modulo <code>%</code></li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python">In <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">1984</span> <span class="token operator">%</span> <span class="token number">100</span>
+Out<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">84</span>
+
+In <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">1984</span> <span class="token operator">//</span> <span class="token number">100</span>
+Out<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">19</span>
+</pre><blockquote>
 <p><i class="fa fa-bolt" aria-hidden="true"></i> Il ne faut pas oublier de doubler le caract&#xE8;re /<br>
 Sinon, l&apos;op&#xE9;ration donnera un flottant. (Voir ensuite)</p>
 </blockquote>
-<p>Pour obtenir le reste dans la division enti&#xE8;re, on utilise l&apos;op&#xE9;rateur modulo %</p>
-<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token number">1984</span> <span class="token operator">%</span> <span class="token number">100</span>
-<span class="token number">84</span>
-<span class="token operator">&gt;&gt;</span> <span class="token number">1984</span> <span class="token operator">//</span> <span class="token number">100</span>
-<span class="token number">19</span>
-</pre><h4 class="mume-header" id="puissance">Puissance <code>**</code></h4>
+<h4 class="mume-header" id="puissance">Puissance <code>**</code></h4>
 
 <p>Exemple du calcul de un milliard sept.</p>
-<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token number">10</span><span class="token operator">**</span><span class="token number">9</span> <span class="token operator">+</span> <span class="token number">7</span>
-<span class="token number">1000000007</span>
+<pre data-role="codeBlock" data-info="python" class="language-python">In <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">10</span><span class="token operator">**</span><span class="token number">9</span> <span class="token operator">+</span> <span class="token number">7</span>
+Out<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">1000000007</span>
 </pre><h4 class="mume-header" id="fa-key-chiffres-dune-puissance-dentiers"><i class="fa fa-key" aria-hidden="true"></i> Chiffres d&apos;une puissance d&apos;entiers</h4>
 
 <blockquote>
@@ -414,17 +430,20 @@ Sinon, l&apos;op&#xE9;ration donnera un flottant. (Voir ensuite)</p>
 <blockquote>
 <p>Exemples, avec une identit&#xE9; remarquable et un calcul de factorielle avec un r&#xE9;sultat tr&#xE8;s grand.</p>
 </blockquote>
-<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token number">50</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token operator">**</span><span class="token number">2</span> <span class="token operator">==</span> <span class="token number">50</span><span class="token operator">**</span><span class="token number">2</span> <span class="token operator">+</span> <span class="token number">2</span><span class="token operator">*</span><span class="token number">50</span><span class="token operator">*</span><span class="token number">3</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token operator">**</span><span class="token number">2</span>
-<span class="token boolean">True</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token keyword">from</span> math <span class="token keyword">import</span> factorial
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> factorial<span class="token punctuation">(</span><span class="token number">2019</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token operator">**</span><span class="token number">5000</span>
-<span class="token boolean">False</span>
+<pre data-role="codeBlock" data-info="python" class="language-python">In <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token number">50</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token operator">**</span><span class="token number">2</span> <span class="token operator">==</span> <span class="token number">50</span><span class="token operator">**</span><span class="token number">2</span> <span class="token operator">+</span> <span class="token number">2</span><span class="token operator">*</span><span class="token number">50</span><span class="token operator">*</span><span class="token number">3</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token operator">**</span><span class="token number">2</span>
+Out<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token boolean">True</span>
+
+In <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token keyword">from</span> math <span class="token keyword">import</span> factorial
+
+In <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">:</span> factorial<span class="token punctuation">(</span><span class="token number">2019</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token operator">**</span><span class="token number">5000</span>
+Out<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token boolean">False</span>
 </pre><blockquote>
 <p><i class="fa fa-info" aria-hidden="true"></i> <strong>La factorielle</strong> (<em>factorial</em>  en anglais) d&apos;un entier <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> est le produit <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>&#xD7;</mo><mn>2</mn><mo>&#xD7;</mo><mn>3</mn><mo>&#xD7;</mo><mn>4</mn><mo>&#xD7;</mo><mo>&#x22EF;</mo><mo>&#xD7;</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">1\times 2\times 3\times 4\times \cdots \times n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#xD7;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#xD7;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#xD7;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#xD7;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="minner">&#x22EF;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#xD7;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>. On la note <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo stretchy="false">!</mo></mrow><annotation encoding="application/x-tex">n!</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">n</span><span class="mclose">!</span></span></span></span></p>
 <blockquote>
 <p>Exemple : <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo stretchy="false">!</mo><mo>=</mo><mn>1</mn><mo>&#xD7;</mo><mn>2</mn><mo>&#xD7;</mo><mn>3</mn><mo>&#xD7;</mo><mn>4</mn><mo>&#xD7;</mo><mn>5</mn><mo>=</mo><mn>120</mn></mrow><annotation encoding="application/x-tex">5! = 1\times 2\times 3\times 4\times 5 = 120</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mclose">!</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#xD7;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#xD7;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#xD7;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#xD7;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">2</span><span class="mord">0</span></span></span></span>.</p>
 </blockquote>
-<p><code>from math import factorial</code> , cette ligne importe la fonction factorielle depuis le module math.</p>
+<p><code>from math import factorial</code> , cette ligne importe la fonction factorielle depuis le module math.<br>
+On constate ici que <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2019</mn><mo stretchy="false">!</mo></mrow><annotation encoding="application/x-tex">2019!</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mord">1</span><span class="mord">9</span><span class="mclose">!</span></span></span></span> poss&#xE8;de plus de 5000 chiffres.</p>
 </blockquote>
 <h3 class="mume-header" id="travail-avec-les-flottants">Travail avec les flottants</h3>
 
@@ -436,54 +455,73 @@ Sinon, l&apos;op&#xE9;ration donnera un flottant. (Voir ensuite)</p>
 <ul>
 <li>Le point est le s&#xE9;parateur d&#xE9;cimal du nombre affich&#xE9;.</li>
 <li>Ces nombres sont stock&#xE9;s en binaire (et non en d&#xE9;cimal) avec une pr&#xE9;cision un peu meilleure qu&apos;avec une calculatrice, mais pas arbitraire non plus.</li>
+<li>On peut entrer directement un nombre en &#xE9;criture scientifique en utilisant la notation <a href="https://en.wikipedia.org/wiki/Scientific_notation#E-notation">e</a>
+<ul>
+<li>exemple : <code>-1.602e-19</code> pour <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2212;</mo><mn>1</mn><mo separator="true">,</mo><mn>602</mn><mo>&#xD7;</mo><mn>1</mn><msup><mn>0</mn><mrow><mo>&#x2212;</mo><mn>19</mn></mrow></msup></mrow><annotation encoding="application/x-tex">-1,602 \times 10^{-19}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">&#x2212;</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">6</span><span class="mord">0</span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#xD7;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2212;</span><span class="mord mtight">1</span><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span></span>, la charge en coulomb d&apos;un &#xE9;lectron.</li>
 </ul>
-<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token keyword">from</span> math <span class="token keyword">import</span> pi
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> pi <span class="token operator">/</span> <span class="token number">2</span>
-<span class="token number">1.5707963267948966</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token number">1.2</span><span class="token operator">**</span><span class="token number">1000</span>
-<span class="token number">1.5179100891722457e+79</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token number">7.3</span> <span class="token operator">+</span> <span class="token number">2</span>
-<span class="token number">9.3</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token number">21</span> <span class="token operator">/</span> <span class="token number">3</span>
-<span class="token number">7.0</span>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python">In <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token keyword">from</span> math <span class="token keyword">import</span> pi
+
+In <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">:</span> pi <span class="token operator">/</span> <span class="token number">2</span>
+Out<span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">1.5707963267948966</span>
+
+In <span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">1.2</span><span class="token operator">**</span><span class="token number">1000</span>
+Out<span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">1.5179100891722457e+79</span>
+
+In <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">7.3</span> <span class="token operator">+</span> <span class="token number">2</span>
+Out<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">9.3</span>
+
+In <span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">21</span> <span class="token operator">/</span> <span class="token number">3</span>
+Out<span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">7.0</span>
+
+In <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">18</span> <span class="token operator">/</span> <span class="token number">6.02e23</span>
+Out<span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">2.990033222591362e-23</span>
 </pre><blockquote>
 <p>Une approximation de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>&#x3C0;</mi><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac \pi 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.040392em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.695392em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">&#x3C0;</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> donn&#xE9;e avec une quinzaine de chiffres d&#xE9;cimaux significatifs.<br>
 La <a href="https://fr.wikipedia.org/wiki/Division">division</a> entre flottants s&apos;obtient avec l&apos;op&#xE9;rateur <code>/</code><br>
 Un calcul d&apos;une puissance d&apos;un flottant. Le r&#xE9;sultat est donn&#xE9; en &#xE9;criture scientifique <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2248;</mo><mn>1</mn><mo separator="true">,</mo><mtext>&#x2009;&#x2063;</mtext><mn>5179</mn><mo>&#xD7;</mo><mn>1</mn><msup><mn>0</mn><mn>79</mn></msup></mrow><annotation encoding="application/x-tex">\approx 1,\!5179\times10^{79}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.48312em;vertical-align:0em;"></span><span class="mrel">&#x2248;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:-0.16666666666666666em;"></span><span class="mord">5</span><span class="mord">1</span><span class="mord">7</span><span class="mord">9</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#xD7;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">7</span><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span></span><br>
 On peut m&#xE9;langer les entiers et flottants  dans les op&#xE9;rations, le r&#xE9;sultat sera en flottant.<br>
-Si on utilise l&apos;op&#xE9;rateur <code>/</code>, le r&#xE9;sultat sera un flottant, m&#xEA;me si la division enti&#xE8;re a un reste nul.</p>
+Si on utilise l&apos;op&#xE9;rateur <code>/</code>, le r&#xE9;sultat sera un flottant, m&#xEA;me si la division enti&#xE8;re a un reste nul.<br>
+Le dernier exemple donne <a href="https://en.wikipedia.org/wiki/Avogadro_constant">le calcul du volume moyen d&apos;une mol&#xE9;cule d&apos;eau</a> en ml, soit environ  30 &#xC5;<sup>3</sup>.</p>
 </blockquote>
 <h4 class="mume-header" id="les-points-plus-d%C3%A9licats">Les points plus d&#xE9;licats</h4>
 
-<p>On retrouve &#xE9;galement sur calculatrice les points suivants :</p>
+<p>On retrouve comme sur de nombreuses calculatrice (et c&apos;est normal) les points suivants :</p>
 <ul>
-<li>Il existe des limites aux nombres flottants, sur le plus petit strictement positif, le plus grand positif, et de m&#xEA;me avec les n&#xE9;gatifs.</li>
+<li>Il existe des limites aux nombres flottants, avec un plus petit strictement positif, un plus grand positif, et de m&#xEA;me avec les n&#xE9;gatifs.</li>
 <li>Le nombre affich&#xE9; n&apos;est souvent pas &#xE9;gal au nombre repr&#xE9;sent&#xE9; en machine !</li>
-<li>Pour simplifier, il y a, en gros, 52 bits pour la mantisse et 11 bits pour l&apos;exposant.</li>
-<li>On peut aussi entrer directement des nombres en &#xE9;criture scientifique, exemple : <code>-1.602e-19</code> pour <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2212;</mo><mn>1</mn><mo separator="true">,</mo><mn>602</mn><mo>&#xD7;</mo><mn>1</mn><msup><mn>0</mn><mrow><mo>&#x2212;</mo><mn>19</mn></mrow></msup></mrow><annotation encoding="application/x-tex">-1,602 \times 10^{-19}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">&#x2212;</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">6</span><span class="mord">0</span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#xD7;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2212;</span><span class="mord mtight">1</span><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span></span>, la charge en coulomb d&apos;un &#xE9;lectron.</li>
+<li>Pour simplifier, il y a, en gros, une quinzaine de chiffres significatifs, et des exposants entre -1000 et +1000, environ.</li>
 </ul>
-<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token number">0.5</span><span class="token operator">**</span><span class="token number">1000</span>
-<span class="token number">9.332636185032189e-302</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token number">0.5</span><span class="token operator">**</span><span class="token number">2000</span>
-<span class="token number">0.0</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token number">2.0</span><span class="token operator">**</span><span class="token number">1000</span>
-<span class="token number">1.0715086071862673e+301</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token number">2.0</span><span class="token operator">**</span><span class="token number">2000</span>
+<pre data-role="codeBlock" data-info="python" class="language-python">In <span class="token punctuation">[</span><span class="token number">13</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">0.5</span><span class="token operator">**</span><span class="token number">1000</span>
+Out<span class="token punctuation">[</span><span class="token number">13</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">9.332636185032189e-302</span>
+
+In <span class="token punctuation">[</span><span class="token number">14</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">0.5</span><span class="token operator">**</span><span class="token number">2000</span>
+Out<span class="token punctuation">[</span><span class="token number">14</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">0.0</span>
+
+In <span class="token punctuation">[</span><span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">2.0</span><span class="token operator">**</span><span class="token number">1000</span>
+Out<span class="token punctuation">[</span><span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">1.0715086071862673e+301</span>
+
+In <span class="token punctuation">[</span><span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">2.0</span><span class="token operator">**</span><span class="token number">2000</span>
 Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
   File <span class="token string">&quot;&lt;stdin&gt;&quot;</span><span class="token punctuation">,</span> line <span class="token number">1</span><span class="token punctuation">,</span> <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">&gt;</span>
+
 OverflowError<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token number">34</span><span class="token punctuation">,</span> <span class="token string">&apos;Numerical result out of range&apos;</span><span class="token punctuation">)</span>
 </pre><blockquote>
 <p>La premi&#xE8;re op&#xE9;ration donne un r&#xE9;sultat tr&#xE8;s petit.<br>
 La deuxi&#xE8;me, tellement petit, qu&apos;il est assimil&#xE9; &#xE0; z&#xE9;ro.<br>
 La troisi&#xE8;me donne un r&#xE9;sultat tr&#xE8;s grand, &#xE9;crit en &#xE9;criture scientifique.<br>
-La quatri&#xE8;me provoque une erreur, le r&#xE9;sultat &#xE9;tant trop grand. Notons que <code>2**2000</code> ne provoque pas d&apos;erreur.<br>
-La cinqui&#xE8;me va vous &#xE9;tonner.</p>
+La quatri&#xE8;me provoque une erreur, le r&#xE9;sultat &#xE9;tant trop grand. Notons que <code>2**2000</code> ne provoque pas d&apos;erreur.</p>
 </blockquote>
 <h4 class="mume-header" id="les-points-techniques">Les points techniques</h4>
 
 <p>&#xC0; aborder en seconde lecture.</p>
-<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token number">0.1</span> <span class="token operator">+</span> <span class="token number">0.2</span> <span class="token operator">==</span> <span class="token number">0.3</span>
-<span class="token boolean">False</span>
+<blockquote>
+<p><a href="http://www.legorafi.fr/2017/10/17/7-proverbes-de-sagesse-chinoise-que-nous-navons-pas-su-traduire/">La cinqui&#xE8;me va vous &#xE9;tonner.</a></p>
+</blockquote>
+<pre data-role="codeBlock" data-info="python" class="language-python">In <span class="token punctuation">[</span><span class="token number">17</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">0.1</span> <span class="token operator">+</span> <span class="token number">0.2</span> <span class="token operator">==</span> <span class="token number">0.3</span>
+Out<span class="token punctuation">[</span><span class="token number">17</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token boolean">False</span>
 </pre><blockquote>
 <ul>
 <li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.1</mn></mrow><annotation encoding="application/x-tex">0.1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">1</span></span></span></span> est stock&#xE9; en machine par un nombre qui n&apos;est pas exactement &#xE9;gal &#xE0; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.1</mn></mrow><annotation encoding="application/x-tex">0.1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">1</span></span></span></span>, mais par un nombre en binaire tr&#xE8;s proche. De m&#xEA;me pour <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.2</mn></mrow><annotation encoding="application/x-tex">0.2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">2</span></span></span></span> et <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.3</mn></mrow><annotation encoding="application/x-tex">0.3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">3</span></span></span></span>.</li>
@@ -491,30 +529,35 @@ La cinqui&#xE8;me va vous &#xE9;tonner.</p>
 <li>Une calculatrice a normalement le m&#xEA;me comportement, sauf si elle travaille avec les nombres r&#xE9;ellement d&#xE9;cimaux.</li>
 </ul>
 </blockquote>
-<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token builtin">type</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
-<span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">&apos;int&apos;</span><span class="token operator">&gt;</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token builtin">type</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
-<span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">&apos;float&apos;</span><span class="token operator">&gt;</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token number">1</span><span class="token punctuation">.</span> <span class="token keyword">is</span> <span class="token number">1</span>
-<span class="token boolean">False</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token number">1</span><span class="token punctuation">.</span> <span class="token operator">==</span> <span class="token number">1</span>
-<span class="token boolean">True</span>
+<pre data-role="codeBlock" data-info="python" class="language-python">In <span class="token punctuation">[</span><span class="token number">18</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token builtin">type</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">18</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token builtin">int</span>
+
+In <span class="token punctuation">[</span><span class="token number">19</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token builtin">type</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">19</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token builtin">float</span>
+
+In <span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">.</span> <span class="token keyword">is</span> <span class="token number">1</span>
+Out<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token boolean">False</span>
+
+In <span class="token punctuation">[</span><span class="token number">21</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">.</span> <span class="token operator">==</span> <span class="token number">1</span>
+Out<span class="token punctuation">[</span><span class="token number">21</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token boolean">True</span>
 </pre><blockquote>
 <p><i class="fa fa-bolt" aria-hidden="true"></i> Explication</p>
 <ul>
-<li><code>1</code> est de type entier, (<em>integer</em>, d&apos;o&#xF9; <code>int</code>)</li>
-<li><code>1.</code> ou bien <code>1.0</code> est de type flottant, (<em>float</em>)</li>
+<li><code>1</code> est de type entier, (<em><b>int</b>eger</em>)</li>
+<li><code>1.</code> ou bien <code>1.0</code> est de type flottant, (<em><b>float</b>ing point number</em>)</li>
 <li>Ce <strong>ne sont pas</strong> les m&#xEA;mes objets en interne pour Python. <em>is</em> r&#xE9;pond alors <em>False</em> pour faux.</li>
-<li>&#xC0; la comparaison, il se passe un ph&#xE9;nom&#xE8;ne de changement de type (transtypage). Pour &#xEA;tre compar&#xE9; &#xE0; un flottant, un entier est automatiquement chang&#xE9; en flottant. Et l&#xE0;, la comparaison s&apos;av&#xE8;re &#xE9;gale, donc le test d&apos;&#xE9;galit&#xE9; renvoie <em>True</em> pour vrai.</li>
+<li>&#xC0; la comparaison, il se passe un ph&#xE9;nom&#xE8;ne de changement de type (transtypage). Pour &#xEA;tre compar&#xE9; &#xE0; un flottant, un entier est automatiquement chang&#xE9; en flottant. Et l&#xE0;, la comparaison s&apos;av&#xE8;re &#xE9;gale, donc le test d&apos;&#xE9;galit&#xE9; renvoie <em>True</em> (pour vrai).</li>
 </ul>
 </blockquote>
-<p>Les op&#xE9;rateurs de Python travaillent avec diff&#xE9;rents objets, de type diff&#xE9;rent. En fonction du type utilis&#xE9;, l&apos;op&#xE9;ration effective sera diff&#xE9;rente. Ainsi, on retrouvera les op&#xE9;rateurs <code>+</code> <code>-</code> <code>*</code> <code>**</code> <code>&lt;</code> <code>&lt;=</code> <code>==</code> <code>&lt;&gt;</code> <code>!=</code> <code>&gt;=</code> <code>&gt;</code> qui fonctionnent aussi avec les flottants. On y ajoute <code>/</code> pour la division continu&#xE9;e.</p>
-<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token number">0.1</span> <span class="token operator">+</span> <span class="token number">0.0045</span>
-<span class="token number">0.1045</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token number">5.4</span> <span class="token operator">+</span> <span class="token number">2.7</span>
-<span class="token number">8.100000000000001</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token number">5</span><span class="token punctuation">,</span><span class="token number">4</span> <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">,</span><span class="token number">7</span>
-<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span>
+<p>Les op&#xE9;rateurs de Python travaillent avec diff&#xE9;rents objets, de type diff&#xE9;rent. En fonction du type utilis&#xE9;, l&apos;op&#xE9;ration effective sera diff&#xE9;rente. Ainsi, on retrouvera les op&#xE9;rateurs <code>+</code> <code>-</code> <code>*</code> <code>**</code> <code>&lt;</code> <code>&lt;=</code> <code>==</code> <code>&lt;&gt;</code> <code>!=</code> <code>&gt;=</code> <code>&gt;</code> qui fonctionnent aussi avec les flottants. On y ajoute <code>/</code> pour la division, faite en binaire, .</p>
+<pre data-role="codeBlock" data-info="python" class="language-python">In <span class="token punctuation">[</span><span class="token number">22</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">0.1</span> <span class="token operator">+</span> <span class="token number">0.0045</span>
+Out<span class="token punctuation">[</span><span class="token number">22</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">0.1045</span>
+
+In <span class="token punctuation">[</span><span class="token number">23</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">5.4</span> <span class="token operator">+</span> <span class="token number">2.7</span>
+Out<span class="token punctuation">[</span><span class="token number">23</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">8.100000000000001</span>
+
+In <span class="token punctuation">[</span><span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span><span class="token number">4</span> <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">,</span><span class="token number">7</span>
+Out<span class="token punctuation">[</span><span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span>
 </pre><ul>
 <li>Le premier exemple montre ce qu&apos;il se passe fr&#xE9;quemment, l&apos;affichage d&#xE9;cimal de la somme de deux repr&#xE9;sentations binaires de flottants (issus de d&#xE9;cimaux) est &#xE9;gal &#xE0; la somme des d&#xE9;cimaux d&apos;origine. Cette phrase &#xE9;tait complexe. Dit autrement : l&apos;addition de deux d&#xE9;cimaux, provoque en machine l&apos;addition de deux nombres binaires qui ne sont pas &#xE9;gaux aux d&#xE9;cimaux, mais la somme calcul&#xE9;e (qui sera un nombre en binaire) peut s&apos;&#xE9;crire en d&#xE9;cimal comme la somme des d&#xE9;cimaux d&apos;origine.</li>
 <li>Dans le second exemple, on constate que ce n&apos;est pas une g&#xE9;n&#xE9;ralit&#xE9;.</li>
@@ -541,17 +584,25 @@ La cinqui&#xE8;me va vous &#xE9;tonner.</p>
 </blockquote>
 <hr>
 <p>Une solution :</p>
-<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> masse_soleil <span class="token operator">=</span> <span class="token number">2e33</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> masse_proton <span class="token operator">=</span> <span class="token number">1.7e-24</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> nb_proton_par_&#xE9;toile <span class="token operator">=</span> masse_soleil <span class="token operator">/</span> masse_proton
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> nb_&#xE9;toile_par_galaxie <span class="token operator">=</span> <span class="token number">100e9</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> nb_proton_par_galaxie <span class="token operator">=</span> nb_proton_par_&#xE9;toile <span class="token operator">*</span> nb_&#xE9;toile_par_galaxie
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> nb_galaxie_de_Univers <span class="token operator">=</span> <span class="token number">1000e9</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> nb_proton_de_Univers <span class="token operator">=</span> nb_proton_par_galaxie <span class="token operator">*</span> nb_galaxie_de_Univers
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> nb_proton_de_Univers
-<span class="token number">1.1764705882352941e+80</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token string-interpolation"><span class="token string">f&quot;Il y a environ </span><span class="token interpolation"><span class="token punctuation">{</span>nb_proton_de_Univers<span class="token punctuation">:</span><span class="token format-spec">.2e</span><span class="token punctuation">}</span></span><span class="token string"> protons dans l&apos;Univers visible.&quot;</span></span>
-<span class="token string">&quot;Il y a environ 1.18e+80 protons dans l&apos;Univers visible.&quot;</span>
+<pre data-role="codeBlock" data-info="python" class="language-python">In <span class="token punctuation">[</span><span class="token number">29</span><span class="token punctuation">]</span><span class="token punctuation">:</span> masse_soleil <span class="token operator">=</span> <span class="token number">2e33</span>
+
+In <span class="token punctuation">[</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">:</span> masse_proton <span class="token operator">=</span> <span class="token number">1.7e-24</span>
+
+In <span class="token punctuation">[</span><span class="token number">31</span><span class="token punctuation">]</span><span class="token punctuation">:</span> nb_proton_par_&#xE9;toile <span class="token operator">=</span> masse_soleil <span class="token operator">/</span> masse_proton
+
+In <span class="token punctuation">[</span><span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">:</span> nb_&#xE9;toile_par_galaxie <span class="token operator">=</span> <span class="token number">100e9</span>
+
+In <span class="token punctuation">[</span><span class="token number">33</span><span class="token punctuation">]</span><span class="token punctuation">:</span> nb_proton_par_galaxie <span class="token operator">=</span> nb_proton_par_&#xE9;toile <span class="token operator">*</span> nb_&#xE9;toile_par_galaxie
+
+In <span class="token punctuation">[</span><span class="token number">34</span><span class="token punctuation">]</span><span class="token punctuation">:</span> nb_galaxie_de_Univers <span class="token operator">=</span> <span class="token number">1000e9</span>
+
+In <span class="token punctuation">[</span><span class="token number">35</span><span class="token punctuation">]</span><span class="token punctuation">:</span> nb_proton_de_Univers <span class="token operator">=</span> nb_proton_par_galaxie <span class="token operator">*</span> nb_galaxie_de_Univers
+
+In <span class="token punctuation">[</span><span class="token number">36</span><span class="token punctuation">]</span><span class="token punctuation">:</span> nb_proton_de_Univers
+Out<span class="token punctuation">[</span><span class="token number">36</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">1.1764705882352941e+80</span>
+
+In <span class="token punctuation">[</span><span class="token number">37</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string-interpolation"><span class="token string">f&quot;Il y a environ </span><span class="token interpolation"><span class="token punctuation">{</span>nb_proton_de_Univers<span class="token punctuation">:</span><span class="token format-spec">.2e</span><span class="token punctuation">}</span></span><span class="token string"> protons dans l&apos;Univers visible.&quot;</span></span>
+Out<span class="token punctuation">[</span><span class="token number">37</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">&quot;Il y a environ 1.18e+80 protons dans l&apos;Univers visible.&quot;</span>
 </pre><blockquote>
 <p><strong>Commentaires :</strong></p>
 <ul>
@@ -564,7 +615,7 @@ La cinqui&#xE8;me va vous &#xE9;tonner.</p>
 
 <h4 class="mume-header" id="pr%C3%A9sentation-de-laffectation">Pr&#xE9;sentation de l&apos;affectation</h4>
 
-<p>Nous avons vu que l&apos;on pouvait utiliser des variables avec des noms plus longs qu&apos;une lettre comme on voit souvent en maths ou en sciences, c&apos;est une bonne pratique.</p>
+<p>Nous avons vu que l&apos;on pouvait utiliser des variables avec des noms plus longs qu&apos;une lettre &#xE0; l&apos;oppos&#xE9; de ce que l&apos;on voit souvent en maths ou en sciences. C&apos;est une bonne pratique.</p>
 <dl>
 <dt>Variable</dt>
 <dd>
@@ -586,18 +637,22 @@ La cinqui&#xE8;me va vous &#xE9;tonner.</p>
 <ul>
 <li>le membre de gauche doit &#xEA;tre une variable,</li>
 <li>le membre de droite est d&apos;abord &#xE9;valu&#xE9;,</li>
-<li>puis la variable est affect&#xE9;e au r&#xE9;sultat.</li>
+<li>puis le r&#xE9;sultat est affect&#xE9; &#xE0; la variable.</li>
 </ul>
 </li>
 </ul>
 </dd>
 </dl>
-<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> a <span class="token operator">=</span> <span class="token number">3</span>         <span class="token comment"># a est affect&#xE9; &#xE0; un entier de valeur 3,</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> x <span class="token operator">=</span> <span class="token number">20</span> <span class="token operator">-</span> a<span class="token operator">*</span><span class="token number">5</span>  <span class="token comment"># x est affect&#xE9; &#xE0; 5 (plus simplement)</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> x <span class="token operator">=</span> <span class="token number">2</span><span class="token operator">*</span>x <span class="token operator">+</span> <span class="token number">1</span>   <span class="token comment"># x est r&#xE9;affect&#xE9; &#xE0; 11</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> y <span class="token operator">=</span> x<span class="token operator">*</span>x <span class="token operator">-</span> <span class="token number">1</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> y
-<span class="token number">120</span>
+<pre data-role="codeBlock" data-info="python" class="language-python">In <span class="token punctuation">[</span><span class="token number">40</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a <span class="token operator">=</span> <span class="token number">3</span>         <span class="token comment"># a est affect&#xE9; &#xE0; un entier de valeur 3,</span>
+
+In <span class="token punctuation">[</span><span class="token number">41</span><span class="token punctuation">]</span><span class="token punctuation">:</span> x <span class="token operator">=</span> <span class="token number">20</span> <span class="token operator">-</span> a<span class="token operator">*</span><span class="token number">5</span>  <span class="token comment"># x est affect&#xE9; &#xE0; 5 (plus simplement)</span>
+
+In <span class="token punctuation">[</span><span class="token number">42</span><span class="token punctuation">]</span><span class="token punctuation">:</span> x <span class="token operator">=</span> <span class="token number">2</span><span class="token operator">*</span>x <span class="token operator">+</span> <span class="token number">1</span>   <span class="token comment"># x est r&#xE9;affect&#xE9; &#xE0; 11</span>
+
+In <span class="token punctuation">[</span><span class="token number">43</span><span class="token punctuation">]</span><span class="token punctuation">:</span> y <span class="token operator">=</span> x<span class="token operator">*</span>x <span class="token operator">-</span> <span class="token number">1</span>
+
+In <span class="token punctuation">[</span><span class="token number">44</span><span class="token punctuation">]</span><span class="token punctuation">:</span> y
+Out<span class="token punctuation">[</span><span class="token number">44</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">120</span>
 </pre><blockquote>
 <p>Remarques :</p>
 </blockquote>
@@ -623,15 +678,15 @@ La cinqui&#xE8;me va vous &#xE9;tonner.</p>
 <li>Le membre de droite est soit :
 <ul>
 <li>un litt&#xE9;ral (<em>une donn&#xE9;e &#xE9;crite dans le code</em>)</li>
-<li>une instruction qui peut s&apos;&#xE9;valuer</li>
+<li>une instruction que l&apos;on peut &#xE9;valuer</li>
 <li>une autre affectation</li>
 </ul>
 </li>
-<li>Le membre de droite est interpr&#xE9;t&#xE9;.</li>
-<li>La (ou les) variables sont affect&#xE9;es &#xE0; (ou aux) r&#xE9;sultats :
+<li>Le membre de droite est interpr&#xE9;t&#xE9; en premier.</li>
+<li>Le ou les r&#xE9;sultats sont affect&#xE9;s &#xE0; la ou aux variables :
 <ul>
-<li>s&apos;il n&apos;y a qu&apos;une variable et plusieurs r&#xE9;sultats, la variable est affect&#xE9;e &#xE0; un tuple des r&#xE9;sultats ;</li>
-<li>s&apos;il y a autant de variables que de r&#xE9;sultats, dans l&apos;ordre chaque variable est affect&#xE9; &#xE0; un r&#xE9;sultat;</li>
+<li>s&apos;il n&apos;y a qu&apos;une variable et plusieurs r&#xE9;sultats, le tuple des r&#xE9;sultats est affect&#xE9; &#xE0; la variable ;</li>
+<li>s&apos;il y a autant de variables que de r&#xE9;sultats, dans l&apos;ordre chaque r&#xE9;sultat est affect&#xE9; &#xE0; une variable ;</li>
 <li>sinon, une <code>ValueError</code> se produit.</li>
 </ul>
 </li>
@@ -639,17 +694,24 @@ La cinqui&#xE8;me va vous &#xE9;tonner.</p>
 </dd>
 </dl>
 <p>Exemples simples :</p>
-<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> a<span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span>
+<pre data-role="codeBlock" data-info="python" class="language-python">In <span class="token punctuation">[</span><span class="token number">50</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a<span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span>
 Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
   File <span class="token string">&quot;&lt;stdin&gt;&quot;</span><span class="token punctuation">,</span> line <span class="token number">1</span><span class="token punctuation">,</span> <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">&gt;</span>
+
 ValueError<span class="token punctuation">:</span> too many values to unpack <span class="token punctuation">(</span>expected <span class="token number">2</span><span class="token punctuation">)</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">,</span> d <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span>
+
+In <span class="token punctuation">[</span><span class="token number">51</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">,</span> d <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span>
 Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
   File <span class="token string">&quot;&lt;stdin&gt;&quot;</span><span class="token punctuation">,</span> line <span class="token number">1</span><span class="token punctuation">,</span> <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">&gt;</span>
+
 ValueError<span class="token punctuation">:</span> <span class="token keyword">not</span> enough values to unpack <span class="token punctuation">(</span>expected <span class="token number">4</span><span class="token punctuation">,</span> got <span class="token number">3</span><span class="token punctuation">)</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> a <span class="token operator">+</span> b<span class="token operator">*</span>c
-<span class="token number">14</span>
+
+In <span class="token punctuation">[</span><span class="token number">52</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span>
+
+In <span class="token punctuation">[</span><span class="token number">53</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a <span class="token operator">+</span> b<span class="token operator">*</span>c
+Out<span class="token punctuation">[</span><span class="token number">53</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">14</span>
 </pre><p>Il est alors possible, en Python, de faire de <a href="https://fr.wiktionary.org/wiki/affectation_parall%C3%A8le">l&apos;affectation parall&#xE8;le</a>.</p>
 <blockquote>
 <p>C&apos;est particuli&#xE8;rement pratique pour &#xE9;changer le contenu de deux variables.</p>
@@ -746,12 +808,12 @@ De mani&#xE8;re synth&#xE9;tique, on a :</p>
 <ul>
 <li><code>False</code> et <code>True</code> : les bool&#xE9;ens faux et vrai.</li>
 <li><code>from</code> et <code>import</code> : pour importer <strong>&#xE0; partir</strong> d&apos;un module.</li>
-<li><code>is</code> : test d&apos;identit&#xE9; entre instances.</li>
+<li><code>is</code> : test d&apos;identit&#xE9; entre objets.</li>
 </ul>
 <p>Nous allons bient&#xF4;t voir :</p>
 <ul>
 <li><code>None</code> : pour une donn&#xE9;e &apos;sans valeur&apos; ; z&#xE9;ro &#xE9;tant un entier poss&#xE9;dant une valeur.</li>
-<li><code>del</code> : pour d&#xE9;truire (<em>delete</em>) une variable, et sa donn&#xE9;e aussi si elle &#xE9;tait seule affect&#xE9;e dessus.</li>
+<li><code>del</code> : pour d&#xE9;truire (<em><b>del</b>ete</em>) une variable et/ou des donn&#xE9;es.</li>
 <li><code>and</code>, <code>or</code>, <code>not</code> : op&#xE9;rateurs sur les bool&#xE9;ens : <strong>et</strong>, <strong>ou</strong>, <strong>non</strong>.</li>
 <li><code>def</code> ou <code>lambda</code>, <code>return</code> : pour d&#xE9;finir une fonction.</li>
 <li><code>pass</code> : pour une instruction qui ne fait rien.</li>
@@ -848,6 +910,7 @@ Quel volume de gaz cela repr&#xE9;sente-t-il ? Et sur la vie d&apos;un v&#xE9;hi
 <li><a href="#fa-android-avec-une-tablette-android"><i class="fa fa-android" aria-hidden="true"></i> Avec une tablette Android</a></li>
 </ul>
 </li>
+<li><a href="#fa-windows-avec-windows"><i class="fa fa-windows" aria-hidden="true"></i> Avec Windows&#xA9;</a></li>
 <li><a href="#fa-calculator-la-console-python-comme-calculatrice"><i class="fa fa-calculator" aria-hidden="true"></i> La console Python comme calculatrice</a>
 <ul>
 <li><a href="#travail-avec-des-entiers">Travail avec des entiers</a>
