@@ -339,17 +339,19 @@ pre[data-line] .line-highlight[data-end]:after {
 
 <p>On ne listera ici que des &#xE9;diteurs libres et multiplateformes, du plus simple au plus &#xE9;labor&#xE9; :</p>
 <ul>
-<li><a href="https://thonny.org/">Thonny</a></li>
+<li><a href="https://thonny.org/">Thonny</a> ; basique,</li>
 <li><a href="https://www.spyder-ide.org/">Spyder</a> ; inclus dans <em>anaconda</em>, <strong>recommand&#xE9; pour d&#xE9;buter</strong>,</li>
-<li><a href="https://geany.org/">Geany</a></li>
-<li><a href="https://atom.io/" title="Site officiel">Atom</a> ou <a href="https://flathub.org/apps/details/com.visualstudio.code.oss" title="Site officiel de la version libre">Visual Studio code - OSS</a> ; &#xE9;diteurs modernes, <strong>Atom recommand&#xE9; pour progresser</strong>,</li>
+<li><a href="https://geany.org/">Geany</a> ; &#xE9;diteur <strong>g&#xE9;n&#xE9;raliste et simple</strong>, recommand&#xE9; pour d&#xE9;buter plusieurs langages de programmation,</li>
+<li><a href="https://atom.io/" title="Site officiel">Atom</a> ; &#xE9;diteur g&#xE9;n&#xE9;raliste moderne, <strong>recommand&#xE9; pour progresser</strong>,</li>
 <li><a href="https://www.gnu.org/software/emacs/" title="Site offciel">GNU Emacs</a> ou <a href="https://www.vim.org/" title="Site officel">Vim</a> ; &#xE9;diteurs modaux et historiques, non conseill&#xE9;s pour d&#xE9;buter,</li>
 <li><a href="http://www.pydev.org/index.html" title="Site officiel">Eclipse+PyDev</a> ; pour les professionnels.</li>
 </ul>
-<p><em>Spyder</em> est inclus dans <em>Anaconda</em>, non sans raisons, nous le pr&#xE9;sentons ici en particulier, mais tout ce qu&apos;on verra est transposable avec un autre &#xE9;diteur.</p>
+<p><a href="https://flathub.org/apps/details/com.visualstudio.code.oss" title="Site officiel de la version libre">Visual Studio code - OSS</a> est la version libre d&apos;un &#xE9;diteur populaire ; attention &#xE0; la t&#xE9;l&#xE9;m&#xE9;trie sur la version compil&#xE9;e de la maison m&#xE8;re... Dans le m&#xEA;me genre, Atom est plus clair &#xE0; ce propos.<br>
+<a href="https://www.jetbrains.com/pycharm/">PyCharm</a> poss&#xE8;de une version libre, cependant ...</p>
 <h3 class="mume-header" id="exemple-avec-spyder">Exemple avec <em>Spyder</em></h3>
 
 <p><img src="assets/Spyder.png" alt title="Logo de Spyder"></p>
+<p><em>Spyder</em> est inclus dans <em>Anaconda</em>, non sans raisons, nous le pr&#xE9;sentons ici en particulier, mais tout ce qu&apos;on verra est transposable avec un autre &#xE9;diteur.</p>
 <p>La premi&#xE8;re ouverture de <em>Spyder</em> propose de compl&#xE9;ter un fichier <code>tmp.py</code> dans un r&#xE9;pertoire interne &#xE0; <em>Spyder</em>.</p>
 <ul>
 <li>Commencer par <kbd><b><u>F</u></b>ichier</kbd><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">&#x2192;</span></span></span></span> <kbd><i class="fa fa-save" aria-hidden="true"></i> Enregistrer sous... </kbd></li>
@@ -401,7 +403,7 @@ M_5 <span class="token operator">=</span> 31
 </pre><ul>
 <li>On constate que le commentaire n&apos;a pas &#xE9;t&#xE9; affich&#xE9;. C&apos;est normal !</li>
 <li>Observer les espaces et l&apos;absence de virgule autour de <code>=</code> dans l&apos;affichage. Normal !</li>
-<li><em>Spyder</em> affiche quel fichier a &#xE9;t&#xE9; ex&#xE9;cut&#xE9; (<em>run file</em>),</li>
+<li><em>Spyder</em> affiche quel fichier a &#xE9;t&#xE9; lanc&#xE9; (<em>run file</em>),</li>
 <li>ainsi que le r&#xE9;pertoire de travail (<code>wdir</code> pour <b>w</b>orking <b>dir</b>ectory).</li>
 </ul>
 <h2 class="mume-header" id="fa-cogs-les-fonctions"><i class="fa fa-cogs" aria-hidden="true"></i> Les fonctions</h2>
@@ -422,7 +424,11 @@ M_5 <span class="token operator">=</span> 31
 n <span class="token operator">=</span> <span class="token number">42</span>                <span class="token comment"># Une affectation.</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;La r&#xE9;ponse &#xE0; la question universelle est&quot;</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token operator">*</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">&quot;texte&quot;</span><span class="token punctuation">,</span> <span class="token number">3.14</span><span class="token punctuation">,</span> <span class="token number">12345e100</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><blockquote>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">Hello World!
+
+La r&#xE9;ponse &#xE0; la question universelle est 42
+1 421 texte 3.14 1.2345e+104
+</pre></div></div><blockquote>
 <p><strong>Remarque</strong> : <code>print</code> &#xE9;tait un mot r&#xE9;serv&#xE9; avec Python2, c&apos;est d&#xE9;sormais une fonction comme les autres !</p>
 </blockquote>
 <h3 class="mume-header" id="la-fonction-round-avec-un-seul-param%C3%A8tre">La fonction <code>round</code>, avec un seul param&#xE8;tre</h3>
@@ -440,7 +446,12 @@ n <span class="token operator">=</span> <span class="token number">42</span>    
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">3.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">4.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">4.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><h3 class="mume-header" id="la-fonction-round-avec-deux-param%C3%A8tres">La fonction <code>round</code>, avec deux param&#xE8;tres</h3>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">3
+3
+4
+4
+-4
+</pre></div></div><h3 class="mume-header" id="la-fonction-round-avec-deux-param%C3%A8tres">La fonction <code>round</code>, avec deux param&#xE8;tres</h3>
 
 <blockquote>
 <p><code>round(nbr, d)</code></p>
@@ -455,7 +466,13 @@ n <span class="token operator">=</span> <span class="token number">42</span>    
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">12345</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">12345.0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">9.8765e100</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><blockquote>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">3.1
+2.72
+3.5
+12300
+12300.0
+9.88e+100
+</pre></div></div><blockquote>
 <p><strong><i class="fa fa-bolt" aria-hidden="true"></i> Attention</strong> : <a href="https://docs.python.org/fr/3/library/functions.html#round">le comportement avec les flottants</a> peut &#xEA;tre curieux, mais c&apos;est normal ! Les flottants ne sont pas les d&#xE9;cimaux !<br>
 On a constat&#xE9; &#xE9;galement que le comportement de <code>round</code> est diff&#xE9;rent en fonction du nombre de param&#xE8;tres.</p>
 </blockquote>
@@ -487,7 +504,7 @@ On a constat&#xE9; &#xE9;galement que le comportement de <code>round</code> est 
 <p>Pr&#xE9;sentons rapidement les autres.</p>
 <ul>
 <li><code>complex</code> : pour les nombres complexes, que l&apos;on &#xE9;tudie en terminale (maths expertes et certaines sections scientifiques).</li>
-<li><code>str</code> : pour les cha&#xEE;nes de caract&#xE8;res (<em>string</em>), du texte. Une fois cr&#xE9;e on ne peut pas la modifier. En fran&#xE7;ais, on dit <strong>immuable</strong> (<em>immutable</em> en anglais).</li>
+<li><code>str</code> : pour les cha&#xEE;nes de caract&#xE8;res (<em>string</em>), du texte. Une fois cr&#xE9;&#xE9;e on ne peut pas la modifier. En fran&#xE7;ais, on dit <strong>immuable</strong> (<em>immutable</em> en anglais).</li>
 <li><code>list</code> : pour une liste ordonn&#xE9;e d&apos;objets. On peut ajouter des objets, en enlever, et de mani&#xE8;re g&#xE9;n&#xE9;rale la modifier. En fran&#xE7;ais, on dit <strong>muable</strong> (<em>mutable</em> en anglais).</li>
 <li><code>tuple</code> : ressemble &#xE0; <code>list</code>, mais en version immuable.</li>
 <li><code>set</code> : pour un ensemble. Non ordonn&#xE9;. Sans doublon. Muable. On peut ajouter, enlever un objet. On peut faire des intersections, unions.</li>
@@ -510,12 +527,18 @@ On a constat&#xE9; &#xE9;galement que le comportement de <code>round</code> est 
 <span class="token keyword">print</span><span class="token punctuation">(</span>sqrt<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>cos<span class="token punctuation">(</span><span class="token number">2019</span> <span class="token operator">*</span> pi<span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>exp<span class="token punctuation">(</span><span class="token number">666</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><p>Ou bien, on importe le module entier et chaque objet est accessible via un appel r&#xE9;f&#xE9;renc&#xE9;.</p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">1.4142135623730951
+-1.0
+1.7383008701505047e+289
+</pre></div></div><p>Ou bien, on importe le module entier et chaque objet est accessible via un appel r&#xE9;f&#xE9;renc&#xE9;.</p>
 <div class="code-chunk" data-id="code-chunk-id-4" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=4, .line-numbers cmd=&quot;python3&quot; output=&quot;text&quot;}" class="language-python line-numbers"><span class="token keyword">import</span> math
 <span class="token keyword">print</span><span class="token punctuation">(</span>math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>math<span class="token punctuation">.</span>cos<span class="token punctuation">(</span><span class="token number">2019</span> <span class="token operator">*</span> math<span class="token punctuation">.</span>pi<span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>math<span class="token punctuation">.</span>exp<span class="token punctuation">(</span><span class="token number">666</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><p>Ici, <a href="https://docs.python.org/fr/3/library/math.html">la liste compl&#xE8;te des objets du module maths</a>.</p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">1.4142135623730951
+-1.0
+1.7383008701505047e+289
+</pre></div></div><p>Ici, <a href="https://docs.python.org/fr/3/library/math.html">la liste compl&#xE8;te des objets du module <code>math</code></a>.</p>
 <blockquote>
 <p><i class="fa fa-bolt" aria-hidden="true"></i> <strong>Attention</strong><br>
 Il ne faut pas utiliser <code>from math import *</code> comme l&apos;on voit trop souvent. Cela importe tout le module <code>math</code>, et &#xE9;crase la fonction <code>pow</code> qui existait avant par une nouvelle qui est moins puissante en arithm&#xE9;tique.<br>
@@ -531,7 +554,9 @@ Ici on construit et on utilise la fonction <span class="katex"><span class="kate
 <div class="code-chunk" data-id="code-chunk-id-5" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=5, .line-numbers cmd=&quot;python3&quot; output=&quot;text&quot;}" class="language-python line-numbers">ma_fonction <span class="token operator">=</span> <span class="token keyword">lambda</span> x<span class="token punctuation">:</span> <span class="token punctuation">(</span>x<span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>x<span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>ma_fonction<span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>ma_fonction<span class="token punctuation">(</span><span class="token number">6125.7</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><blockquote>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">200
+37524175.489999995
+</pre></div></div><blockquote>
 <p>On constate, ici, que notre fonction traite aussi bien un flottant qu&apos;un entier, une seule d&#xE9;finition suffit. Ce n&apos;est pas possible facilement avec d&apos;autres langages.</p>
 </blockquote>
 <h4 class="mume-header" id="constructeur-def">Constructeur <code>def</code></h4>
@@ -543,7 +568,9 @@ Ici on construit et on utilise la fonction <span class="katex"><span class="kate
 
 <span class="token keyword">print</span><span class="token punctuation">(</span>ma_fonction<span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>ma_fonction<span class="token punctuation">(</span><span class="token number">6125.7</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><p>Cette seconde m&#xE9;thode est adapt&#xE9;e pour les fonctions dont le corps est cons&#xE9;quent ; plusieurs lignes. Alors que <code>lambda</code> est adapt&#xE9; pour les fonctions courtes &#xE0; d&#xE9;finir.</p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">200
+37524175.489999995
+</pre></div></div><p>Cette seconde m&#xE9;thode est adapt&#xE9;e pour les fonctions dont le corps est cons&#xE9;quent ; plusieurs lignes. Alors que <code>lambda</code> est adapt&#xE9; pour les fonctions courtes &#xE0; d&#xE9;finir.</p>
 <blockquote>
 <p><i class="fa fa-bolt" aria-hidden="true"></i> <strong>Attention</strong>.</p>
 <ul>
@@ -560,7 +587,9 @@ Ici on construit et on utilise la fonction <span class="katex"><span class="kate
     <span class="token keyword">return</span> largeur <span class="token operator">*</span> longueur
 
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;L&apos;aire est&quot;</span><span class="token punctuation">,</span> aire_rectangle<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><blockquote>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">Les c&#xF4;t&#xE9;s du rectangle sont 8 et 13
+L&apos;aire est 104
+</pre></div></div><blockquote>
 <p><strong>Remarques</strong></p>
 <p>La fonction <code>aire_rectangle</code> :</p>
 <ul>
@@ -578,7 +607,14 @@ Ici on construit et on utilise la fonction <span class="katex"><span class="kate
 <span class="token keyword">print</span><span class="token punctuation">(</span>ne_fait_rien<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token builtin">help</span><span class="token punctuation">(</span>ne_fait_rien<span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><blockquote>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">None
+
+Help on function ne_fait_rien in module __main__:
+
+ne_fait_rien()
+    Cette fonction ne fait rien !
+
+</pre></div></div><blockquote>
 <p><strong>Remarques</strong></p>
 <p>La fonction <code>ne_fait_rien</code> :</p>
 <ul>
@@ -702,21 +738,21 @@ In <span class="token punctuation">[</span><span class="token number">3</span><s
 <dd>Une cha&#xEE;ne de caract&#xE8;res est un objet de type <code>str</code> (pour <em><b>str</b>ing</em>), elle poss&#xE8;de z&#xE9;ro, un ou plusieurs caract&#xE8;res, elle est <strong>ordonn&#xE9;e</strong>, on ne peut pas la modifier (elle est <strong>immuable</strong> ou <em>immutable</em>). Les caract&#xE8;res ne sont pas seulement <a href="https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange">ASCII</a> (un jeu limit&#xE9; de 127 caract&#xE8;res), mais <a href="https://fr.wikipedia.org/wiki/UTF-8">UTF-8</a> donc universel. Une cha&#xEE;ne est immuable, cependant on peut cr&#xE9;er une nouvelle cha&#xEE;ne &#xE0; partir d&apos;une autre.</dd>
 </dl>
 <p>Exemples &#xE0; tester dans la console de <em>Spyder</em> :</p>
-<pre data-role="codeBlock" data-info="python3" class="language-python3"><code>lst_vide = []  # une liste vide
-eps = &quot;&quot;       # un mot vide
-mot = &quot;test&quot;   # un mot ; &apos;test&apos;
-a = [mot]      # une liste contenant un objet : une cha&#xEE;ne `str`
-b = [&quot;test&quot;]   # une autre liste, de m&#xEA;me contenu !
-lnp = [2, 3, 5, 7, 11]   # une liste de 5 &#xE9;l&#xE9;ments, les nombres premiers jusqu&apos;&#xE0; 11
-lettres_de_bonjour = list(&quot;bonjour&quot;)
-print(lettres_de_bonjour)
-un_m&#xE9;lange = [&apos;X270&apos;, 8, 4, 3.0] # mauvaises pratiques :
-#  - accent &#xE0; la variable,
-#  - les types des &#xE9;l&#xE9;ments de la liste sont diff&#xE9;rents.
-print(type(lnp)) # affiche le type de lnp
-print(len(lnp))  # affiche la longueur de lnp
-print(lnp[0])    # affiche l&apos;&#xE9;l&#xE9;ment lnp d&apos;index 0
-</code></pre><h4 class="mume-header" id="points-communs-entre-list-et-str">Points communs entre <code>list</code> et <code>str</code></h4>
+<pre data-role="codeBlock" data-info="python" class="language-python">lst_vide <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>  <span class="token comment"># une liste vide</span>
+eps <span class="token operator">=</span> <span class="token string">&quot;&quot;</span>       <span class="token comment"># un mot vide</span>
+mot <span class="token operator">=</span> <span class="token string">&quot;test&quot;</span>   <span class="token comment"># un mot ; &apos;test&apos;</span>
+a <span class="token operator">=</span> <span class="token punctuation">[</span>mot<span class="token punctuation">]</span>      <span class="token comment"># une liste contenant un objet : une cha&#xEE;ne `str`</span>
+b <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;test&quot;</span><span class="token punctuation">]</span>   <span class="token comment"># une autre liste, de m&#xEA;me contenu !</span>
+lnp <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">]</span>   <span class="token comment"># une liste de 5 &#xE9;l&#xE9;ments, les nombres premiers jusqu&apos;&#xE0; 11</span>
+lettres_de_bonjour <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token string">&quot;bonjour&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>lettres_de_bonjour<span class="token punctuation">)</span>
+un_m&#xE9;lange <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&apos;X270&apos;</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">]</span> <span class="token comment"># mauvaises pratiques :</span>
+<span class="token comment">#  - accent &#xE0; la variable,</span>
+<span class="token comment">#  - les types des &#xE9;l&#xE9;ments de la liste sont diff&#xE9;rents.</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>lnp<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># affiche le type de lnp</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>lnp<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># affiche la longueur de lnp</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>lnp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>    <span class="token comment"># affiche l&apos;&#xE9;l&#xE9;ment lnp d&apos;index 0</span>
+</pre><h4 class="mume-header" id="points-communs-entre-list-et-str">Points communs entre <code>list</code> et <code>str</code></h4>
 
 <p>Avec <code>truc</code> qui est de type <code>list</code> ou de type <code>str</code>.</p>
 <ul>
@@ -834,14 +870,24 @@ truc<span class="token punctuation">[</span><span class="token number">3</span><
 maFonction <span class="token operator">=</span> <span class="token keyword">lambda</span> x<span class="token punctuation">:</span> x<span class="token operator">*</span>x <span class="token operator">+</span> <span class="token number">100</span>
 <span class="token keyword">for</span> x <span class="token keyword">in</span> truc<span class="token punctuation">:</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> maFonction<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><div class="code-chunk" data-id="code-chunk-id-10" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=10, .line-numbers cmd=&quot;python3&quot; output=&quot;text&quot;}" class="language-python line-numbers">verbe <span class="token operator">=</span> <span class="token string">&quot;manger&quot;</span> <span class="token comment"># un verbe du premier groupe</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">[1, 0, 0, 2, 0, 4]
+1 101
+0 100
+0 100
+2 104
+0 100
+4 116
+</pre></div></div><div class="code-chunk" data-id="code-chunk-id-10" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=10, .line-numbers cmd=&quot;python3&quot; output=&quot;text&quot;}" class="language-python line-numbers">verbe <span class="token operator">=</span> <span class="token string">&quot;manger&quot;</span> <span class="token comment"># un verbe du premier groupe</span>
 l <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>verbe<span class="token punctuation">)</span>
 radical <span class="token operator">=</span> verbe<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span>l<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span>  <span class="token comment"># du d&#xE9;but &#xE0; la fin sauf les deux derniers</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Je&quot;</span><span class="token punctuation">,</span> radical<span class="token operator">+</span><span class="token string">&quot;e&quot;</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Tu&quot;</span><span class="token punctuation">,</span> radical<span class="token operator">+</span><span class="token string">&quot;es&quot;</span><span class="token punctuation">)</span>
 <span class="token keyword">pass</span> <span class="token comment"># &#xE0; vous de compl&#xE9;ter...</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Ils&quot;</span><span class="token punctuation">,</span> radical<span class="token operator">+</span><span class="token string">&quot;ent&quot;</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><h3 class="mume-header" id="avec-un-it%C3%A9rateur-de-type-range">Avec un it&#xE9;rateur de type <code>range</code></h3>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">Je mange
+Tu manges
+Ils mangent
+</pre></div></div><h3 class="mume-header" id="avec-un-it%C3%A9rateur-de-type-range">Avec un it&#xE9;rateur de type <code>range</code></h3>
 
 <dl>
 <dt>Le type <code>range</code></dt>
@@ -977,7 +1023,8 @@ m_5 <span class="token operator">=</span> mersenne<span class="token punctuation
 m_11 <span class="token operator">=</span> mersenne<span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span>
 <span class="token keyword">if</span> test_divisible<span class="token punctuation">(</span>m_11<span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;TEST2 : Confirmation, mersenne(11) n&apos;est pas un nombre premier&quot;</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><p>Explications :</p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">TEST2 : Confirmation, mersenne(11) n&apos;est pas un nombre premier
+</pre></div></div><p>Explications :</p>
 <ul>
 <li>Lignes 1 &#xE0; 3, on d&#xE9;finit la fonction <code>mersenne</code> : <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>&#x21A6;</mo><msup><mn>2</mn><mi>p</mi></msup><mo>&#x2212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">p\mapsto 2^p-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7054400000000001em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x21A6;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.747722em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">p</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2212;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>
 <ul>
@@ -1077,21 +1124,26 @@ premiers_jusqu_32 <span class="token operator">=</span> <span class="token punct
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Test 1 r&#xE9;ussi&quot;</span><span class="token punctuation">)</span>
 
 <span class="token comment"># Test 2</span>
+message_erreur_test2 <span class="token operator">=</span> <span class="token string">&quot;Votre m&#xE9;thode ne trouve pas 25 nombres premiers inf&#xE9;rieurs &#xE0; 100 !&quot;</span>
 premiers_jusqu_100 <span class="token operator">=</span> <span class="token punctuation">[</span>p <span class="token keyword">for</span> p <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span> <span class="token keyword">if</span> est_premier<span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">]</span>
-<span class="token keyword">assert</span> <span class="token builtin">len</span><span class="token punctuation">(</span>premiers_jusqu_100<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">25</span>
+<span class="token keyword">assert</span> <span class="token builtin">len</span><span class="token punctuation">(</span>premiers_jusqu_100<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">25</span><span class="token punctuation">,</span> message_erreur_test2
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Test 2 r&#xE9;ussi&quot;</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><p><strong>Si votre programme met trop de temps &#xE0; finir un test, on peut l&apos;arr&#xEA;ter avec</strong> <kbd>Ctrl</kbd>+<kbd>C</kbd></p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">Traceback (most recent call last):
+  File &quot;/home/francky/Documents/Python-Lycee/o77r2l37q_code_chunk&quot;, line 1, in <module>
+    from outils import *
+ModuleNotFoundError: No module named &apos;outils&apos;
+</module></pre></div></div><p><strong>Si votre programme met trop de temps &#xE0; finir un test, on peut l&apos;arr&#xEA;ter avec</strong> <kbd>Ctrl</kbd>+<kbd>C</kbd></p>
 <p><i class="fa fa-bolt" aria-hidden="true"></i> <strong>Remarques</strong></p>
 <ul>
 <li>Ligne 1 : On importe nos fonctions cr&#xE9;&#xE9;es.</li>
 <li>Ligne 4 : On utilise des valeurs connues, cod&#xE9;es en dur (<em>hardcoded</em>) pour le test 1</li>
-<li>Lignes 6 et 10 <code>assert</code> permet de faire le test d&apos;une condition.
+<li>Lignes 6 et 12 <code>assert</code> permet de faire le test d&apos;une condition.
 <ul>
 <li>Si la condition est vraie, le script se poursuit normalement,</li>
 <li>sinon le script est interrompu, et l&apos;objet suivant est affich&#xE9;.</li>
 </ul>
 </li>
-<li>Ligne 10 : Nous reverrons cette fa&#xE7;on de construire une <a href="https://fr.wikipedia.org/wiki/Liste_en_compr%C3%A9hension">liste <em>en compr&#xE9;hension</em></a>.
+<li>Ligne 11 : Nous reverrons cette fa&#xE7;on de construire une <a href="https://fr.wikipedia.org/wiki/Liste_en_compr%C3%A9hension">liste <em>en compr&#xE9;hension</em></a>.
 <ul>
 <li><strong>C&apos;est au programme de math&#xE9;matiques en premi&#xE8;re</strong>.</li>
 </ul>
@@ -1100,7 +1152,7 @@ premiers_jusqu_100 <span class="token operator">=</span> <span class="token punc
 <ul>
 <li>il retourne un bool&#xE9;en ...</li>
 <li>qui est compar&#xE9; &#xE0; celui retourn&#xE9; par <code>est_premier(...)</code></li>
-<li><i class="fa fa-bolt" aria-hidden="true"></i> <strong>ce n&apos;est pas du tout le m&#xEA;me</strong> que le <code>in</code> aux lignes 5 et 10 !</li>
+<li><i class="fa fa-bolt" aria-hidden="true"></i> <strong>ce n&apos;est pas du tout le m&#xEA;me</strong> que le <code>in</code> aux lignes 5 et 11 !</li>
 </ul>
 </li>
 </ul>
@@ -1109,6 +1161,7 @@ premiers_jusqu_100 <span class="token operator">=</span> <span class="token punc
 <ul>
 <li>Un professeur ne pourra pas toujours corriger votre code.</li>
 <li>Apprendre &#xE0; fabriquer ses propres tests est une source de progr&#xE8;s.</li>
+<li>Il existe de nombreux outils en ligne pour tester automatiquement du code.</li>
 </ul>
 </blockquote>
 

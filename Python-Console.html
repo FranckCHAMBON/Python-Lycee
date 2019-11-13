@@ -263,7 +263,7 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <p><img src="assets/python-java.jpg?0.9162693238460315" alt></p>
+      <p><img src="assets/python-java.jpg?0.7959673886707141" alt></p>
 <h1 class="mume-header undefined" id="d%C3%A9couverte-de-python-en-console">D&#xE9;couverte de Python en console</h1>
 
 <h2 class="mume-header undefined" id="sommaire">Sommaire</h2>
@@ -300,6 +300,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <li><a href="#pr%C3%A9sentation-de-laffectation">Pr&#xE9;sentation de l&apos;affectation</a></li>
 <li><a href="#affectation-plus-pr%C3%A9cis%C3%A9ment">Affectation plus pr&#xE9;cis&#xE9;ment</a></li>
 <li><a href="#le-nom-dune-variable">Le nom d&apos;une variable</a></li>
+<li><a href="#les-mots-r%C3%A9serv%C3%A9s-de-python3">Les mots r&#xE9;serv&#xE9;s de Python3</a></li>
 </ul>
 </li>
 </ul>
@@ -621,8 +622,8 @@ Out<span class="token punctuation">[</span><span class="token number">37</span><
 <dd>
 <ul>
 <li>Une variable poss&#xE8;de un nom.</li>
-<li>Une variable pointe vers une donn&#xE9;e (<em>cette donn&#xE9;e est peut &#xEA;tre partag&#xE9;e</em>).</li>
-<li>La donn&#xE9;e poss&#xE8;de parfois une valeur (ou plusieurs, et des m&#xE9;thodes).</li>
+<li>Une variable pointe vers un objet, (une donn&#xE9;e) (<em>cet objet est peut &#xEA;tre partag&#xE9;</em>).</li>
+<li>L&apos;objet poss&#xE8;de parfois une valeur (ou plusieurs, et des m&#xE9;thodes).</li>
 <li>Par abus de langage on dit souvent qu&apos;elle a une valeur. C&apos;est pourtant faux en Python !</li>
 <li>Dans d&apos;autres langages c&apos;est vrai, d&apos;o&#xF9; la confusion.</li>
 </ul>
@@ -632,7 +633,7 @@ Out<span class="token punctuation">[</span><span class="token number">37</span><
 <ul>
 <li>L&apos;op&#xE9;rateur <code>=</code> r&#xE9;alise l&apos;affectation, il n&apos;est pas sym&#xE9;trique.</li>
 <li>En pseudo-code <code>a = 5</code> se note <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>&#x2190;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">a \leftarrow 5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x2190;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span></span></span></span>.</li>
-<li>L&apos;affectation d&#xE9;signe vers quoi la variable pointe.</li>
+<li>L&apos;affectation d&#xE9;signe ce vers quoi la variable pointe.</li>
 <li>Dans une affectation simple :
 <ul>
 <li>le membre de gauche doit &#xEA;tre une variable,</li>
@@ -643,11 +644,11 @@ Out<span class="token punctuation">[</span><span class="token number">37</span><
 </ul>
 </dd>
 </dl>
-<pre data-role="codeBlock" data-info="python" class="language-python">In <span class="token punctuation">[</span><span class="token number">40</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a <span class="token operator">=</span> <span class="token number">3</span>         <span class="token comment"># a est affect&#xE9; &#xE0; un entier de valeur 3,</span>
+<pre data-role="codeBlock" data-info="python" class="language-python">In <span class="token punctuation">[</span><span class="token number">40</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a <span class="token operator">=</span> <span class="token number">3</span>         <span class="token comment">#  un entier de valeur 3 est affect&#xE9; &#xE0; a,</span>
 
-In <span class="token punctuation">[</span><span class="token number">41</span><span class="token punctuation">]</span><span class="token punctuation">:</span> x <span class="token operator">=</span> <span class="token number">20</span> <span class="token operator">-</span> a<span class="token operator">*</span><span class="token number">5</span>  <span class="token comment"># x est affect&#xE9; &#xE0; 5 (plus simplement)</span>
+In <span class="token punctuation">[</span><span class="token number">41</span><span class="token punctuation">]</span><span class="token punctuation">:</span> x <span class="token operator">=</span> <span class="token number">20</span> <span class="token operator">-</span> a<span class="token operator">*</span><span class="token number">5</span>  <span class="token comment"># 5 est affect&#xE9; &#xE0; x (plus simplement)</span>
 
-In <span class="token punctuation">[</span><span class="token number">42</span><span class="token punctuation">]</span><span class="token punctuation">:</span> x <span class="token operator">=</span> <span class="token number">2</span><span class="token operator">*</span>x <span class="token operator">+</span> <span class="token number">1</span>   <span class="token comment"># x est r&#xE9;affect&#xE9; &#xE0; 11</span>
+In <span class="token punctuation">[</span><span class="token number">42</span><span class="token punctuation">]</span><span class="token punctuation">:</span> x <span class="token operator">=</span> <span class="token number">2</span><span class="token operator">*</span>x <span class="token operator">+</span> <span class="token number">1</span>   <span class="token comment"># 11 est affect&#xE9; &#xE0; x</span>
 
 In <span class="token punctuation">[</span><span class="token number">43</span><span class="token punctuation">]</span><span class="token punctuation">:</span> y <span class="token operator">=</span> x<span class="token operator">*</span>x <span class="token operator">-</span> <span class="token number">1</span>
 
@@ -712,6 +713,11 @@ In <span class="token punctuation">[</span><span class="token number">52</span><
 
 In <span class="token punctuation">[</span><span class="token number">53</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a <span class="token operator">+</span> b<span class="token operator">*</span>c
 Out<span class="token punctuation">[</span><span class="token number">53</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">14</span>
+
+In <span class="token punctuation">[</span><span class="token number">54</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span>
+
+In <span class="token punctuation">[</span><span class="token number">55</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">,</span> a
+Out<span class="token punctuation">[</span><span class="token number">55</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 </pre><p>Il est alors possible, en Python, de faire de <a href="https://fr.wiktionary.org/wiki/affectation_parall%C3%A8le">l&apos;affectation parall&#xE8;le</a>.</p>
 <blockquote>
 <p>C&apos;est particuli&#xE8;rement pratique pour &#xE9;changer le contenu de deux variables.</p>
@@ -738,8 +744,23 @@ De mani&#xE8;re synth&#xE9;tique, on a :</p>
 <li><em>Conseil :</em> ne pas d&#xE9;buter par <code>_</code>, sauf si vous savez/voulez travailler avec des variables cach&#xE9;es.</li>
 <li><a href="https://fr.wikipedia.org/wiki/Snake_case">Pour en savoir plus sur le snake_case et ses variantes</a>.</li>
 </ul>
-<blockquote>
+<p><i class="fa fa-bolt" aria-hidden="true"></i> <strong>Exemple m&#xE9;chant authentique</strong></p>
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=0, .line-numbers cmd=&quot;python3&quot; output=&quot;text&quot;}" class="language-python line-numbers">value <span class="token operator">=</span> <span class="token number">42</span>
+valu&#x435; <span class="token operator">=</span> <span class="token number">1000</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+<span class="token comment"># on s&apos;attend &#xE0; un affichage de 1000, logique ! Et NON !!!</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">42
+</pre></div></div><p><strong>Explication :</strong></p>
+<ul>
+<li>le premier <code>value</code> est &#xE9;crit avec des caract&#xE8;res directement accessibles au clavier, la derni&#xE8;re lettre est un &apos;e&apos; latin dont le code est 101.</li>
+<li>le second <code>valu&#x435;</code> se termine par un &apos;&#x435;&apos; cyrillique dont le code est 1077. Visuellement identique, ce n&apos;est pas le m&#xEA;me caract&#xE8;re, et donc il y a deux variables diff&#xE9;rentes.</li>
+<li>le &apos;print&apos; agit sur la premi&#xE8;re variable... <strong>Le pi&#xE8;ge est redoutable et totalement invisible.</strong></li>
+</ul>
+<p><em>Further reading : <a href="https://github.com/satwikkansal/wtfpython">WTFPython</a></em></p>
+<h4 class="mume-header" id="les-mots-r%C3%A9serv%C3%A9s-de-python3">Les mots r&#xE9;serv&#xE9;s de Python3</h4>
+
 <p>Il y a <strong>35 mots r&#xE9;serv&#xE9;s</strong> (dont deux r&#xE9;cents) qui ne peuvent pas &#xEA;tre utilis&#xE9;s pour des variables.</p>
+<blockquote>
 <table>
 <thead>
 <tr>
@@ -935,6 +956,7 @@ Quel volume de gaz cela repr&#xE9;sente-t-il ? Et sur la vie d&apos;un v&#xE9;hi
 <li><a href="#pr%C3%A9sentation-de-laffectation">Pr&#xE9;sentation de l&apos;affectation</a></li>
 <li><a href="#affectation-plus-pr%C3%A9cis%C3%A9ment">Affectation plus pr&#xE9;cis&#xE9;ment</a></li>
 <li><a href="#le-nom-dune-variable">Le nom d&apos;une variable</a></li>
+<li><a href="#les-mots-r%C3%A9serv%C3%A9s-de-python3">Les mots r&#xE9;serv&#xE9;s de Python3</a></li>
 </ul>
 </li>
 </ul>
