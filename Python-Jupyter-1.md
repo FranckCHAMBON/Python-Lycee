@@ -230,3 +230,6 @@ Syntaxe :
 
 
 TODO --revoir la mise en page--
+
+## Premiers graphiques
+TODO

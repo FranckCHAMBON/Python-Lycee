@@ -132,14 +132,23 @@ Plusieurs lectures rapides sont possibles.
    1. Corriger ses erreurs
    1. Structures conditionnelles
    1. Exercices
-1. [Écriture d'un carnet avec *Jupyter*](Python-Jupyter.html)
+1. [Écriture d'un carnet avec *Jupyter*](Python-Jupyter-1.html)
 *En construction*
    1. Utilisations
-   1. Exemples simples
    1. Cellules *Markdown*
-   1. Exercices
-   1. Écrire des mathématiques
-   1. Exercices
+   1. Premiers graphiques
+
+
+1. [Écrire des mathématiques avec Jupyter](Python-Jupyter-2.html)
+   1. Balises maths
+   1. Nombres et les 4 opérations
+   1. Calcul littéral
+   1. Fractions
+   1. Parenthèses
+   1. Puissances
+   1. Indices
+   1. Écriture scripte
+   1. Toujours un peu plus loin
 
 1. [Relecture du niveau 1 sur FranceIOI]()
 *En construction*
