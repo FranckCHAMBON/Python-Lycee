@@ -12,10 +12,13 @@ export_on_save:
 Jupyter est une solution logicielle qui permet de créer des carnets pour inclure des cellules de code en Python, et des cellules de texte avec une mise en forme la plus simple, grâce à la syntaxe *Markdown*.
 
 Ces carnets sont très utiles et commodes en sciences.
-- Pour créer des supports de cours, d'exercices, ou des devoirs, nécessitant la visualisation ou l'exécution de code, ou pas !
-- Le rendu est assuré par un navigateur web seul. On peut se passer de tout autre logiciel. Tout élève peut l'utiliser sur n'importe quelle machine ayant un navigateur.
+- Pour créer des supports de cours, d'exercices, ou des devoirs, nécessitant la visualisation ou l'exécution de code. Ou pas !
+- Le rendu est assuré par un navigateur web seul. On peut se passer de tout autre logiciel. Tout élève peut l'utiliser sur n'importe quelle machine ayant un navigateur connecté.
 - Pour la vidéoprojection, le format HTML permet un zoom avec la mise en page automatique. On peut aussi imprimer facilement.
 - On peut partager en ligne un document, le visualiser, et utiliser du code.
+- On peut aussi travailler déconnecté, pour une garantie de confidentialité, et d'autonomie.
+
+Ci-dessous un document en cours d'élaboration.
 
 ![](assets/jupyexemple.png "Exemple avec Jupyter")
 
@@ -39,7 +42,9 @@ Il est possible d'essayer Jupyter avec une feuille par défaut.
 - Une page de démonstration se charge
   - elle est interactive
   - vous pouvez la modifier
-  - vous pourrez en faire vous-même bientôt.
+  - vous pourrez en créer une vous-même bientôt.
+- :fa-bolt: Attention. En classe, cette solution n'est pas fiable ; le serveur est parfois surchargé.
+- Cette solution est adaptée pour qu'un élève puisse faire un devoir maison sans avoir à installer de logiciel chez lui.
 
 #### Avec *GitHub*
 
@@ -51,6 +56,7 @@ Il est possible de sauvegarder en ligne vos carnets Jupyter sur la plateforme [G
   - ils ne peuvent pas être modifiés sur place,
   - ils ne peuvent pas lancer les bouts de code,
   - ils peuvent seulement être lus, et pointer vers d'autres liens.
+- La fiabilité des serveurs est très bonne. L'éthique peut-être un peu moins bonne ; pour ceux que cela touche, il existe d'autres excellentes solutions comme [GitLab](https://about.gitlab.com/) ou [FramaGit](https://framagit.org/public/projects).
 
 #### Avec *My Binder*
 
@@ -58,9 +64,12 @@ Il est possible de sauvegarder en ligne vos carnets Jupyter sur la plateforme [G
 
 [Cette solution](https://mybinder.org/) permet de rendre dynamique les carnets stockés sur *GitHub*.
 
-L'exemple proposé par *Try Jupyter* repose sur *Binder*, à vous de créer vos propres carnets pour les mettre en ligne.
+L'exemple proposé par *Try Jupyter* repose sur *Binder*.
+**À vous** de créer vos propres carnets et les mettre en ligne !
 
 ### Utiliser Jupyter sur son poste
+
+#### Avec Anaconda
 
 <!-- @import "assets/anaconda.png" {width="200px" title="Logo d'Anaconda" alt="Un logo d'Anaconda"} -->
 
