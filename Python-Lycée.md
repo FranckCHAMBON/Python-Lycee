@@ -134,11 +134,11 @@ Plusieurs lectures rapides sont possibles.
    1. Exercices
 1. [Écriture d'un carnet avec *Jupyter*](Python-Jupyter.html)
 *En construction*
-   1. Premier lancement
-   1. Cellules *markdown*
-   1. Écritures mathématiques
-   1. Découverte de *Matplotlib*
-   1. Découverte de *Pandas*
+   1. Utilisations
+   1. Exemples simples
+   1. Cellules *Markdown*
+   1. Exercices
+   1. Écrire des mathématiques
    1. Exercices
 
 1. [Relecture du niveau 1 sur FranceIOI]()
