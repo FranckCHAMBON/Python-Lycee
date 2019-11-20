@@ -760,13 +760,13 @@ from outils import *
 premiers_jusqu_32 = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31]
 for n in range(32):
     assert est_premier(n) == (n in premiers_jusqu_32), f"Échec du test 1 pour n = {n}"
-print("Test 1 réussi")
+print("Test 1 réussi.")
 
 # Test 2
 message_erreur_test2 = "Votre méthode ne trouve pas 25 nombres premiers inférieurs à 100 !"
 premiers_jusqu_100 = [p for p in range(100) if est_premier(p)]
 assert len(premiers_jusqu_100) == 25, message_erreur_test2
-print("Test 2 réussi")
+print("Test 2 réussi.")
 ```
 
 **Si votre programme met trop de temps à finir un test, on peut l'arrêter avec** <kbd>Ctrl</kbd>+<kbd>C</kbd>

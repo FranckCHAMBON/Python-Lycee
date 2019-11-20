@@ -211,15 +211,21 @@ Chacun ayant ses préférences en termes de style, ou d'éthique, on pourra auss
 
 Ensuite, résoudre des exercices est le plus gros moteur de progrès. On en trouvera sur :
 
-- [France IOI](http://france-ioi.org) ; très adapté aux élèves.
+- [France IOI](http://france-ioi.org) ; très adapté aux élèves ; possible dès le collège.
+- Sur le site tech⋅io : [Une présentation de Python au lycée très accès maths]((https://tech.io/playgrounds/17176/recueil-dexercices-pour-apprendre-python-au-lycee/presentation-2)).
+  - recommandé aux élèves de maths/NSI
+  - recommendé aux enseignants de maths débutants Python
+  - recommandé aux jeunes étudiants
 - [Prologin](https://prologin.org/) ; dans un second temps.
-- [Project Euler](https://projecteuler.net/) ; en anglais.
-- [SPOJ](https://www.spoj.com/) ; en anglais.
+- [Project Euler](https://projecteuler.net/) ; en anglais. Contient des problèmes d'une extrême difficulté.
+- [SPOJ](https://www.spoj.com/) ; en anglais. Contient une base colossale de problèmes.
+- [Codin'Game](https://www.codingame.com/start) ; contient des publicités. Recommandé aux gamers qui veulent progresser.
 
 Enfin, chacun pourra être autonome pour compléter avec les aspects ou les modules qui l'intéresse le plus. Développement Web, sciences appliquées, algorithmique, mathématiques, ...
 
 Voici une série d'articles récents sur [linuxfr.org](https://linuxfr.org/news/python-pour-la-rentree-2019-partie-1) pour les plus curieux sur Python.
 
-D'autres liens en anglais en cliquant sur l'image suivante :
+D'autres liens en anglais en cliquant sur l'image suivante. D'abord pour tenter de répondre à la question :
+> **Quel langage de programmation** apprendre en premier ?
 
 [![](assets/choix-langage.png)](http://carlcheo.com/startcoding)
