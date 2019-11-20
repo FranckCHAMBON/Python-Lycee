@@ -12,6 +12,5 @@ def est_premier(n):
     for p in range(3, n, 2):
         if not n%p :
             return False
-        if p*p>n : 
+        if p*p>n :
             return True
-

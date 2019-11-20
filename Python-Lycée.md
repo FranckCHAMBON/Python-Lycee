@@ -213,9 +213,9 @@ Ensuite, résoudre des exercices est le plus gros moteur de progrès. On en trou
 
 - [France IOI](http://france-ioi.org) ; très adapté aux élèves ; possible dès le collège.
 - Sur le site tech⋅io : [Une présentation de Python au lycée très accès maths]((https://tech.io/playgrounds/17176/recueil-dexercices-pour-apprendre-python-au-lycee/presentation-2)).
-  - recommandé aux élèves de maths/NSI
-  - recommendé aux enseignants de maths débutants Python
-  - recommandé aux jeunes étudiants
+  - recommandé aux élèves de maths/NSI débrouillards,
+  - recommandé aux enseignants de maths débutants Python,
+  - recommandé aux jeunes étudiants.
 - [Prologin](https://prologin.org/) ; dans un second temps.
 - [Project Euler](https://projecteuler.net/) ; en anglais. Contient des problèmes d'une extrême difficulté.
 - [SPOJ](https://www.spoj.com/) ; en anglais. Contient une base colossale de problèmes.
