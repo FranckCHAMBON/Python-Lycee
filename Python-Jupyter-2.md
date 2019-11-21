@@ -21,7 +21,7 @@ Dans la plupart des pages HTML, on peut écrire des maths avec les bonnes balise
 
 Commençons par un tour d'horizon des possibilités en [comparant les deux moteurs](https://www.intmath.com/cg5/katex-mathjax-comparison.php "KaTeX vs MathJax") de rendu les plus répandus.
 
-> Nous allons voir comment écrire des maths, en commençant par les choses les plus simples, et cela pourra faire office de révisions pour certains. Chaque partie contient des exercices à réaliser.  
+> Nous allons voir comment écrire des maths, en commençant par les choses les plus simples, et cela pourra faire office de révisions pour certains. Chaque partie contient des exercices à réaliser.
 **Ouvrir une feuille de calcul [Jupyter](https://jupyter.org/try), et c'est parti !**
 
 ## La balise math `$` ; pour écrire des nombres
@@ -138,20 +138,20 @@ On peut bien sûr utiliser des variables mathématiques, elles seront écrites e
 
 #### Exemple 1  {ignore=true}
 ```markdown
-Pour tous nombres $k$, $a$, $b$, on a :  
+Pour tous nombres $k$, $a$, $b$, on a :
 $k(a+b) = ka + kb$
 ```
-> Pour tous nombres $k$, $a$, $b$, on a :  
+> Pour tous nombres $k$, $a$, $b$, on a :
 $k(a+b) = ka + kb$
 
 #### Exemple 2 {ignore=true}
 ```markdown
 Le volume d'un pavé droit de longueur $L$, de hauteur $H$ et
-de profondeur $P$ est  
+de profondeur $P$ est
 $V = L \times H \times P$
 ```
 > Le volume d'un pavé droit de longueur $L$, de hauteur $H$ et
-de profondeur $P$ est  
+de profondeur $P$ est
 $V = L \times H \times P$
 
 #### Remarque {ignore=true}
@@ -331,4 +331,4 @@ La [suite](https://fr.wikibooks.org/wiki/LaTeX/Math%C3%A9matiques) pourra être 
 
 
 TODO
-## Exercice de création d'un carnet complet.
+## Exercice de création d'un carnet complet
