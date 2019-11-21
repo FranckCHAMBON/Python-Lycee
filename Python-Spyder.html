@@ -263,7 +263,7 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <p><img src="assets/xkeyboarcd.png" alt title="https://xkcd.com/2150/"></p>
+      <p><img src="assets/xkeyboarcd.png" alt="XKeyboarCD" title="https://xkcd.com/2150/"></p>
 <h1 class="mume-header undefined" id="d%C3%A9couverte-dun-%C3%A9diteur-de-script">D&#xE9;couverte d&apos;un &#xE9;diteur de script</h1>
 
 <h2 class="mume-header undefined" id="sommaire">Sommaire</h2>
@@ -282,7 +282,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <li><a href="#la-fonction-round-avec-un-seul-param%C3%A8tre">La fonction <code>round</code>, avec un seul param&#xE8;tre</a></li>
 <li><a href="#la-fonction-round-avec-deux-param%C3%A8tres">La fonction <code>round</code>, avec deux param&#xE8;tres</a></li>
 <li><a href="#fonctions-directement-accessibles-ou-natives">Fonctions directement accessibles, ou natives</a></li>
-<li><a href="#fonctions-du-module-math">Fonctions du module math</a></li>
+<li><a href="#fonctions-et-constantes-du-module-math">Fonctions et constantes du module math</a></li>
 <li><a href="#fonctions-cr%C3%A9%C3%A9es-par-lutilisateur">Fonctions cr&#xE9;&#xE9;es par l&apos;utilisateur</a>
 <ul>
 <li><a href="#constructeur-lambda">Constructeur <code>lambda</code></a></li>
@@ -342,6 +342,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <li><a href="https://thonny.org/">Thonny</a> ; basique,</li>
 <li><a href="https://www.spyder-ide.org/">Spyder</a> ; inclus dans <em>anaconda</em>, <strong>recommand&#xE9; pour d&#xE9;buter</strong>,</li>
 <li><a href="https://geany.org/">Geany</a> ; &#xE9;diteur <strong>g&#xE9;n&#xE9;raliste et simple</strong>, recommand&#xE9; pour d&#xE9;buter plusieurs langages de programmation,</li>
+<li><a href="https://pyzo.org/index.html">Pyzo</a> ; &#xE9;diteur accompagn&#xE9; de Python et quelques biblioth&#xE8;ques scientifiques,</li>
 <li><a href="https://atom.io/" title="Site officiel">Atom</a> ; &#xE9;diteur g&#xE9;n&#xE9;raliste moderne, <strong>recommand&#xE9; pour progresser</strong>,</li>
 <li><a href="https://www.gnu.org/software/emacs/" title="Site offciel">GNU Emacs</a> ou <a href="https://www.vim.org/" title="Site officel">Vim</a> ; &#xE9;diteurs modaux et historiques, non conseill&#xE9;s pour d&#xE9;buter,</li>
 <li><a href="http://www.pydev.org/index.html" title="Site officiel">Eclipse+PyDev</a> ; pour les professionnels.</li>
@@ -367,7 +368,7 @@ Ceci est un script temporaire.
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><ul>
 <li>Les lignes du fichier sont num&#xE9;rot&#xE9;es ; c&apos;est pratique.</li>
 <li>La ligne 1 indique que l&apos;encodage du fichier est <code>utf-8</code> ; c&apos;est un choix moderne qui permet d&apos;&#xE9;crire sans probl&#xE8;me toute lettre accentu&#xE9;e. Cette ligne est inutile sur un syst&#xE8;me d&apos;exploitation r&#xE9;cent, l&apos;<a href="https://fr.wikipedia.org/wiki/UTF-8">UTF-8</a> &#xE9;tant automatique.</li>
-<li>Les lignes 2 &#xE0; 6 constituent une cha&#xEE;ne de caract&#xE8;res de 5 lignes. Elle n&apos;est ni affect&#xE9;e, ni affich&#xE9;e &#xE0; l&apos;ex&#xE9;cution du script, elle constitue un commentaire sur plusieurs lignes.</li>
+<li>Les lignes 2 &#xE0; 6 constituent une cha&#xEE;ne de caract&#xE8;res de 5 lignes. Elle n&apos;est ni affect&#xE9;e &#xE0; une variable, ni affich&#xE9;e &#xE0; l&apos;ex&#xE9;cution du script ; elle constitue ici un commentaire sur plusieurs lignes.</li>
 </ul>
 <dl>
 <dt><strong>print</strong></dt>
@@ -375,8 +376,8 @@ Ceci est un script temporaire.
 </dl>
 <blockquote>
 <ul>
-<li>Recopier le script ci-dessous (avec un copi&#xE9;-coll&#xE9;),</li>
-<li>sauver le dans un r&#xE9;pertoire personnel choisi,</li>
+<li>Recopier le script ci-dessous (avec un copier-coller),</li>
+<li>le sauver dans un r&#xE9;pertoire personnel choisi,</li>
 <li>anticiper le r&#xE9;sultat,</li>
 <li>et appuyer sur <kbd>F5</kbd> pour faire ex&#xE9;cuter le script par la version <em>Python</em> propos&#xE9;e.</li>
 </ul>
@@ -403,7 +404,7 @@ M_5 <span class="token operator">=</span> 31
 </pre><ul>
 <li>On constate que le commentaire n&apos;a pas &#xE9;t&#xE9; affich&#xE9;. C&apos;est normal !</li>
 <li>Observer les espaces et l&apos;absence de virgule autour de <code>=</code> dans l&apos;affichage. Normal !</li>
-<li><em>Spyder</em> affiche quel fichier a &#xE9;t&#xE9; lanc&#xE9; (<em>run file</em>),</li>
+<li><em>Spyder</em> affiche le nom complet du fichier qui a &#xE9;t&#xE9; interpr&#xE9;t&#xE9; (<em>run file</em>),</li>
 <li>ainsi que le r&#xE9;pertoire de travail (<code>wdir</code> pour <b>w</b>orking <b>dir</b>ectory).</li>
 </ul>
 <h2 class="mume-header" id="fa-cogs-les-fonctions"><i class="fa fa-cogs" aria-hidden="true"></i> Les fonctions</h2>
@@ -411,7 +412,7 @@ M_5 <span class="token operator">=</span> 31
 <h3 class="mume-header" id="la-fonction-print">La fonction <code>print</code></h3>
 
 <ul>
-<li>prend en arguments z&#xE9;ro, un ou plusieurs param&#xE8;tres,</li>
+<li>prend en argument z&#xE9;ro, un ou plusieurs param&#xE8;tres, <strong>mis entre parenth&#xE8;ses</strong>,</li>
 <li>affiche les valeurs de ces param&#xE8;tres en les <strong>s&#xE9;parant par une espace</strong>, puis <strong>termine par un saut de ligne</strong>,</li>
 <li>(et elle renvoie <code>None</code>).</li>
 </ul>
@@ -439,40 +440,40 @@ La r&#xE9;ponse &#xE0; la question universelle est 42
 <ul>
 <li>prend en argument un nombre <code>nbr</code> de type entier ou flottant,</li>
 <li>retourne un nombre de <strong>type entier</strong>, le plus proche de <code>nbr</code>,</li>
-<li>en cas d&apos;&#xE9;galit&#xE9;, retourne l&apos;entier <strong>pair</strong>.</li>
+<li>en cas d&apos;&#xE9;galit&#xE9;, retourne l&apos;entier <strong>pair</strong> ; <em>cf</em> les trois derniers exemples.</li>
 </ul>
-<div class="code-chunk" data-id="code-chunk-id-1" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=1, .line-numbers cmd=&quot;python3&quot; output=&quot;text&quot;}" class="language-python line-numbers"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">3.14</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">2.718</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">3.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">4.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">4.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">3
-3
-4
-4
--4
-</pre></div></div><h3 class="mume-header" id="la-fonction-round-avec-deux-param%C3%A8tres">La fonction <code>round</code>, avec deux param&#xE8;tres</h3>
+<div class="code-chunk" data-id="code-chunk-id-1" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=1, .line-numbers cmd=&quot;python3&quot; output=&quot;text&quot;}" class="language-python line-numbers"><span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token punctuation">[</span><span class="token number">3.14</span><span class="token punctuation">,</span> <span class="token number">2.718</span><span class="token punctuation">,</span> <span class="token number">3.5</span><span class="token punctuation">,</span> <span class="token number">4.5</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">4.5</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;L&apos;arrondi de&quot;</span><span class="token punctuation">,</span> x<span class="token punctuation">,</span> <span class="token string">&quot;est&quot;</span><span class="token punctuation">,</span> <span class="token builtin">round</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">L&apos;arrondi de 3.14 est 3
+L&apos;arrondi de 2.718 est 3
+L&apos;arrondi de 3.5 est 4
+L&apos;arrondi de 4.5 est 4
+L&apos;arrondi de -4.5 est -4
+</pre></div></div><blockquote>
+<p>On vient de voir, au passage, comment r&#xE9;p&#xE9;ter une instruction avec une variable qui prend des valeurs successives. Nous y reviendrons.</p>
+</blockquote>
+<h3 class="mume-header" id="la-fonction-round-avec-deux-param%C3%A8tres">La fonction <code>round</code>, avec deux param&#xE8;tres</h3>
 
 <blockquote>
 <p><code>round(nbr, d)</code></p>
 </blockquote>
 <ul>
 <li>prend en argument un nombre <code>nbr</code> entier ou flottant, et un entier <code>d</code></li>
-<li>retourne un nombre <strong>de m&#xEA;me type</strong> que <code>nbr</code>, son arrondi &#xE0; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><msup><mn>0</mn><mrow><mo>&#x2212;</mo><mi>d</mi></mrow></msup></mrow><annotation encoding="application/x-tex">10^{-d}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2212;</span><span class="mord mathdefault mtight">d</span></span></span></span></span></span></span></span></span></span></span></span> pr&#xE8;s.</li>
+<li>retourne un nombre <strong>de m&#xEA;me type</strong> que <code>nbr</code>, l&apos;arrondi de <code>nbr</code> &#xE0; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><msup><mn>0</mn><mrow><mo>&#x2212;</mo><mi>d</mi></mrow></msup></mrow><annotation encoding="application/x-tex">10^{-d}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2212;</span><span class="mord mathdefault mtight">d</span></span></span></span></span></span></span></span></span></span></span></span> pr&#xE8;s.</li>
 </ul>
-<div class="code-chunk" data-id="code-chunk-id-2" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=2, .line-numbers cmd=&quot;python3&quot; output=&quot;text&quot;}" class="language-python line-numbers"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">3.14</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">2.718</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">3.5</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">12345</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">12345.0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">9.8765e100</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">3.1
-2.72
-3.5
-12300
-12300.0
-9.88e+100
+<div class="code-chunk" data-id="code-chunk-id-2" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=2, .line-numbers cmd=&quot;python3&quot; output=&quot;text&quot;}" class="language-python line-numbers"><span class="token keyword">for</span> x<span class="token punctuation">,</span> d <span class="token keyword">in</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">3.14</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">2.718</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3.5</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">12345</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">12345.0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">9.8765e100</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;L&apos;arrondi de </span><span class="token interpolation"><span class="token punctuation">{</span>x<span class="token punctuation">}</span></span><span class="token string"> &#xE0; 10^</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token operator">-</span>d<span class="token punctuation">}</span></span><span class="token string"> pr&#xE8;s est </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">round</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> d<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">L&apos;arrondi de 3.14 &#xE0; 10^-1 pr&#xE8;s est 3.1
+L&apos;arrondi de 2.718 &#xE0; 10^-2 pr&#xE8;s est 2.72
+L&apos;arrondi de 3.5 &#xE0; 10^-2 pr&#xE8;s est 3.5
+L&apos;arrondi de 4 &#xE0; 10^-2 pr&#xE8;s est 4
+L&apos;arrondi de 12345 &#xE0; 10^2 pr&#xE8;s est 12300
+L&apos;arrondi de 12345.0 &#xE0; 10^2 pr&#xE8;s est 12300.0
+L&apos;arrondi de 9.8765e+100 &#xE0; 10^98 pr&#xE8;s est 9.88e+100
 </pre></div></div><blockquote>
+<p>On vient de voir, au passage, une une <em>f-string</em> pour afficher du texte et des valeurs. Nous y reviendrons.</p>
+</blockquote>
+<blockquote>
 <p><strong><i class="fa fa-bolt" aria-hidden="true"></i> Attention</strong> : <a href="https://docs.python.org/fr/3/library/functions.html#round">le comportement avec les flottants</a> peut &#xEA;tre curieux, mais c&apos;est normal ! Les flottants ne sont pas les d&#xE9;cimaux !<br>
 On a constat&#xE9; &#xE9;galement que le comportement de <code>round</code> est diff&#xE9;rent en fonction du nombre de param&#xE8;tres.</p>
 </blockquote>
@@ -485,7 +486,7 @@ On a constat&#xE9; &#xE9;galement que le comportement de <code>round</code> est 
 <li><code>type</code> : pour retourner le type d&apos;un objet.</li>
 </ul>
 <dl>
-<dt>objet</dt>
+<dt>Objet</dt>
 <dd>Avec Python, <strong>tout est objet</strong> : les nombres, les collections (ensembles, listes, dictionnaires, ...), les fonctions, les modules, tout ce qui existe et tout ce que vous allez cr&#xE9;er. <strong>Tout est objet</strong>.</dd>
 </dl>
 <p>Concentrons-nous sur les fonctions li&#xE9;es au type d&apos;un objet.</p>
@@ -496,30 +497,33 @@ On a constat&#xE9; &#xE9;galement que le comportement de <code>round</code> est 
 <li><code>complex</code> : Transforme un objet, si possible, en nombre complexe.</li>
 <li><code>str</code> : Transforme un objet, si possible, en cha&#xEE;ne de caract&#xE8;res.</li>
 <li><code>list</code> : Transforme un objet, si possible, en liste.</li>
-<li><code>tuple</code> : Cr&#xE9;e un tuple, ou transforme un objet, si possible, en tuple.</li>
+<li><code>tuple</code> : Transforme un objet, si possible, en tuple.</li>
 <li><code>set</code> : Transforme un objet, si possible, en ensemble.</li>
 <li><code>dict</code> : Cr&#xE9;e un nouveau dictionnaire.</li>
 </ul>
-<p>Nous avons d&#xE9;j&#xE0; crois&#xE9; certains de ces types de base. (<code>int</code>, <code>float</code>, <code>bool</code>).</p>
-<p>Pr&#xE9;sentons rapidement les autres.</p>
+<dl>
+<dt>Type</dt>
+<dd>Tout objet poss&#xE8;de un type. Nous avons d&#xE9;j&#xE0; crois&#xE9; certains de ces types de base : (<code>int</code>, <code>float</code>, <code>bool</code>).</dd>
+</dl>
+<p>Pr&#xE9;sentons rapidement les autres fonctions natives li&#xE9;es au type.</p>
 <ul>
-<li><code>complex</code> : pour les nombres complexes, que l&apos;on &#xE9;tudie en terminale (maths expertes et certaines sections scientifiques).</li>
-<li><code>str</code> : pour les cha&#xEE;nes de caract&#xE8;res (<em>string</em>), du texte. Une fois cr&#xE9;&#xE9;e on ne peut pas la modifier. En fran&#xE7;ais, on dit <strong>immuable</strong> (<em>immutable</em> en anglais).</li>
-<li><code>list</code> : pour une liste ordonn&#xE9;e d&apos;objets. On peut ajouter des objets, en enlever, et de mani&#xE8;re g&#xE9;n&#xE9;rale la modifier. En fran&#xE7;ais, on dit <strong>muable</strong> (<em>mutable</em> en anglais).</li>
-<li><code>tuple</code> : ressemble &#xE0; <code>list</code>, mais en version immuable.</li>
-<li><code>set</code> : pour un ensemble. Non ordonn&#xE9;. Sans doublon. Muable. On peut ajouter, enlever un objet. On peut faire des intersections, unions.</li>
-<li><code>dict</code> : pour cr&#xE9;er un dictionnaire associatif. &#xC0; un &#xE9;l&#xE9;ment d&apos;un ensemble (les <strong>cl&#xE9;s</strong>), on associe une donn&#xE9;e (les <strong>valeurs</strong>).</li>
+<li><code>complex</code> : Pour les nombres <strong>complex</strong>es, que l&apos;on &#xE9;tudie en terminale (maths expertes et certaines sections scientifiques).</li>
+<li><code>str</code> : Pour les cha&#xEE;nes de caract&#xE8;res (<em><strong>str</strong>ing</em>), du texte. Une fois cr&#xE9;&#xE9;e on ne peut pas la modifier. En fran&#xE7;ais, on dit <strong>immuable</strong> (<em>immutable</em> en anglais).</li>
+<li><code>list</code> : Pour une <strong>list</strong>e ordonn&#xE9;e d&apos;objets. On peut ajouter des objets, en enlever, et de mani&#xE8;re g&#xE9;n&#xE9;rale la modifier. En fran&#xE7;ais, on dit <strong>muable</strong> (<em>mutable</em> en anglais).</li>
+<li><code>tuple</code> : Ressemble &#xE0; <code>list</code>, mais en version immuable.</li>
+<li><code>set</code> : Pour un ensemble. Non ordonn&#xE9;. Sans doublon. Muable. On peut ajouter, enlever un objet. On peut faire des intersections, unions.</li>
+<li><code>dict</code> : Pour cr&#xE9;er un dictionnaire associatif. &#xC0; un &#xE9;l&#xE9;ment d&apos;un ensemble (les <strong>cl&#xE9;s</strong>), on associe une donn&#xE9;e (les <strong>valeurs</strong>).</li>
 </ul>
 <p>Nous reviendrons sur ces types de donn&#xE9;es. En particulier sur la distinction muable-immuable et le lien direct avec les dictionnaires.</p>
 <p>Pour une pr&#xE9;sentation compl&#xE8;te des <a href="https://docs.python.org/fr/3/reference/datamodel.html?highlight=mutable">mod&#xE8;les de donn&#xE9;es</a>.</p>
-<h3 class="mume-header" id="fonctions-du-module-math">Fonctions du module math</h3>
+<h3 class="mume-header" id="fonctions-et-constantes-du-module-math">Fonctions et constantes du module math</h3>
 
 <p>Dans le module <code>math</code>, il y a, par exemple :</p>
 <ul>
-<li><code>sqrt</code> : la fonction racine carr&#xE9;e (<em><b>sq</b>uare <b>r</b>oo<b>t</b></em>)</li>
-<li><code>cos</code>, <code>sin</code>, <code>tan</code> : les fonctions cosinus, sinus, tangente, pour un angle en radian ; un flottant. Les r&#xE9;ciproques <code>acos</code>, <code>asin</code>, <code>atan</code>.</li>
-<li><code>exp</code>, <code>log</code> : les fonctions exponentielle et logarithme naturel, pour un flottant.</li>
-<li><code>pi</code>, <code>e</code> : les flottants approximations des constantes <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>&#x3C0;</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">&#x3C0;</span></span></span></span>, et <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>e</mtext></mrow><annotation encoding="application/x-tex">\textrm{e}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord text"><span class="mord textrm">e</span></span></span></span></span>.</li>
+<li><code>sqrt</code> : La fonction racine carr&#xE9;e (<em><strong>sq</strong>uare</em> <em><strong>r</strong>oo<strong>t</strong></em>)</li>
+<li><code>cos</code>, <code>sin</code>, <code>tan</code> : Les fonctions cosinus, sinus, tangente, pour un angle en radian ; un flottant. Les r&#xE9;ciproques <code>acos</code>, <code>asin</code>, <code>atan</code>.</li>
+<li><code>exp</code>, <code>log</code> : Les fonctions exponentielle et logarithme n&#xE9;p&#xE9;rien, pour un flottant.</li>
+<li><code>pi</code>, <code>e</code> : Les flottants approximations des constantes <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>&#x3C0;</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">&#x3C0;</span></span></span></span>, et <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>e</mtext></mrow><annotation encoding="application/x-tex">\textrm{e}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord text"><span class="mord textrm">e</span></span></span></span></span>.</li>
 </ul>
 <p>Pour utiliser ces objets, il y a deux m&#xE9;thodes.</p>
 <p>On peut importer un choix d&apos;objets, pr&#xEA;ts &#xE0; &#xEA;tre utilis&#xE9;s directement.</p>
@@ -557,7 +561,8 @@ Ici on construit et on utilise la fonction <span class="katex"><span class="kate
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">200
 37524175.489999995
 </pre></div></div><blockquote>
-<p>On constate, ici, que notre fonction traite aussi bien un flottant qu&apos;un entier, une seule d&#xE9;finition suffit. Ce n&apos;est pas possible facilement avec d&apos;autres langages.</p>
+<p>On constate encore que les flottans <strong>ne sont pas</strong> les d&#xE9;cimaux.<br>
+On constate aussi, ici, que notre fonction traite aussi bien un flottant qu&apos;un entier, une seule d&#xE9;finition suffit. Ce n&apos;est pas possible facilement avec d&apos;autres langages, voire interdit. C&apos;est une caract&#xE9;ristique du langage <em>Python</em> qui en facilite l&apos;utilisation, mais qui, parfois, peut conduire &#xE0; l&apos;&#xE9;criture de code difficilement debuggable.</p>
 </blockquote>
 <h4 class="mume-header" id="constructeur-def">Constructeur <code>def</code></h4>
 
@@ -577,7 +582,7 @@ Ici on construit et on utilise la fonction <span class="katex"><span class="kate
 <li>Il ne faut pas oublier les deux points &#xE0; la fin de la ligne de <code>def</code>.</li>
 <li>Chaque ligne de la d&#xE9;finition de la fonction doit &#xEA;tre <strong>indent&#xE9;e</strong> ; l&apos;ensemble forme un bloc d&#xE9;cal&#xE9; vers la droite d&apos;un m&#xEA;me nombre d&apos;espaces. <strong>4 espaces de pr&#xE9;f&#xE9;rence</strong>, c&apos;est une r&#xE8;gle.</li>
 <li>Il peut y avoir z&#xE9;ro, un ou plusieurs param&#xE8;tres.</li>
-<li>Il peut y avoir z&#xE9;ro, une <sub>(ou</sub> <sub>plusieurs)</sub> instruction<sub>s</sub> qui commence<sub>nt</sub> par <code>return</code> ; le r&#xE9;sultat qui suit le premier <code>return</code> rencontr&#xE9; est renvoy&#xE9;, l&apos;ex&#xE9;cution de la fonction s&apos;arr&#xEA;te.</li>
+<li>Il peut y avoir z&#xE9;ro, une <sub>(ou</sub> <sub>plusieurs)</sub> instruction<sub>s</sub> qui commence<sub>nt</sub> par <code>return</code> ; l&apos;expression qui suit le premier <code>return</code> rencontr&#xE9; est retourn&#xE9;, l&apos;ex&#xE9;cution de la fonction s&apos;arr&#xEA;te. Sans expression apr&#xE8;s le <code>return</code>, ou bien en fin de fonction, <code>None</code> est retourn&#xE9;.</li>
 </ul>
 </blockquote>
 <p>Exemple 1</p>
@@ -593,7 +598,7 @@ L&apos;aire est 104
 <p><strong>Remarques</strong></p>
 <p>La fonction <code>aire_rectangle</code> :</p>
 <ul>
-<li>poss&#xE8;de deux param&#xE8;tres obligatoires,</li>
+<li>requiert deux param&#xE8;tres obligatoires,</li>
 <li>poss&#xE8;de une <code>docstring</code> (ligne 2); un texte d&apos;aide,</li>
 <li>affiche une information sur les c&#xF4;t&#xE9;s du rectangle,</li>
 <li>puis retourne une valeur calcul&#xE9;e.</li>
@@ -620,7 +625,7 @@ ne_fait_rien()
 <ul>
 <li>est fid&#xE8;le &#xE0; son nom,</li>
 <li>poss&#xE8;de une <code>docstring</code>, (c&apos;est une bonne pratique)</li>
-<li>renvoie <code>None</code> in fine comme il n&apos;y a pas de <code>return</code></li>
+<li>retourne <code>None</code> in fine ; il n&apos;y a pas de <code>return</code></li>
 </ul>
 <p>La ligne 5, affiche le retour de cette fonction, c&apos;est la raison du <code>None</code><br>
 Le <code>print</code> &#xE0; la ligne 6 n&apos;affiche rien, mais saute &#xE0; la ligne.<br>
@@ -649,12 +654,12 @@ In <span class="token punctuation">[</span><span class="token number">3</span><s
 <ul>
 <li>Avec <em>Spyder</em> l&apos;aide est affich&#xE9;e en console, c&apos;est facile ! <strong>Une raison de plus de pr&#xE9;f&#xE9;rer <em>Spyder</em> pour d&#xE9;buter.</strong></li>
 <li>Avec un terminal classique, l&apos;aide est affich&#xE9;e dans un &#xE9;diteur annexe. Pour en sortir, il faut taper sur <code>q</code> (comme <em>quit</em>) ; et ce n&apos;est pas indiqu&#xE9; ; c&apos;est moins pratique !</li>
-<li>En cas de doute sur l&apos;utilisation d&apos;une fonction, c&apos;est une bonne pratique que de v&#xE9;rifier cela gr&#xE2;ce &#xE0; <code>help</code>.</li>
+<li>En cas de doute sur l&apos;utilisation d&apos;une fonction, c&apos;est une bonne pratique que de v&#xE9;rifier avec <code>help</code>.</li>
 </ul>
 </blockquote>
 <h3 class="mume-header" id="fa-key-utilisation-de-ses-propres-fonctions-en-console"><i class="fa fa-key" aria-hidden="true"></i> Utilisation de ses propres fonctions en console</h3>
 
-<p>Le programme dans le BO mentionne explicitement le fait de cr&#xE9;er des fonctions dans des fichiers, et de les appeler depuis la console. A priori dans un souci d&apos;&#xE9;viter les soucis de <code>int(input())</code> et de limiter les <code>print</code>. Travailler avec <em>Jupyter</em> sera tr&#xE8;s adapt&#xE9; &#xE0; cette pr&#xE9;occupation. Restons avec <em>Spyder</em> encore un peu.</p>
+<p>Le programme dans le B.O. mentionne explicitement le fait de cr&#xE9;er des fonctions dans des fichiers, et de les appeler depuis la console. A priori dans un souci d&apos;&#xE9;viter les soucis de <code>int(input())</code> et de limiter les <code>print</code>. Travailler avec <em>Jupyter</em> sera tr&#xE8;s adapt&#xE9; &#xE0; cette pr&#xE9;occupation. Restons donc avec <em>Spyder</em> encore un peu.</p>
 <ol>
 <li>
 <p>&#xC9;crire une fonction <code>mersenne</code> dans un script,</p>
@@ -1178,7 +1183,7 @@ Test 2 r&#xE9;ussi.
 <li><a href="#la-fonction-round-avec-un-seul-param%C3%A8tre">La fonction <code>round</code>, avec un seul param&#xE8;tre</a></li>
 <li><a href="#la-fonction-round-avec-deux-param%C3%A8tres">La fonction <code>round</code>, avec deux param&#xE8;tres</a></li>
 <li><a href="#fonctions-directement-accessibles-ou-natives">Fonctions directement accessibles, ou natives</a></li>
-<li><a href="#fonctions-du-module-math">Fonctions du module math</a></li>
+<li><a href="#fonctions-et-constantes-du-module-math">Fonctions et constantes du module math</a></li>
 <li><a href="#fonctions-cr%C3%A9%C3%A9es-par-lutilisateur">Fonctions cr&#xE9;&#xE9;es par l&apos;utilisateur</a>
 <ul>
 <li><a href="#constructeur-lambda">Constructeur <code>lambda</code></a></li>

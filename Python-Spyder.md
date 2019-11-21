@@ -29,6 +29,7 @@ On ne listera ici que des éditeurs libres et multiplateformes, du plus simple a
 - [Thonny](https://thonny.org/) ; basique,
 - [Spyder](https://www.spyder-ide.org/) ; inclus dans *anaconda*, **recommandé pour débuter**,
 - [Geany](https://geany.org/) ; éditeur **généraliste et simple**, recommandé pour débuter plusieurs langages de programmation,
+- [Pyzo](https://pyzo.org/index.html) ; éditeur accompagné de Python et quelques bibliothèques scientifiques,
 - [Atom](https://atom.io/ "Site officiel") ; éditeur généraliste moderne, **recommandé pour progresser**,
 - [GNU Emacs](https://www.gnu.org/software/emacs/ "Site offciel") ou [Vim](https://www.vim.org/ "Site officel") ; éditeurs modaux et historiques, non conseillés pour débuter,
 - [Eclipse+PyDev](http://www.pydev.org/index.html "Site officiel") ; pour les professionnels.
@@ -61,13 +62,13 @@ Ceci est un script temporaire.
 
 - Les lignes du fichier sont numérotées ; c'est pratique.
 - La ligne 1 indique que l'encodage du fichier est `utf-8` ; c'est un choix moderne qui permet d'écrire sans problème toute lettre accentuée. Cette ligne est inutile sur un système d'exploitation récent, l'[UTF-8](https://fr.wikipedia.org/wiki/UTF-8) étant automatique.
-- Les lignes 2 à 6 constituent une chaîne de caractères de 5 lignes. Elle n'est ni affectée, ni affichée à l'exécution du script, elle constitue un commentaire sur plusieurs lignes.
+- Les lignes 2 à 6 constituent une chaîne de caractères de 5 lignes. Elle n'est ni affectée à une variable, ni affichée à l'exécution du script ; elle constitue ici un commentaire sur plusieurs lignes.
 
 **print**
 : Pour afficher la valeur d'une donnée (si elle existe) pendant l'exécution d'un script on peut utiliser la fonction `print`
 
->- Recopier le script ci-dessous (avec un copié-collé),
->- sauver le dans un répertoire personnel choisi,
+>- Recopier le script ci-dessous (avec un copier-coller),
+>- le sauver dans un répertoire personnel choisi,
 >- anticiper le résultat,
 >- et appuyer sur <kbd>F5</kbd> pour faire exécuter le script par la version *Python* proposée.
 
@@ -99,14 +100,14 @@ M_5 = 31
 
 - On constate que le commentaire n'a pas été affiché. C'est normal !
 - Observer les espaces et l'absence de virgule autour de `=` dans l'affichage. Normal !
-- *Spyder* affiche quel fichier a été lancé (*run file*),
+- *Spyder* affiche le nom complet du fichier qui a été interprété (*run file*),
 - ainsi que le répertoire de travail (`wdir` pour <b>w</b>orking <b>dir</b>ectory).
 
 ## :fa-cogs: Les fonctions
 
 ### La fonction `print`
 
-- prend en arguments zéro, un ou plusieurs paramètres,
+- prend en argument zéro, un ou plusieurs paramètres, **mis entre parenthèses**,
 - affiche les valeurs de ces paramètres en les **séparant par une espace**, puis **termine par un saut de ligne**,
 - (et elle renvoie `None`).
 
@@ -130,31 +131,28 @@ print(1, 10*n+1, "texte", 3.14, 12345e100)
 
 - prend en argument un nombre `nbr` de type entier ou flottant,
 - retourne un nombre de **type entier**, le plus proche de `nbr`,
-- en cas d'égalité, retourne l'entier **pair**.
+- en cas d'égalité, retourne l'entier **pair** ; *cf* les trois derniers exemples.
 
 ```python {.line-numbers cmd="python3" output="text"}
-print(round(3.14))
-print(round(2.718))
-print(round(3.5))
-print(round(4.5))
-print(round(-4.5))
+for x in [3.14, 2.718, 3.5, 4.5, -4.5]:
+    print("L'arrondi de", x, "est", round(x))
 ```
+
+> On vient de voir, au passage, comment répéter une instruction avec une variable qui prend des valeurs successives. Nous y reviendrons.
 
 ### La fonction `round`, avec deux paramètres
 
 > `round(nbr, d)`
 
 - prend en argument un nombre `nbr` entier ou flottant, et un entier `d`
-- retourne un nombre **de même type** que `nbr`, son arrondi à $10^{-d}$ près.
+- retourne un nombre **de même type** que `nbr`, l'arrondi de `nbr` à $10^{-d}$ près.
 
 ```python {.line-numbers cmd="python3" output="text"}
-print(round(3.14, 1))
-print(round(2.718, 2))
-print(round(3.5, 2))
-print(round(12345, -2))
-print(round(12345.0, -2))
-print(round(9.8765e100, 2-100))
+for x, d in [(3.14, 1), (2.718, 2), (3.5, 2), (4, 2), (12345, -2), (12345.0, -2), (9.8765e100, 2-100)]:
+    print(f"L'arrondi de {x} à 10^{-d} près est {round(x, d)}")
 ```
+
+> On vient de voir, au passage, une une *f-string* pour afficher du texte et des valeurs. Nous y reviendrons.
 
 > **:fa-bolt: Attention** : [le comportement avec les flottants](https://docs.python.org/fr/3/library/functions.html#round) peut être curieux, mais c'est normal ! Les flottants ne sont pas les décimaux !
 > On a constaté également que le comportement de `round` est différent en fonction du nombre de paramètres.
@@ -167,7 +165,7 @@ Dans la [liste de la documentation officielle](https://docs.python.org/fr/3/libr
 - `round` : pour l'arrondi de nombres,
 - `type` : pour retourner le type d'un objet.
 
-objet
+Objet
 : Avec Python, **tout est objet** : les nombres, les collections (ensembles, listes, dictionnaires, ...), les fonctions, les modules, tout ce qui existe et tout ce que vous allez créer. **Tout est objet**.
 
 Concentrons-nous sur les fonctions liées au type d'un objet.
@@ -178,33 +176,34 @@ Concentrons-nous sur les fonctions liées au type d'un objet.
 - `complex` : Transforme un objet, si possible, en nombre complexe.
 - `str` : Transforme un objet, si possible, en chaîne de caractères.
 - `list` : Transforme un objet, si possible, en liste.
-- `tuple` : Crée un tuple, ou transforme un objet, si possible, en tuple.
+- `tuple` : Transforme un objet, si possible, en tuple.
 - `set` : Transforme un objet, si possible, en ensemble.
 - `dict` : Crée un nouveau dictionnaire.
 
-Nous avons déjà croisé certains de ces types de base. (`int`, `float`, `bool`).
+Type
+: Tout objet possède un type. Nous avons déjà croisé certains de ces types de base : (`int`, `float`, `bool`).
 
-Présentons rapidement les autres.
+Présentons rapidement les autres fonctions natives liées au type.
 
-- `complex` : pour les nombres complexes, que l'on étudie en terminale (maths expertes et certaines sections scientifiques).
-- `str` : pour les chaînes de caractères (*string*), du texte. Une fois créée on ne peut pas la modifier. En français, on dit **immuable** (*immutable* en anglais).
-- `list` : pour une liste ordonnée d'objets. On peut ajouter des objets, en enlever, et de manière générale la modifier. En français, on dit **muable** (*mutable* en anglais).
-- `tuple` : ressemble à `list`, mais en version immuable.
-- `set` : pour un ensemble. Non ordonné. Sans doublon. Muable. On peut ajouter, enlever un objet. On peut faire des intersections, unions.
-- `dict` : pour créer un dictionnaire associatif. À un élément d'un ensemble (les **clés**), on associe une donnée (les **valeurs**).
+- `complex` : Pour les nombres **complex**es, que l'on étudie en terminale (maths expertes et certaines sections scientifiques).
+- `str` : Pour les chaînes de caractères (_**str**ing_), du texte. Une fois créée on ne peut pas la modifier. En français, on dit **immuable** (*immutable* en anglais).
+- `list` : Pour une **list**e ordonnée d'objets. On peut ajouter des objets, en enlever, et de manière générale la modifier. En français, on dit **muable** (*mutable* en anglais).
+- `tuple` : Ressemble à `list`, mais en version immuable.
+- `set` : Pour un ensemble. Non ordonné. Sans doublon. Muable. On peut ajouter, enlever un objet. On peut faire des intersections, unions.
+- `dict` : Pour créer un dictionnaire associatif. À un élément d'un ensemble (les **clés**), on associe une donnée (les **valeurs**).
 
 Nous reviendrons sur ces types de données. En particulier sur la distinction muable-immuable et le lien direct avec les dictionnaires.
 
 Pour une présentation complète des [modèles de données](https://docs.python.org/fr/3/reference/datamodel.html?highlight=mutable).
 
-### Fonctions du module math
+### Fonctions et constantes du module math
 
 Dans le module `math`, il y a, par exemple :
 
-- `sqrt` : la fonction racine carrée (*<b>sq</b>uare <b>r</b>oo<b>t</b>*)
-- `cos`, `sin`, `tan` : les fonctions cosinus, sinus, tangente, pour un angle en radian ; un flottant. Les réciproques `acos`, `asin`, `atan`.
-- `exp`, `log` : les fonctions exponentielle et logarithme naturel, pour un flottant.
-- `pi`, `e` : les flottants approximations des constantes $\pi$, et $\textrm{e}$.
+- `sqrt` : La fonction racine carrée (_**sq**uare_ _**r**oo**t**_)
+- `cos`, `sin`, `tan` : Les fonctions cosinus, sinus, tangente, pour un angle en radian ; un flottant. Les réciproques `acos`, `asin`, `atan`.
+- `exp`, `log` : Les fonctions exponentielle et logarithme népérien, pour un flottant.
+- `pi`, `e` : Les flottants approximations des constantes $\pi$, et $\textrm{e}$.
 
 Pour utiliser ces objets, il y a deux méthodes.
 
@@ -246,8 +245,8 @@ ma_fonction = lambda x: (x+5) * (x-5)
 print(ma_fonction(15))
 print(ma_fonction(6125.7))
 ```
-
-> On constate, ici, que notre fonction traite aussi bien un flottant qu'un entier, une seule définition suffit. Ce n'est pas possible facilement avec d'autres langages.
+> On constate encore que les flottans **ne sont pas** les décimaux.
+> On constate aussi, ici, que notre fonction traite aussi bien un flottant qu'un entier, une seule définition suffit. Ce n'est pas possible facilement avec d'autres langages, voire interdit. C'est une caractéristique du langage *Python* qui en facilite l'utilisation, mais qui, parfois, peut conduire à l'écriture de code difficilement debuggable.
 
 #### Constructeur `def`
 
@@ -270,7 +269,7 @@ Cette seconde méthode est adaptée pour les fonctions dont le corps est conséq
 > - Il ne faut pas oublier les deux points à la fin de la ligne de `def`.
 > - Chaque ligne de la définition de la fonction doit être **indentée** ; l'ensemble forme un bloc décalé vers la droite d'un même nombre d'espaces. **4 espaces de préférence**, c'est une règle.
 > - Il peut y avoir zéro, un ou plusieurs paramètres.
-> - Il peut y avoir zéro, une ~(ou~ ~plusieurs)~ instruction~s~ qui commence~nt~ par `return` ; le résultat qui suit le premier `return` rencontré est renvoyé, l'exécution de la fonction s'arrête.
+> - Il peut y avoir zéro, une ~(ou~ ~plusieurs)~ instruction~s~ qui commence~nt~ par `return` ; l'expression qui suit le premier `return` rencontré est retourné, l'exécution de la fonction s'arrête. Sans expression après le `return`, ou bien en fin de fonction, `None` est retourné.
 
 Exemple 1
 
@@ -287,7 +286,7 @@ print("L'aire est", aire_rectangle(8, 13))
 >
 > La fonction `aire_rectangle` :
 >
-> - possède deux paramètres obligatoires,
+> - requiert deux paramètres obligatoires,
 > - possède une `docstring` (ligne 2); un texte d'aide,
 > - affiche une information sur les côtés du rectangle,
 > - puis retourne une valeur calculée.
@@ -310,7 +309,7 @@ help(ne_fait_rien)
 >
 >- est fidèle à son nom,
 >- possède une `docstring`, (c'est une bonne pratique)
->- renvoie `None` in fine comme il n'y a pas de `return`
+>- retourne `None` in fine ; il n'y a pas de `return`
 >
 > La ligne 5, affiche le retour de cette fonction, c'est la raison du `None`
 > Le `print` à la ligne 6 n'affiche rien, mais saute à la ligne.
@@ -341,11 +340,11 @@ In [3]:
 >
 > - Avec *Spyder* l'aide est affichée en console, c'est facile ! **Une raison de plus de préférer _Spyder_ pour débuter.**
 > - Avec un terminal classique, l'aide est affichée dans un éditeur annexe. Pour en sortir, il faut taper sur `q` (comme *quit*) ; et ce n'est pas indiqué ; c'est moins pratique !
-> - En cas de doute sur l'utilisation d'une fonction, c'est une bonne pratique que de vérifier cela grâce à `help`.
+> - En cas de doute sur l'utilisation d'une fonction, c'est une bonne pratique que de vérifier avec `help`.
 
 ### :fa-key: Utilisation de ses propres fonctions en console
 
-Le programme dans le BO mentionne explicitement le fait de créer des fonctions dans des fichiers, et de les appeler depuis la console. A priori dans un souci d'éviter les soucis de `int(input())` et de limiter les `print`. Travailler avec *Jupyter* sera très adapté à cette préoccupation. Restons avec *Spyder* encore un peu.
+Le programme dans le B.O. mentionne explicitement le fait de créer des fonctions dans des fichiers, et de les appeler depuis la console. A priori dans un souci d'éviter les soucis de `int(input())` et de limiter les `print`. Travailler avec *Jupyter* sera très adapté à cette préoccupation. Restons donc avec *Spyder* encore un peu.
 
 1. Écrire une fonction `mersenne` dans un script,
 
