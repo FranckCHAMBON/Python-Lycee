@@ -81,12 +81,13 @@ Parmi les applications disponibles sur le PlayStore :
 
 - [*Termux*](https://play.google.com/store/apps/details?id=com.termux&hl=fr), qui sera minimaliste, pour travailler en console. Sans publicité ;
 - [*Pydroid3*](https://play.google.com/store/apps/details?id=ru.iiec.pydroid3&hl=fr), qui sera complète, mais pourra proposer des publicités.
+- [*QPython3*](https://play.google.com/store/apps/details?id=org.qpython.qpy3&hl=fr), intermédiaire. Avec un clavier virtuel à revoir.
 
-> **Ces deux applications disposent d'un clavier virtuel adapté**,
+> **Les applications Termux et Pydroid3 disposent d'un clavier virtuel adapté**,
 ce qui permet de taper les symboles courants. Cela reste précaire, et uniquement adapté à de petites créations !
 
 *Jupyter*
-:    *Pydroid3* permet aussi d'utiliser *Jupyter*, pour faire tourner des carnets qui auront été préparés plus facilement sur ordinateur, voire sur tablette avec clavier physique.
+:    *Termux* et *Pydroid3* permettent aussi d'utiliser *Jupyter*, pour faire tourner des carnets qui auront été préparés plus facilement sur ordinateur, voire sur tablette avec clavier physique.
     > **Attention**, le clavier virtuel de *Jupyter* sur tablette n'est pas pratique du tout. Sans clavier physique, on ne fera que des modifications mineures.
 
 **:fa-check: Conclusion**

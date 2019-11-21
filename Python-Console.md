@@ -92,6 +92,8 @@ Ensuite, on peut tester un premier calcul :
 7
 ```
 
+TODO : ajouter pkg install jupyter
+
 ### :fa-windows: Avec Windows
 
 Pour commencer, en ayant installé la distribution *Anaconda*, *Spyder* est accessible, il dispose d'une console, on peut donc tester immédiatement quelques instructions.
@@ -139,7 +141,7 @@ In [2]: 1984 // 100
 Out[2]: 19
 ```
 
-> :fa-bolt: Il ne faut pas oublier de doubler le caractère /  
+> :fa-bolt: Il ne faut pas oublier de doubler le caractère /
 > Sinon, l'opération donnera un flottant. (Voir ensuite)
 
 #### Puissance `**`
