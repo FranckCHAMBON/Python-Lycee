@@ -10,21 +10,21 @@ Plusieurs lectures rapides sont possibles.
    1. Une calculatrice (entiers, flottants, variables)
    1. Un peu d'anglais utile
    1. Exercices
-1. [Création d'un script avec un éditeur](../Python-Éditeur/Python-Éditeur.html)
+1. [Création d'un script avec un éditeur](../Python-Editeur/Python-Editeur.html)
    1. Premier lancement
    1. Création et utilisation de fonctions
    1. Premières boucles
    1. Corriger ses erreurs
    1. Structures conditionnelles
    1. Exercices
-1. [Écriture d'un carnet avec *Jupyter*](../Python-Carnets/Python-Jupyter-1.html)
+1. [Écriture d'un carnet avec *Jupyter*](../Python-Carnets/Python-Jupyter-intro.html)
 *En construction*
    1. Utilisations
    1. Cellules *Markdown*
    1. Premiers graphiques
 
 
-1. [Écrire des mathématiques avec Jupyter](../Python-Carnets/Python-Jupyter-2.html)
+1. [Écrire des mathématiques avec Jupyter](../Python-Carnets/Python-Jupyter-maths.html)
    1. Balises maths
    1. Nombres et les 4 opérations
    1. Calcul littéral
