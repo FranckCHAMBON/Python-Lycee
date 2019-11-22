@@ -69,12 +69,19 @@ L'exemple proposé par *Try Jupyter* repose sur *Binder*.
 
 ### Utiliser Jupyter sur son poste
 
-#### Avec Anaconda
+#### Avec Anaconda sur ordinateur
 
 <!-- @import "../assets/anaconda.png" {width="200px" title="Logo d'Anaconda" alt="Un logo d'Anaconda"} -->
 
 - Le moyen le plus simple d'obtenir JupyterLab est de passer par la [distribution Anaconda](https://www.anaconda.com/distribution/).
 - Il faut bien suivre [les étapes d'installation](https://docs.anaconda.com/anaconda/).
+
+#### Avec Termux sur tablette
+
+<!-- @import "../assets/termux.png" {width="50px" title="Logo de Termux" alt="Un logo de Termux"} -->
+
+- Après avoir installé *Python* sur tablette, avec `pkg install python`
+- on installe *Jupyter* avec `pkg install jupyter`
 
 ### Premiers exemples simples.
 

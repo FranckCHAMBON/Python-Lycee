@@ -1,6 +1,6 @@
 # Python au lycée
 
-## [Une présentation](http://htmlpreview.github.io/?https://github.com/FranckCHAMBON/Python-Lycee/blob/master/Python-Lyc%C3%A9e/Python-Lyc%C3%A9e.html)
+## [Une présentation](http://htmlpreview.github.io/?https://github.com/twbs/bootstrap/blob/gh-pages/2.3.2/index.html)
 
 ### Public visé
 
