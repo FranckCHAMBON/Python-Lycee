@@ -6,7 +6,7 @@ export_on_save:
 
 # Python au lycée
 
-## [Une présentation](Python-Présentation/Python-Présentation.html)
+## [Une présentation](Python-Presentation/Python-Presentation.html)
 
 ### Public visé
 

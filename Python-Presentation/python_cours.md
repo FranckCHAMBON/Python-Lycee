@@ -102,9 +102,9 @@ Ensuite, résoudre des exercices est le plus gros moteur de progrès. On en trou
   - recommandé aux enseignants de maths débutants Python,
   - recommandé aux jeunes étudiants.
 - [Prologin](https://prologin.org/) ; dans un second temps.
-- [Project Euler](https://projecteuler.net/) ; en anglais. Contient des problèmes d'une extrême difficulté.
-- [SPOJ](https://www.spoj.com/) ; en anglais. Contient une base colossale de problèmes.
-- [Codin'Game](https://www.codingame.com/start) ; contient des publicités. Recommandé aux gamers qui veulent progresser.
+- [Project Euler](https://projecteuler.net/) ; en anglais. Contient certains problèmes d'une extrême difficulté. Les premiers sont abordables.
+- [SPOJ](https://www.spoj.com/) ; en anglais. Contient une base colossale de problèmes, certains sont très faciles, d'autres de difficulté extrême.
+- [Codin'Game](https://www.codingame.com/start) ; contient des publicités. Recommandé aux gamers qui veulent progresser. Toutes difficultés.
 
 Enfin, chacun pourra être autonome pour compléter avec les aspects ou les modules qui l'intéresse le plus. Développement Web, sciences appliquées, algorithmique, mathématiques, ...
 
