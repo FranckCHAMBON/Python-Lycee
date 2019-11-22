@@ -3,11 +3,11 @@ export_on_save:
   html: true
 ---
 
-![Humans outnumbered by Lego people](assets/minifigs.png "https://xkcd.com/1281/")
+![Humans outnumbered by Lego people](../assets/minifigs.png "https://xkcd.com/1281/")
 
 # Découverte de Jupyter {ignore=true}
 
-@import "assets/Jupyter.svg" {width="300px" height="200px" title="Logo de Jupyter" alt="logo de Jupyter"}
+@import "../assets/Jupyter.svg" {width="300px" height="200px" title="Logo de Jupyter" alt="logo de Jupyter"}
 
 Jupyter est une solution logicielle qui permet de créer des carnets pour inclure des cellules de code en Python, et des cellules de texte avec une mise en forme la plus simple, grâce à la syntaxe *Markdown*.
 
@@ -20,7 +20,7 @@ Ces carnets sont très utiles et commodes en sciences.
 
 Ci-dessous un document en cours d'élaboration.
 
-![](assets/jupyexemple.png "Exemple avec Jupyter")
+![](../assets/jupyexemple.png "Exemple avec Jupyter")
 
 ## Sommaire {ignore=true}
 
@@ -32,7 +32,7 @@ Ci-dessous un document en cours d'élaboration.
 
 #### Avec *Try Jupyter*
 
-<!-- @import "assets/try-jupyter.png" {width="200px" title="Logo de l'Éducation Nationale" alt="Un logo de Jupyter Lab"}-->
+<!-- @import "../assets/try-jupyter.png" {width="200px" title="Logo de l'Éducation Nationale" alt="Un logo de Jupyter Lab"}-->
 
 
 Il est possible d'essayer Jupyter avec une feuille par défaut.
@@ -48,7 +48,7 @@ Il est possible d'essayer Jupyter avec une feuille par défaut.
 
 #### Avec *GitHub*
 
-<!-- @import "assets/github-logo.png" {width="200px" title="Logo de GitHub" alt="Un logo de GitHub"}-->
+<!-- @import "../assets/github-logo.png" {width="200px" title="Logo de GitHub" alt="Un logo de GitHub"}-->
 
 
 Il est possible de sauvegarder en ligne vos carnets Jupyter sur la plateforme [GitHub](https://github.com/), et ainsi de les partager facilement.
@@ -60,7 +60,7 @@ Il est possible de sauvegarder en ligne vos carnets Jupyter sur la plateforme [G
 
 #### Avec *My Binder*
 
-<!-- @import "assets/binder.svg" {width="200px"} -->
+<!-- @import "../assets/binder.svg" {width="200px"} -->
 
 [Cette solution](https://mybinder.org/) permet de rendre dynamique les carnets stockés sur *GitHub*.
 
@@ -71,7 +71,7 @@ L'exemple proposé par *Try Jupyter* repose sur *Binder*.
 
 #### Avec Anaconda
 
-<!-- @import "assets/anaconda.png" {width="200px" title="Logo d'Anaconda" alt="Un logo d'Anaconda"} -->
+<!-- @import "../assets/anaconda.png" {width="200px" title="Logo d'Anaconda" alt="Un logo d'Anaconda"} -->
 
 - Le moyen le plus simple d'obtenir JupyterLab est de passer par la [distribution Anaconda](https://www.anaconda.com/distribution/).
 - Il faut bien suivre [les étapes d'installation](https://docs.anaconda.com/anaconda/).
@@ -222,7 +222,7 @@ Syntaxe :
 
 #### Exercice 2 : la création d'un premier carnet
 
-<!-- @import "assets/notebook-py3.png" {width="200px" title="Notebook Python3" alt="Notebook Python3"} -->
+<!-- @import "../assets/notebook-py3.png" {width="200px" title="Notebook Python3" alt="Notebook Python3"} -->
 
 - Lancer JupyterLab
 - Créer un nouveau carnet : **Notebook Python 3**

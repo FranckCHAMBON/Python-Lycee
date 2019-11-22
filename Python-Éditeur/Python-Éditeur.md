@@ -3,7 +3,7 @@ export_on_save:
   html: true
 ---
 
-![XKeyboarCD](assets/xkeyboarcd.png "https://xkcd.com/2150/")
+![XKeyboarCD](../assets/xkeyboarcd.png "https://xkcd.com/2150/")
 
 # Découverte d'un éditeur de script {ignore=true}
 
@@ -40,7 +40,7 @@ On ne listera ici que des éditeurs libres et multiplateformes, du plus simple a
 
 ### Exemple avec *Spyder*
 
-![](assets/Spyder.png "Logo de Spyder")
+![](../assets/Spyder.png "Logo de Spyder")
 
 *Spyder* est inclus dans *Anaconda*, non sans raisons, nous le présentons ici en particulier, mais tout ce qu'on verra est transposable avec un autre éditeur.
 

@@ -1,14 +1,30 @@
-# Écrire des mathématiques simples avec LaTeX
+---
+export_on_save:
+  html: true
+---
+
+![Des équations variées](../assets/equations.png "https://xkcd.com/2034/")
+
+# Écrire des mathématiques simples avec Jupyter {ignore=true}
+
+@import "../assets/Jupyter.svg" {width="300px" height="200px" title="Logo de Jupyter" alt="logo de Jupyter"}
+
+## Sommaire {ignore=true}
+
+[TOC]
+
+
+
 Dans la plupart des pages HTML, on peut écrire des maths avec les bonnes balises et les bonnes commandes.
 
 \[\sum\limits_{k\in\mathbb N^*} \frac 1 {k^2} = \frac {\pi^2}6 \quad \text{: Problème de Bâle, résolu par Leonhard Euler.}\]
 
 Commençons par un tour d'horizon des possibilités en [comparant les deux moteurs](https://www.intmath.com/cg5/katex-mathjax-comparison.php "KaTeX vs MathJax") de rendu les plus répandus.
 
-> Nous allons voir comment écrire des maths, en commençant par les choses les plus simples, et cela pourra faire office de révisions pour certains. Chaque partie contient des exercices à réaliser.  
+> Nous allons voir comment écrire des maths, en commençant par les choses les plus simples, et cela pourra faire office de révisions pour certains. Chaque partie contient des exercices à réaliser.
 **Ouvrir une feuille de calcul [Jupyter](https://jupyter.org/try), et c'est parti !**
 
-## I] La balise math `$` ; pour écrire des nombres
+## La balise math `$` ; pour écrire des nombres
 Il y a deux façons de placer des maths dans un document Jupyter :
 * Au milieu du texte qu'on écrit ; en ligne.
     + Dans ce cas : `$`_<code math à écrire là>_`$`
@@ -23,7 +39,7 @@ Il y a deux façons de placer des maths dans un document Jupyter :
 
 > **Attention** : pas d'espaces après la balise ouvrante, ni avant la balise fermante.
 
-#### Exemples
+#### Exemples  {ignore=true}
 ```markdown
 $$x+y= y + x$$
 ```
@@ -34,7 +50,7 @@ La somme de $123$ et 123 est égale à $123 +123$.
 ```
 La somme de $123$ et 123 est égale à $123 +123$.
 
-#### Remarques
+#### Remarques {ignore=true}
 * Avec le premier exemple, on voit que l'espacement est correct, indépendamment de la source. C'est bien !
 * Avec le second exemple, bien voir la différence d'écriture des deux premiers $123$. Dans un souci de cohérence, il vaut mieux :
     + mettre tous les nombres avec lesquels ont fait du calcul entre balises maths. Même status, même écriture...
@@ -44,7 +60,7 @@ La somme de $123$ et 123 est égale à $123 +123$.
     + Le moteur de rendu choisira les bonnes tailles d'espaces à afficher. C'est un principe de fonctionnement.
 
 
-### Motivation
+#### Motivation {ignore=true}
 L'inspiration du HTML vient de TeX, inventé par [Donald Knuth](https://fr.wikipedia.org/wiki/Donald_Knuth "Article Wikipedia").
 
 Écrire un document en utilisant LaTeX est une nécessité pour beaucoup d'étudiants en thèse, et nombre de professionnels. Ce n'est pas [un apprentissage rapide](https://fr.wikibooks.org/wiki/LaTeX), mais cela permet d'obtenir une très grande qualité.
@@ -52,7 +68,7 @@ L'inspiration du HTML vient de TeX, inventé par [Donald Knuth](https://fr.wikip
 > Utiliser Markdown, avec quelques connaissances de la balise maths LaTeX, permet de créer facilement des documents scientifiques honorables. Avec Jupyter, on peut facilement alterner entre cellule de texte et cellule de code.
 
 
-### Plus de détails sur les espaces
+#### Plus de détails sur les espaces {ignore=true}
 * Comme dans les balises HTML, la gestion des espaces est laissé au moteur de rendu, pour chaque cas.
 * Dans les balises maths, entre deux lettres ou chiffres, les espaces sont ignorés.
 * Pour modifier de l'espace que LaTeX a prévu, il y a plusieurs possibilités complexes :
@@ -67,7 +83,7 @@ L'inspiration du HTML vient de TeX, inventé par [Donald Knuth](https://fr.wikip
     + `~` est une bonne idée pour le séparateur des milliers.
     + `~` est une bonne idée pour séparer un nombre et son unité.
 
-#### Exemples :
+##### Exemples : {ignore=true}
 |Code|Résultat affiché|
 |---|---:|
 |`$12 34 56 78 90$` | $12 34 56 78 90$|
@@ -81,7 +97,7 @@ Les deux derniers exemples seront revus à la fin de cette page.
 
 
 
-## II] Les 4 opérations et les nombres
+## Les 4 opérations et les nombres
 Dans une cellule Markdown, à l'intérieur de balises math,
 * L'addition s'obtient avec `+`
 * La soustraction s'obtient avec `-`
@@ -95,50 +111,50 @@ Dans une cellule Markdown, à l'intérieur de balises math,
 * La division s'obtient avec `/`
 
 
-#### Exemple
+#### Exemple {ignore=true}
 ```markdown
 $[5 + 3\times8 - (1 + 35\div5)](18  -  5 \times 2)$
 ```
 
 $[5 + 3\times8 - (1 + 35\div5)](18  -  5 \times 2)$
 
-#### Exercice 1
+#### Exercice 1  {ignore=true}
 ![un calcul](images/calcul1.png)
 
 1. Calculer avec une cellule Python l'expression numérique précédente,
 2. puis afficher cette expression avec son résultat dans une cellule Markdown.
 
-#### Exercice 2
+#### Exercice 2 {ignore=true}
 ![un calcul](images/calcul2.png)
 1. Calculer avec une cellule Python l'expression numérique précédente.
 2. Compléter alors le code `$3 + ... \approx \pi$`
 3. (maths) Écrire le membre de gauche comme une seule fraction.
 4. Pour les plus curieux à ce sujet, [un peu de lecture](https://fr.wikipedia.org/wiki/Fraction_continue#D%C3%A9veloppement_en_fraction_continue_du_nombre_%CF%80 "Article Wikipédia")
 
-## III] Du calcul littéral
+## Du calcul littéral
 On peut bien sûr utiliser des variables mathématiques, elles seront écrites en italique, avec une police un peu différente.
 * Dans l'exemple 1, comparer les lettres `a` (dans «on a», et dans «$ka+kb$»).
 * Dans l'exemple 2, noter qu'il faut une espace après `\times`, sinon la commande `\timesH` est cherchée et non trouvée.
 
-#### Exemple 1
+#### Exemple 1  {ignore=true}
 ```markdown
-Pour tous nombres $k$, $a$, $b$, on a :  
+Pour tous nombres $k$, $a$, $b$, on a :
 $k(a+b) = ka + kb$
 ```
-> Pour tous nombres $k$, $a$, $b$, on a :  
+> Pour tous nombres $k$, $a$, $b$, on a :
 $k(a+b) = ka + kb$
 
-#### Exemple 2
+#### Exemple 2 {ignore=true}
 ```markdown
 Le volume d'un pavé droit de longueur $L$, de hauteur $H$ et
-de profondeur $P$ est  
+de profondeur $P$ est
 $V = L \times H \times P$
 ```
 > Le volume d'un pavé droit de longueur $L$, de hauteur $H$ et
-de profondeur $P$ est  
+de profondeur $P$ est
 $V = L \times H \times P$
 
-#### Remarque
+#### Remarque {ignore=true}
 Si on souhaite mieux écrire une formule d'aire ou de volume, on devine la nécessité :
 * de savoir écrire des fractions,
 * de savoir écrire des parenthèses à la bonne taille,
@@ -151,7 +167,7 @@ Voilà donc la suite de notre programme. Pas d'exercices ici, mais plein ensuite
 
 
 
-## IV] Les fractions ; `$\dfrac{ }{ }$`
+## Les fractions ; `$\dfrac{ }{ }$`
 
 |Code|Résultat affiché|
 |----|--------:|
@@ -160,7 +176,7 @@ Voilà donc la suite de notre programme. Pas d'exercices ici, mais plein ensuite
 |`$5+\dfrac{x+7}{x-1}$` | $5+\dfrac{x+7}{x-1}$|
 
 
-#### Exercice 1
+#### Exercice 1 {ignore=true}
 Écrire dans une cellule Markdown, les règles fondamentales sur les écritures fractionnaires :
 
 > ![règles fractions](images/fractions1.png)
@@ -178,13 +194,13 @@ $a\div$
 ```
 
 
-#### Exercice 2
+#### Exercice 2 {ignore=true}
 Recréer en Markdown, et vérifier les résultats ci-dessous :
 
 > ![fraction approchant pi](images/fraction2.png)
 
 
-#### Remarques
+#### Remarques {ignore=true}
 * Si le contenu d'un paramètre entre accolades n'est qu'un seul caractère, les accolades ne sont pas nécessaires.
 * Si ce caractère est un chiffre, on peut même le coller à `\dfrac`
 
@@ -198,7 +214,7 @@ Exemples :
 
 
 
-## V] Les parenthèses à la bonne taille
+## Les parenthèses à la bonne taille
 Si on veut placer un bloc (une expression) entre parenthèses, et que l'expression est plus haute que la normale (avec des fractions par exemple), alors les parenthèses normales ne sont pas assez hautes.
 > `$( \dfrac ab )$` donne $( \dfrac ab )$ ; qui est disgracieux.
 
@@ -207,12 +223,12 @@ Si on veut placer un bloc (une expression) entre parenthèses, et que l'expressi
 
 
 
-## VI] Les puissances `$a^n$` pour $a^n$
+## Les puissances `$a^n$` pour $a^n$
 > De manière générale `$base^{ exposant }$` donne $base^{ exposant }$
 
 Les accolades sont nécessaires pour des exposants qui ont plus d'un caractère.
 
-#### Exercice 1
+#### Exercice 1 {ignore=true}
 Retrouver les formules apprises au collège sur les puissances, puis compléter le code ci-dessous.
 ```markdown
 Pour tous nombres $a$, $b$, $c$ (non nul), et tous entiers $n$, $m$, on a :
@@ -225,12 +241,12 @@ L'objectif étant d'obtenir le résultat (à compléter) ci-dessous :
 
 > ![formules puissances](images/puiss1.png)
 
-#### La Racine carrée
+#### La Racine carrée {ignore=true}
 En anglais _**sq**uare __r__oo**t**_ ; `sqrt` est massivement utilisé.
 
 Exemple : `$\sqrt{ radicande }$` donne $\sqrt{ radicande }$
 
-#### Exercice 2
+#### Exercice 2 {ignore=true}
 ![exo pythagore](images/pyth1.png)
 
 En vous inspirant du modèle ci-dessus, rédiger une solution au problème suivant :
@@ -249,7 +265,7 @@ On pourra utiliser, modifier, et compléter le code suivant :
 > **Remarque** : le principe d'utiliser, modifier, compléter du code est largement utilisé dans l'enseignement. Il faut cependant savoir que certains codes sont protégés par du droit d'auteur. Les logiciels libres permettent aux utilisateurs avertis de pouvoir améliorer le code et d'en faire profiter tout le monde.
 
 
-## VII] Les indices `$a_n$` pour $a_n$
+## Les indices `$a_n$` pour $a_n$
 Mêmes principes que pour les exposants.
 > `$bloc_{ indice }$` donne $bloc_{ indice }$
 
@@ -259,7 +275,7 @@ Mêmes principes que pour les exposants.
 >`$bloc_\text{ indice }$` donne $bloc_\text{ indice }$
 
 
-## VIII] Écriture scripte, pour aires, volumes, cercles...
+## Écriture scripte, pour aires, volumes, cercles...
 Pour démarquer certaines lettres, en mode **math**-ématique, on utilise l'écriture **scr**-ipte,
 > d'où la commande `$\mathscr{ }$`.
 
@@ -273,7 +289,7 @@ Pour démarquer certaines lettres, en mode **math**-ématique, on utilise l'écr
 > Noter dans les deux derniers exemples, que `RST` est bien en mode math, alors que
 `\text{triangle}` produit du texte dans le mode math. C'est bien la bonne méthode.
 
-#### Exercice (un peu long):
+#### Exercice (un peu long): {ignore=true}
 Écrire de belles formules pour :
 * Le carré
     * Le périmètre d'un carré de côté $a$.
@@ -294,7 +310,7 @@ Pour démarquer certaines lettres, en mode **math**-ématique, on utilise l'écr
     + Une boule de rayon $r$.
 
 
-#### Remarque sur les unités
+#### Remarque sur les unités {ignore=true}
 On devrait utiliser une [espace fine insécable](https://fr.wikipedia.org/wiki/Espace_ins%C3%A9cable) entre la partie numérique et l'unité.
 
 * Pour simplifier, on peut utiliser une espace-mot insécable à la place.
@@ -306,8 +322,13 @@ On devrait utiliser une [espace fine insécable](https://fr.wikipedia.org/wiki/E
 |`$35~\text{m}^2$`|$35~\text{m}^2$|
 
 
-## IX] Pour aller plus loin
+## Pour aller plus loin
 * Avec ce qui a été vu précédemment, on peut écrire une large partie d'un cours de mathématique au collège.
 * Une autre page traitera des mathématiques du lycée, en seconde pour commencer.
 * Une partie de cette [section](https://fr.wikibooks.org/wiki/LaTeX/%C3%89crire_des_math%C3%A9matiques) est valable pour le mode mathématique en Markdown.
 La [suite](https://fr.wikibooks.org/wiki/LaTeX/Math%C3%A9matiques) pourra être utile.
+
+
+
+TODO
+## Exercice de création d'un carnet complet

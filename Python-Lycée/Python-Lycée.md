@@ -3,15 +3,15 @@ export_on_save:
   html: true
 ---
 
-<!-- @import "assets/EducNat.jpg" {width="400px" title="Logo de l'Éducation Nationale" alt="Logo de l'Éducation Nationale"} -->
+<!-- @import "../assets/EducNat.jpg" {width="400px" title="Logo de l'Éducation Nationale" alt="Logo de l'Éducation Nationale"} -->
 
 # Python au lycée - une présentation {ignore=true}
 
-@import "assets/Python.svg" {width="400px" title="Logo de Python" alt="Logo de Python"}
+@import "../assets/Python.svg" {width="400px" title="Logo de Python" alt="Logo de Python"}
 
 Auteur : <a href="mailto:franck.chambon@ac-aix-marseille.fr">Franck CHAMBON</a>, enseignant au lycée Lucie AUBRAC de Bollène.
 
-@import "assets/CC-BY-NC-SA.svg" {width="100px" title="Licence" alt="Licence CC-BY-NC-SA-4.0"}
+@import "../assets/CC-BY-NC-SA.svg" {width="100px" title="Licence" alt="Licence CC-BY-NC-SA-4.0"}
 
 Les documents suivants sont placés sous licence libre [CC - BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.fr) :
 
@@ -108,7 +108,7 @@ Elle offre Python facilement sur les systèmes d'exploitation courants, et de no
 - [*Matplotlib*](https://matplotlib.org/ "Site officiel"), pour créer des représentations graphiques.
 - [*Pandas*](https://pandas.pydata.org/ "Site officiel") pour l'analyse de données.
 
-<!-- @import "assets/python_environment.png" title="https://xkcd.com/1987/" -->
+<!-- @import "../assets/python_environment.png" title="https://xkcd.com/1987/" -->
 
 > Cette image issue d'un comic illustre la pagaille possible à installer de multiples environnements de travail avec Python.
 
@@ -121,26 +121,26 @@ Avant de créer un premier script ou *notebook*, **il faut découvrir un peu la 
 Lire à son rythme ces premières parties, en fonction des connaissances de chacun.
 Plusieurs lectures rapides sont possibles.
 
-1. [Découverte de Python par la console](Python-Console.html)
+1. [Découverte de Python par la console](../Python-Console/Python-Console.html)
    1. Premier lancement
    1. Une calculatrice (entiers, flottants, variables)
    1. Un peu d'anglais utile
    1. Exercices
-1. [Création d'un script avec un éditeur](Python-Spyder.html)
+1. [Création d'un script avec un éditeur](../Python-Éditeur/Python-Éditeur.html)
    1. Premier lancement
    1. Création et utilisation de fonctions
    1. Premières boucles
    1. Corriger ses erreurs
    1. Structures conditionnelles
    1. Exercices
-1. [Écriture d'un carnet avec *Jupyter*](Python-Jupyter-1.html)
+1. [Écriture d'un carnet avec *Jupyter*](../Python-Carnets/Python-Jupyter-1.html)
 *En construction*
    1. Utilisations
    1. Cellules *Markdown*
    1. Premiers graphiques
 
 
-1. [Écrire des mathématiques avec Jupyter](Python-Jupyter-2.html)
+1. [Écrire des mathématiques avec Jupyter](../Python-Carnets/Python-Jupyter-2.html)
    1. Balises maths
    1. Nombres et les 4 opérations
    1. Calcul littéral
@@ -229,4 +229,4 @@ Voici une série d'articles récents sur [linuxfr.org](https://linuxfr.org/news/
 D'autres liens en anglais en cliquant sur l'image suivante. D'abord pour tenter de répondre à la question :
 > **Quel langage de programmation** apprendre en premier ?
 
-[![](assets/choix-langage.png)](http://carlcheo.com/startcoding)
+[![](../assets/choix-langage.png)](http://carlcheo.com/startcoding)

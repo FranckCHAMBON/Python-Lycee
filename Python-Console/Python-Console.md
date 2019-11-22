@@ -3,7 +3,7 @@ export_on_save:
   html: true
 ---
 
-<!-- @import "assets/python-java.jpg" title="Python vs Java - comic strip" -->
+<!-- @import "../assets/python-java.jpg" title="Python vs Java - comic strip" -->
 
 # Découverte de Python en console {ignore=true}
 
@@ -20,7 +20,7 @@ export_on_save:
 
 On ouvre un terminal (ou une console), avec <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>, ou bien en cliquant sur une icône (souvent noire), qui peut ressembler à <kbd>:fa-terminal:</kbd> ou <kbd> $_ </kbd>.
 
-![Un terminal bash](assets/terminal.png)
+![Un terminal bash](../assets/terminal.png)
 
 On obtient alors une invite de commande `bash` qui finit par `~$ `, dans laquelle on tape `python3` (ou simplement `python` dans les distributions modernes). La version 3 ou supérieure est la version des programmes de l'Éducation Nationale.
 
