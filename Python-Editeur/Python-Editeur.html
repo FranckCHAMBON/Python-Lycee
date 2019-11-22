@@ -780,17 +780,18 @@ truc<span class="token punctuation">[</span><span class="token number">0</span><
 <p><i class="fa fa-key" aria-hidden="true"></i> Exp&#xE9;rimenter les diff&#xE9;rents cas o&#xF9; <code>i</code> et <code>j</code> sont de m&#xEA;me signe ou non !</p>
 <blockquote>
 <p><strong>Remarque 3</strong> : Pour les copies de tranches, on peut aussi ne pas sp&#xE9;cifier <code>i</code> ou <code>j</code>.<br>
-Avec <code>i</code> et <code>j</code> positifs :</p>
+Avec <code>x</code> positif :</p>
 <ul>
-<li><code>truc[:j]</code> correspond aux <code>j</code> premiers &#xE9;l&#xE9;ments d&apos;une copie de <code>truc</code>.</li>
-<li><code>truc[i:]</code> correspond &#xE0; une copie de tout <code>truc</code> sauf ses <code>i</code> premiers &#xE9;l&#xE9;ments.</li>
-<li><code>truc[:]</code> correspond &#xE0; une copie de tout <code>truc</code>.</li>
+<li><code>truc[:x]</code> correspond aux <code>x</code> premiers &#xE9;l&#xE9;ments d&apos;une copie de <code>truc</code>.</li>
+<li><code>truc[x:]</code> correspond &#xE0; une copie de tout <code>truc</code> sauf ses <code>x</code> premiers &#xE9;l&#xE9;ments.</li>
+<li><code>truc[:x]</code> et <code>truc[:x]</code> constituent donc une partition de <code>truc</code> en deux parties.</li>
+<li><code>truc[:]</code> correspond &#xE0; <strong>une copie</strong> de tout <code>truc</code>.</li>
 </ul>
 </blockquote>
-<p><i class="fa fa-key" aria-hidden="true"></i> De m&#xEA;me, traduire ce que r&#xE9;alisent les expressions suivantes avec <code>i</code> et <code>j</code> positifs :</p>
+<p><i class="fa fa-key" aria-hidden="true"></i> De m&#xEA;me, traduire ce que r&#xE9;alisent les expressions suivantes avec <code>x</code> positif :</p>
 <ul>
-<li><code>truc[:-j]</code></li>
-<li><code>truc[-i:]</code></li>
+<li><code>truc[:-x]</code></li>
+<li><code>truc[-x:]</code></li>
 </ul>
 <blockquote>
 <p><strong>Remarque 4</strong> : Pour les copies de tranches, on peut aussi sp&#xE9;cifier un pas <code>k</code>.<br>
@@ -798,18 +799,15 @@ Avec <code>i</code> et <code>j</code> positifs :</p>
 Par exemple :</p>
 <ul>
 <li><code>truc[5:17:5]</code> donnera les &#xE9;l&#xE9;ments d&apos;index 5, 10 et 15 de <code>truc</code></li>
-<li><code>truc[11:20:3]</code> donnera les &#xE9;l&#xE9;ments d&apos;index 11, 14 et 17 de <code>truc</code>, mais pas le 20.</li>
+<li><code>truc[11:20:3]</code> donnera les &#xE9;l&#xE9;ments d&apos;index 11, 14 et 17 de <code>truc</code>, mais pas le 20.<br>
+<code>truc[::-1]</code> donnera une copie de <code>truc</code> de bout en bout, mais &#xE0; l&apos;envers !</li>
 </ul>
 </blockquote>
-<p><i class="fa fa-key" aria-hidden="true"></i> Donner des &#xE9;critures de tranches pour avoir une copie :</p>
+<p><i class="fa fa-key" aria-hidden="true"></i> Donner des expression sous forme de tranches pour obtenir une copie :</p>
 <ol>
-<li>De tous &#xE9;l&#xE9;ments d&apos;index pair de <code>truc</code></li>
-<li>De tous &#xE9;l&#xE9;ments d&apos;index impair de <code>truc</code></li>
-<li>De tous les &#xE9;l&#xE9;ments de <code>truc</code>, mais rang&#xE9;s dans l&apos;ordre inverse.
-<ul>
-<li>Aide : le pas peut &#xEA;tre n&#xE9;gatif.</li>
-</ul>
-</li>
+<li>De tous &#xE9;l&#xE9;ments d&apos;index pair de <code>truc</code>.</li>
+<li>De tous &#xE9;l&#xE9;ments d&apos;index impair de <code>truc</code>.</li>
+<li>De tous les &#xE9;l&#xE9;ments de <code>truc</code>, sauf les deux derniers, et rang&#xE9;s dans l&apos;ordre inverse.</li>
 </ol>
 <h4 class="mume-header" id="fa-key-conjugaisons"><i class="fa fa-key" aria-hidden="true"></i> Conjugaisons</h4>
 

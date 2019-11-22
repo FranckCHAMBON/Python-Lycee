@@ -474,26 +474,27 @@ truc[0] == truc[-l]
 :fa-key: Expérimenter les différents cas où `i` et `j` sont de même signe ou non !
 
 > **Remarque 3** : Pour les copies de tranches, on peut aussi ne pas spécifier `i` ou `j`.
-> Avec `i` et `j` positifs :
-> - `truc[:j]` correspond aux `j` premiers éléments d'une copie de `truc`.
-> - `truc[i:]` correspond à une copie de tout `truc` sauf ses `i` premiers éléments.
-> - `truc[:]` correspond à une copie de tout `truc`.
+> Avec `x` positif :
+> - `truc[:x]` correspond aux `x` premiers éléments d'une copie de `truc`.
+> - `truc[x:]` correspond à une copie de tout `truc` sauf ses `x` premiers éléments.
+> - `truc[:x]` et `truc[:x]` constituent donc une partition de `truc` en deux parties.
+> - `truc[:]` correspond à **une copie** de tout `truc`.
 
-:fa-key: De même, traduire ce que réalisent les expressions suivantes avec `i` et `j` positifs :
-- `truc[:-j]`
-- `truc[-i:]`
+:fa-key: De même, traduire ce que réalisent les expressions suivantes avec `x` positif :
+- `truc[:-x]`
+- `truc[-x:]`
 
 > **Remarque 4** : Pour les copies de tranches, on peut aussi spécifier un pas `k`.
 > `truc[i:j:k]` correspond à une copie des éléments de `truc` de l'index `i` inclus à l'index `j` exclu, par pas de `k`.
 > Par exemple :
 > - `truc[5:17:5]` donnera les éléments d'index 5, 10 et 15 de `truc`
 > - `truc[11:20:3]` donnera les éléments d'index 11, 14 et 17 de `truc`, mais pas le 20.
+> `truc[::-1]` donnera une copie de `truc` de bout en bout, mais à l'envers !
 
-:fa-key: Donner des écritures de tranches pour avoir une copie :
-1. De tous éléments d'index pair de `truc`
-2. De tous éléments d'index impair de `truc`
-3. De tous les éléments de `truc`, mais rangés dans l'ordre inverse.
-    - Aide : le pas peut être négatif.
+:fa-key: Donner des expression sous forme de tranches pour obtenir une copie :
+1. De tous éléments d'index pair de `truc`.
+2. De tous éléments d'index impair de `truc`.
+3. De tous les éléments de `truc`, sauf les deux derniers, et rangés dans l'ordre inverse.
 
 #### :fa-key: Conjugaisons
 1. Choisir un modèle de conjugaison de verbe. (Exemple : le verbe aimer)
