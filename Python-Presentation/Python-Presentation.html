@@ -1,0 +1,590 @@
+<!DOCTYPE html><html><head>
+      <title>Python-Presentation</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css">
+      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      
+      
+      
+      
+      
+      
+      
+
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <img src="../assets/EducNat.jpg?0.9520677508428439" width="400px" title="Logo de l&apos;&#xC9;ducation Nationale" alt="Logo de l&apos;&#xC9;ducation Nationale">
+<h1 class="mume-header undefined" id="python-au-lyc%C3%A9e-une-pr%C3%A9sentation">Python au lyc&#xE9;e - une pr&#xE9;sentation</h1>
+
+<img src="data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgo8c3ZnIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6Y2M9Imh0dHA6Ly93ZWIucmVzb3VyY2Uub3JnL2NjLyIgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIiB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczpzb2RpcG9kaT0iaHR0cDovL2lua3NjYXBlLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIiB2ZXJzaW9uPSIxLjAiIHdpZHRoPSIzODguODRwdCIgaGVpZ2h0PSIxMTUuMDJwdCIgaWQ9InN2ZzIiIHNvZGlwb2RpOnZlcnNpb249IjAuMzIiIGlua3NjYXBlOnZlcnNpb249IjAuNDMiIHNvZGlwb2RpOmRvY25hbWU9ImxvZ28tcHl0aG9uLWdlbmVyaWMuc3ZnIiBzb2RpcG9kaTpkb2NiYXNlPSIvaG9tZS9zZGVpYmVsIj4KICA8bWV0YWRhdGEgaWQ9Im1ldGFkYXRhMjE5MyI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiLz4KICAgICAgPC9jYzpXb3JrPgogICAgPC9yZGY6UkRGPgogIDwvbWV0YWRhdGE+CiAgPHNvZGlwb2RpOm5hbWVkdmlldyBpbmtzY2FwZTp3aW5kb3ctaGVpZ2h0PSI1NDMiIGlua3NjYXBlOndpbmRvdy13aWR0aD0iNzkxIiBpbmtzY2FwZTpwYWdlc2hhZG93PSIyIiBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIiBib3JkZXJvcGFjaXR5PSIxLjAiIGJvcmRlcmNvbG9yPSIjNjY2NjY2IiBwYWdlY29sb3I9IiNmZmZmZmYiIGlkPSJiYXNlIiBpbmtzY2FwZTp6b29tPSIxLjQzNDAwODkiIGlua3NjYXBlOmN4PSIyNDMuMDI0OTkiIGlua3NjYXBlOmN5PSI3MS44ODc0OTciIGlua3NjYXBlOndpbmRvdy14PSIwIiBpbmtzY2FwZTp3aW5kb3cteT0iMCIgaW5rc2NhcGU6Y3VycmVudC1sYXllcj0ic3ZnMiIvPgogIDxkZWZzIGlkPSJkZWZzNCI+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhckdyYWRpZW50Mjc5NSI+CiAgICAgIDxzdG9wIHN0eWxlPSJzdG9wLWNvbG9yOiNiOGI4Yjg7c3RvcC1vcGFjaXR5OjAuNDk4MDM5MjIiIG9mZnNldD0iMCIgaWQ9InN0b3AyNzk3Ii8+CiAgICAgIDxzdG9wIHN0eWxlPSJzdG9wLWNvbG9yOiM3ZjdmN2Y7c3RvcC1vcGFjaXR5OjAiIG9mZnNldD0iMSIgaWQ9InN0b3AyNzk5Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXJHcmFkaWVudDI3ODciPgogICAgICA8c3RvcCBzdHlsZT0ic3RvcC1jb2xvcjojN2Y3ZjdmO3N0b3Atb3BhY2l0eTowLjUiIG9mZnNldD0iMCIgaWQ9InN0b3AyNzg5Ii8+CiAgICAgIDxzdG9wIHN0eWxlPSJzdG9wLWNvbG9yOiM3ZjdmN2Y7c3RvcC1vcGFjaXR5OjAiIG9mZnNldD0iMSIgaWQ9InN0b3AyNzkxIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXJHcmFkaWVudDM2NzYiPgogICAgICA8c3RvcCBzdHlsZT0ic3RvcC1jb2xvcjojYjJiMmIyO3N0b3Atb3BhY2l0eTowLjUiIG9mZnNldD0iMCIgaWQ9InN0b3AzNjc4Ii8+CiAgICAgIDxzdG9wIHN0eWxlPSJzdG9wLWNvbG9yOiNiM2IzYjM7c3RvcC1vcGFjaXR5OjAiIG9mZnNldD0iMSIgaWQ9InN0b3AzNjgwIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXJHcmFkaWVudDMyMzYiPgogICAgICA8c3RvcCBzdHlsZT0ic3RvcC1jb2xvcjojZjRmNGY0O3N0b3Atb3BhY2l0eToxIiBvZmZzZXQ9IjAiIGlkPSJzdG9wMzI0NCIvPgogICAgICA8c3RvcCBzdHlsZT0ic3RvcC1jb2xvcjojZmZmZmZmO3N0b3Atb3BhY2l0eToxIiBvZmZzZXQ9IjEiIGlkPSJzdG9wMzI0MCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyR3JhZGllbnQ0NjcxIj4KICAgICAgPHN0b3Agc3R5bGU9InN0b3AtY29sb3I6I2ZmZDQzYjtzdG9wLW9wYWNpdHk6MSIgb2Zmc2V0PSIwIiBpZD0ic3RvcDQ2NzMiLz4KICAgICAgPHN0b3Agc3R5bGU9InN0b3AtY29sb3I6I2ZmZTg3MztzdG9wLW9wYWNpdHk6MSIgb2Zmc2V0PSIxIiBpZD0ic3RvcDQ2NzUiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhckdyYWRpZW50NDY4OSI+CiAgICAgIDxzdG9wIHN0eWxlPSJzdG9wLWNvbG9yOiM1YTlmZDQ7c3RvcC1vcGFjaXR5OjEiIG9mZnNldD0iMCIgaWQ9InN0b3A0NjkxIi8+CiAgICAgIDxzdG9wIHN0eWxlPSJzdG9wLWNvbG9yOiMzMDY5OTg7c3RvcC1vcGFjaXR5OjEiIG9mZnNldD0iMSIgaWQ9InN0b3A0NjkzIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IHgxPSIyMjQuMjM5OTYiIHkxPSIxNDQuNzU3MTciIHgyPSItNjUuMzA4NTAyIiB5Mj0iMTQ0Ljc1NzE3IiBpZD0ibGluZWFyR3JhZGllbnQyOTg3IiB4bGluazpocmVmPSIjbGluZWFyR3JhZGllbnQ0NjcxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09InRyYW5zbGF0ZSgxMDAuMjcwMiw5OS42MTExNikiLz4KICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iMTcyLjk0MjA4IiB5MT0iNzcuNDc1OTgzIiB4Mj0iMjYuNjcwMjk4IiB5Mj0iNzYuMzEzMTMzIiBpZD0ibGluZWFyR3JhZGllbnQyOTkwIiB4bGluazpocmVmPSIjbGluZWFyR3JhZGllbnQ0Njg5IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09InRyYW5zbGF0ZSgxMDAuMjcwMiw5OS42MTExNikiLz4KICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iMTcyLjk0MjA4IiB5MT0iNzcuNDc1OTgzIiB4Mj0iMjYuNjcwMjk4IiB5Mj0iNzYuMzEzMTMzIiBpZD0ibGluZWFyR3JhZGllbnQyNTg3IiB4bGluazpocmVmPSIjbGluZWFyR3JhZGllbnQ0Njg5IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09InRyYW5zbGF0ZSgxMDAuMjcwMiw5OS42MTExNikiLz4KICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iMjI0LjIzOTk2IiB5MT0iMTQ0Ljc1NzE3IiB4Mj0iLTY1LjMwODUwMiIgeTI9IjE0NC43NTcxNyIgaWQ9ImxpbmVhckdyYWRpZW50MjU4OSIgeGxpbms6aHJlZj0iI2xpbmVhckdyYWRpZW50NDY3MSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGdyYWRpZW50VHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAwLjI3MDIsOTkuNjExMTYpIi8+CiAgICA8bGluZWFyR3JhZGllbnQgeDE9IjE3Mi45NDIwOCIgeTE9Ijc3LjQ3NTk4MyIgeDI9IjI2LjY3MDI5OCIgeTI9Ijc2LjMxMzEzMyIgaWQ9ImxpbmVhckdyYWRpZW50MjI0OCIgeGxpbms6aHJlZj0iI2xpbmVhckdyYWRpZW50NDY4OSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGdyYWRpZW50VHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAwLjI3MDIsOTkuNjExMTYpIi8+CiAgICA8bGluZWFyR3JhZGllbnQgeDE9IjIyNC4yMzk5NiIgeTE9IjE0NC43NTcxNyIgeDI9Ii02NS4zMDg1MDIiIHkyPSIxNDQuNzU3MTciIGlkPSJsaW5lYXJHcmFkaWVudDIyNTAiIHhsaW5rOmhyZWY9IiNsaW5lYXJHcmFkaWVudDQ2NzEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBncmFkaWVudFRyYW5zZm9ybT0idHJhbnNsYXRlKDEwMC4yNzAyLDk5LjYxMTE2KSIvPgogICAgPGxpbmVhckdyYWRpZW50IHgxPSIyMjQuMjM5OTYiIHkxPSIxNDQuNzU3MTciIHgyPSItNjUuMzA4NTAyIiB5Mj0iMTQ0Ljc1NzE3IiBpZD0ibGluZWFyR3JhZGllbnQyMjU1IiB4bGluazpocmVmPSIjbGluZWFyR3JhZGllbnQ0NjcxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgwLjU2MjU0MSwwLDAsMC41Njc5NzIsLTExLjU5NzQsLTcuNjA5NTQpIi8+CiAgICA8bGluZWFyR3JhZGllbnQgeDE9IjE3Mi45NDIwOCIgeTE9Ijc2LjE3NjIyNCIgeDI9IjI2LjY3MDI5OCIgeTI9Ijc2LjMxMzEzMyIgaWQ9ImxpbmVhckdyYWRpZW50MjI1OCIgeGxpbms6aHJlZj0iI2xpbmVhckdyYWRpZW50NDY4OSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMC41NjI1NDEsMCwwLDAuNTY3OTcyLC0xMS41OTc0LC03LjYwOTU0KSIvPgogICAgPHJhZGlhbEdyYWRpZW50IGN4PSI2MS41MTg4ODMiIGN5PSIxMzIuMjg1NzUiIHI9IjI5LjAzNjkxMyIgZng9IjYxLjUxODg4MyIgZnk9IjEzMi4yODU3NSIgaWQ9InJhZGlhbEdyYWRpZW50MjgwMSIgeGxpbms6aHJlZj0iI2xpbmVhckdyYWRpZW50Mjc5NSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMC4xNzc5NjYsMCwxMDguNzQzNCkiLz4KICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iMTUwLjk2MTExIiB5MT0iMTkyLjM1MTc2IiB4Mj0iMTEyLjAzMTQ0IiB5Mj0iMTM3LjI3Mjk5IiBpZD0ibGluZWFyR3JhZGllbnQxNDc1IiB4bGluazpocmVmPSIjbGluZWFyR3JhZGllbnQ0NjcxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgwLjU2MjU0MSwwLDAsMC41Njc5NzIsLTkuMzk5NzQ5LC01LjMwNTMxNykiLz4KICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iMjYuNjQ4OTM3IiB5MT0iMjAuNjAzNzgxIiB4Mj0iMTM1LjY2NTI1IiB5Mj0iMTE0LjM5NzY3IiBpZD0ibGluZWFyR3JhZGllbnQxNDc4IiB4bGluazpocmVmPSIjbGluZWFyR3JhZGllbnQ0Njg5IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgwLjU2MjU0MSwwLDAsMC41Njc5NzIsLTkuMzk5NzQ5LC01LjMwNTMxNykiLz4KICAgIDxyYWRpYWxHcmFkaWVudCBjeD0iNjEuNTE4ODgzIiBjeT0iMTMyLjI4NTc1IiByPSIyOS4wMzY5MTMiIGZ4PSI2MS41MTg4ODMiIGZ5PSIxMzIuMjg1NzUiIGlkPSJyYWRpYWxHcmFkaWVudDE0ODAiIHhsaW5rOmhyZWY9IiNsaW5lYXJHcmFkaWVudDI3OTUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDIuMzgyNzE2ZS04LC0wLjI5NjQwNSwxLjQzNjc2LDQuNjgzNjczZS03LC0xMjguNTQ0LDE1MC41MjAyKSIvPgogIDwvZGVmcz4KICA8ZyBpZD0iZzIzMDMiPgogICAgPHBhdGggaWQ9InBhdGg0NiIgc3R5bGU9ImZpbGw6IzY0NjQ2NDtmaWxsLW9wYWNpdHk6MSIgZD0iTSAxODQuNjEzNDQsNjEuOTI5MzYzIEMgMTg0LjYxMzQ0LDQ3LjM2NzIxMyAxODAuNDYxMTgsMzkuODkxMTkzIDE3Mi4xNTY2NiwzOS40ODE4MTMgQyAxNjguODUyMzksMzkuMzI1ODYzIDE2NS42MjYxMSwzOS44NTIyMDMgMTYyLjQ4NzU0LDQxLjA3MDU5MyBDIDE1OS45ODI1NCw0MS45NjczMjMgMTU4LjI5NjMsNDIuODU0MzEzIDE1Ny40MDkzMSw0My43NTEwNDMgTCAxNTcuNDA5MzEsNzguNTA5MTYzIEMgMTYyLjcyMTQ3LDgxLjg0MjY3MyAxNjcuNDM5MDcsODMuMzkyNDUzIDE3MS41NTIzNCw4My4xNDg3ODMgQyAxODAuMjU2NDksODIuNTczNzAzIDE4NC42MTM0NCw3NS41MDcwNjMgMTg0LjYxMzQ0LDYxLjkyOTM2MyB6IE0gMTk0Ljg1NzYzLDYyLjUzMzY4MyBDIDE5NC44NTc2Myw2OS45MzE3MjMgMTkzLjEyMjY1LDc2LjA3MjM5MyAxODkuNjMzMTksODAuOTU1NjgzIEMgMTg1Ljc0NDEsODYuNDgyMjgzIDE4MC4zNTM5Niw4OS4zMjg0MzMgMTczLjQ2Mjc3LDg5LjQ4NDM5MyBDIDE2OC4yNjc1Nyw4OS42NTAwOTMgMTYyLjkxNjQyLDg4LjAyMjMyMyAxNTcuNDA5MzEsODQuNjEwODQzIEwgMTU3LjQwOTMxLDExNi4yMDExNiBMIDE0OC41MDA0NywxMTMuMDIzNjEgTCAxNDguNTAwNDcsNDIuOTAzMDQzIEMgMTQ5Ljk2MjUzLDQxLjEwOTU4MyAxNTEuODQzNzIsMzkuNTY5NTQzIDE1NC4xMjQ1NCwzOC4yNjM0MzMgQyAxNTkuNDI2OTYsMzUuMTczNjAzIDE2NS44Njk3OCwzMy41ODQ4MjMgMTczLjQ1MzAyLDMzLjUwNjg1MyBMIDE3My41Nzk3MywzMy42MzM1NjMgQyAxODAuNTA5OTEsMzMuNTQ1ODMzIDE4NS44NTEzMiwzNi4zOTE5OTMgMTg5LjYwMzk1LDQyLjE2MjI2MyBDIDE5My4xMDMxNSw0Ny40NTQ5MzMgMTk0Ljg1NzYzLDU0LjIzODkxMyAxOTQuODU3NjMsNjIuNTMzNjgzIHogIi8+CiAgICA8cGF0aCBpZD0icGF0aDQ4IiBzdHlsZT0iZmlsbDojNjQ2NDY0O2ZpbGwtb3BhY2l0eToxIiBkPSJNIDI0OS4zMDQ4Nyw4My4yNjU3NDMgQyAyNDkuMzA0ODcsOTMuMTg4MjgzIDI0OC4zMTA2NywxMDAuMDU5OTggMjQ2LjMyMjI3LDEwMy44ODA4NCBDIDI0NC4zMjQxMSwxMDcuNzAxNyAyNDAuNTIyNzUsMTEwLjc1MjU0IDIzNC45MDg0MiwxMTMuMDIzNjEgQyAyMzAuMzU2NTMsMTE0LjgxNzA3IDIyNS40MzQyNSwxMTUuNzkxNzggMjIwLjE1MTMzLDExNS45NTc0OCBMIDIxOC42Nzk1MiwxMTAuMzQzMTYgQyAyMjQuMDUwMTYsMTA5LjYxMjEzIDIyNy44MzIwNCwxMDguODgxMDkgMjMwLjAyNTEzLDEwOC4xNTAwNiBDIDIzNC4zNDMwOSwxMDYuNjg4IDIzNy4zMDYyMSwxMDQuNDQ2MTcgMjM4LjkzMzk3LDEwMS40NDQwNiBDIDI0MC4yNDAwOCw5OC45OTc1NDMgMjQwLjg4MzM5LDk0LjMyODY5MyAyNDAuODgzMzksODcuNDE4MDAzIEwgMjQwLjg4MzM5LDg1LjA5ODIwMyBDIDIzNC43OTE0Niw4Ny44NjYzNzMgMjI4LjQwNzExLDg5LjI0MDcxMyAyMjEuNzMwMzYsODkuMjQwNzEzIEMgMjE3LjM0NDE3LDg5LjI0MDcxMyAyMTMuNDc0NTcsODcuODY2MzczIDIxMC4xNDEwNyw4NS4wOTgyMDMgQyAyMDYuMzk4MTgsODIuMDg2MzQzIDIwNC41MjY3NCw3OC4yNjU0ODMgMjA0LjUyNjc0LDczLjYzNTYyMyBMIDIwNC41MjY3NCwzNi41NTc2OTMgTCAyMTMuNDM1NTgsMzMuNTA2ODUzIEwgMjEzLjQzNTU4LDcwLjgyODQ1MyBDIDIxMy40MzU1OCw3NC44MTUwMTMgMjE0LjcyMjIsNzcuODg1MzUzIDIxNy4yOTU0Myw4MC4wMzk0NjMgQyAyMTkuODY4NjYsODIuMTkzNTYzIDIyMy4yMDIxNyw4My4yMjY3NTMgMjI3LjI4NjIsODMuMTQ4NzgzIEMgMjMxLjM3MDIzLDgzLjA2MTA1MyAyMzUuNzQ2NjcsODEuNDgyMDIzIDI0MC4zOTYwMyw3OC4zOTIyMDMgTCAyNDAuMzk2MDMsMzQuODUxOTUzIEwgMjQ5LjMwNDg3LDM0Ljg1MTk1MyBMIDI0OS4zMDQ4Nyw4My4yNjU3NDMgeiAiLz4KICAgIDxwYXRoIGlkPSJwYXRoNTAiIHN0eWxlPSJmaWxsOiM2NDY0NjQ7ZmlsbC1vcGFjaXR5OjEiIGQ9Ik0gMjg0LjA4MjQ5LDg4Ljk5NzAzMyBDIDI4My4wMjAwNiw4OS4wODQ3NTMgMjgyLjA0NTM1LDg5LjEyMzc0MyAyODEuMTQ4NjIsODkuMTIzNzQzIEMgMjc2LjEwOTM3LDg5LjEyMzc0MyAyNzIuMTgxMjksODcuOTI0ODUzIDI2OS4zNzQxMyw4NS41MTczMjMgQyAyNjYuNTc2NzEsODMuMTA5NzkzIDI2NS4xNzMxNCw3OS43ODYwMzMgMjY1LjE3MzE0LDc1LjU0NjA1MyBMIDI2NS4xNzMxNCw0MC40NTY1MjMgTCAyNTkuMDcxNDYsNDAuNDU2NTIzIEwgMjU5LjA3MTQ2LDM0Ljg1MTk1MyBMIDI2NS4xNzMxNCwzNC44NTE5NTMgTCAyNjUuMTczMTQsMTkuOTY4MTQzIEwgMjc0LjA3MjIzLDE2LjgwMDMzMyBMIDI3NC4wNzIyMywzNC44NTE5NTMgTCAyODQuMDgyNDksMzQuODUxOTUzIEwgMjg0LjA4MjQ5LDQwLjQ1NjUyMyBMIDI3NC4wNzIyMyw0MC40NTY1MjMgTCAyNzQuMDcyMjMsNzUuMzAyMzczIEMgMjc0LjA3MjIzLDc4LjY0NTYyMyAyNzQuOTY4OTYsODEuMDE0MTYzIDI3Ni43NjI0Myw4Mi4zOTgyNTMgQyAyNzguMzAyNDcsODMuNTM4NjYzIDI4MC43NDg5OSw4NC4xOTE3MjMgMjg0LjA4MjQ5LDg0LjM1NzQyMyBMIDI4NC4wODI0OSw4OC45OTcwMzMgeiAiLz4KICAgIDxwYXRoIGlkPSJwYXRoNTIiIHN0eWxlPSJmaWxsOiM2NDY0NjQ7ZmlsbC1vcGFjaXR5OjEiIGQ9Ik0gMzM4LjAyMjg4LDg4LjI2NjAwMyBMIDMyOS4xMTQwNCw4OC4yNjYwMDMgTCAzMjkuMTE0MDQsNTMuODc4MjczIEMgMzI5LjExNDA0LDUwLjM3OTA2MyAzMjguMjk1MjgsNDcuMzY3MjEzIDMyNi42Njc1Myw0NC44NTI0NjMgQyAzMjQuNzg2MzQsNDIuMDA2MzEzIDMyMi4xNzQxMSw0MC41ODMyMzMgMzE4LjgyMTEyLDQwLjU4MzIzMyBDIDMxNC43MzcwOCw0MC41ODMyMzMgMzA5LjYyOTYsNDIuNzM3MzQzIDMwMy40OTg3LDQ3LjA0NTU2MyBMIDMwMy40OTg3LDg4LjI2NjAwMyBMIDI5NC41ODk4NSw4OC4yNjYwMDMgTCAyOTQuNTg5ODUsNi4wNjg3OTI5IEwgMzAzLjQ5ODcsMy4yNjE2MzI5IEwgMzAzLjQ5ODcsNDAuNzAwMjAzIEMgMzA5LjE5MSwzNi41NTc2OTMgMzE1LjQwOTYzLDM0LjQ4MTU2MyAzMjIuMTY0MzYsMzQuNDgxNTYzIEMgMzI2Ljg4MTk2LDM0LjQ4MTU2MyAzMzAuNzAyODIsMzYuMDcwMzMzIDMzMy42MjY5NCwzOS4yMzgxNDMgQyAzMzYuNTYwODIsNDIuNDA1OTQzIDMzOC4wMjI4OCw0Ni4zNTM1MTMgMzM4LjAyMjg4LDUxLjA3MTEwMyBMIDMzOC4wMjI4OCw4OC4yNjYwMDMgTCAzMzguMDIyODgsODguMjY2MDAzIHogIi8+CiAgICA8cGF0aCBpZD0icGF0aDU0IiBzdHlsZT0iZmlsbDojNjQ2NDY0O2ZpbGwtb3BhY2l0eToxIiBkPSJNIDM4NS4zNzQyNCw2MC41MjU3ODMgQyAzODUuMzc0MjQsNTQuOTMwOTUzIDM4NC4zMTE4Miw1MC4zMTA4MzMgMzgyLjE5NjY5LDQ2LjY1NTY3MyBDIDM3OS42ODE5NSw0Mi4yMDEyNTMgMzc1Ljc3MzM3LDM5Ljg1MjIwMyAzNzAuNDkwNDQsMzkuNjA4NTIzIEMgMzYwLjcyMzg2LDQwLjE3Mzg2MyAzNTUuODUwMzIsNDcuMTcyMjczIDM1NS44NTAzMiw2MC41ODQyNjMgQyAzNTUuODUwMzIsNjYuNzM0NjgzIDM1Ni44NjQwMSw3MS44NzEzOTMgMzU4LjkxMDg5LDc1Ljk5NDQxMyBDIDM2MS41MjMxMiw4MS4yNDgwOTMgMzY1LjQ0MTQ1LDgzLjg0MDgyMyAzNzAuNjY1ODksODMuNzUzMTAzIEMgMzgwLjQ3MTQ2LDgzLjY3NTEyMyAzODUuMzc0MjQsNzUuOTM1OTMzIDM4NS4zNzQyNCw2MC41MjU3ODMgeiBNIDM5NS4xMzEwOSw2MC41ODQyNjMgQyAzOTUuMTMxMDksNjguNTQ3NjQzIDM5My4wOTM5NSw3NS4xNzU2NjMgMzg5LjAyOTQxLDgwLjQ2ODMzMyBDIDM4NC41NTU1LDg2LjM5NDU2MyAzNzguMzc1ODQsODkuMzY3NDIzIDM3MC40OTA0NCw4OS4zNjc0MjMgQyAzNjIuNjczMjgsODkuMzY3NDIzIDM1Ni41ODEzNSw4Ni4zOTQ1NjMgMzUyLjE4NTQxLDgwLjQ2ODMzMyBDIDM0OC4xOTg4NSw3NS4xNzU2NjMgMzQ2LjIxMDQ0LDY4LjU0NzY0MyAzNDYuMjEwNDQsNjAuNTg0MjYzIEMgMzQ2LjIxMDQ0LDUzLjA5ODUwMyAzNDguMzY0NTUsNDYuODAxODgzIDM1Mi42NzI3Niw0MS42NzQ5MTMgQyAzNTcuMjI0NjYsMzYuMjM2MDMzIDM2My4yMDkzNywzMy41MDY4NTMgMzcwLjYwNzQsMzMuNTA2ODUzIEMgMzc4LjAwNTQ1LDMzLjUwNjg1MyAzODQuMDI5MTQsMzYuMjM2MDMzIDM4OC42Njg3Nyw0MS42NzQ5MTMgQyAzOTIuOTc2OTcsNDYuODAxODgzIDM5NS4xMzEwOSw1My4wOTg1MDMgMzk1LjEzMTA5LDYwLjU4NDI2MyB6ICIvPgogICAgPHBhdGggaWQ9InBhdGg1NiIgc3R5bGU9ImZpbGw6IzY0NjQ2NDtmaWxsLW9wYWNpdHk6MSIgZD0iTSA0NDYuMjA1ODMsODguMjY2MDAzIEwgNDM3LjI5Njk5LDg4LjI2NjAwMyBMIDQzNy4yOTY5OSw1MS45Mjg4NTMgQyA0MzcuMjk2OTksNDcuOTQyMjkzIDQzNi4wOTgxLDQ0LjgzMjk3MyA0MzMuNzAwMzIsNDIuNTkxMTMzIEMgNDMxLjMwMjUzLDQwLjM1OTA1MyA0MjguMTA1NDksMzkuMjc3MTIzIDQyNC4xMTg5MywzOS4zNjQ4NTMgQyA0MTkuODg4NywzOS40NDI4MzMgNDE1Ljg2MzE0LDQwLjgyNjkxMyA0MTIuMDQyMjksNDMuNTA3MzYzIEwgNDEyLjA0MjI5LDg4LjI2NjAwMyBMIDQwMy4xMzM0NSw4OC4yNjYwMDMgTCA0MDMuMTMzNDUsNDIuNDA1OTQzIEMgNDA4LjI2MDQyLDM4LjY3MjgxMyA0MTIuOTc4MDEsMzYuMjM2MDMzIDQxNy4yODYyMSwzNS4wOTU2MjMgQyA0MjEuMzUwNzYsMzQuMDMzMTkzIDQyNC45Mzc2OSwzMy41MDY4NTMgNDI4LjAyNzUyLDMzLjUwNjg1MyBDIDQzMC4xNDI2NCwzMy41MDY4NTMgNDMyLjEzMTA0LDMzLjcxMTU0MyA0MzQuMDAyNDgsMzQuMTIwOTEzIEMgNDM3LjUwMTY5LDM0LjkyOTkyMyA0NDAuMzQ3ODMsMzYuNDMwOTczIDQ0Mi41NDA5MywzOC42MzM4MjMgQyA0NDQuOTg3NDQsNDEuMDcwNTkzIDQ0Ni4yMDU4Myw0My45OTQ3MjMgNDQ2LjIwNTgzLDQ3LjQxNTk0MyBMIDQ0Ni4yMDU4Myw4OC4yNjYwMDMgeiAiLz4KICAgIDxwYXRoIGlkPSJwYXRoMTk0OCIgc3R5bGU9ImZpbGw6dXJsKCNsaW5lYXJHcmFkaWVudDE0NzgpO2ZpbGwtb3BhY2l0eToxIiBkPSJNIDYwLjUxMDE1Niw2LjM5Nzk3MjkgQyA1NS45MjY1MDMsNi40MTkyNzEyIDUxLjU0OTIxNyw2LjgxMDE5MDYgNDcuNjk3NjU2LDcuNDkxNzIyOSBDIDM2LjM1MTQ0LDkuNDk2MjI2NyAzNC4yOTE0MDcsMTMuNjkxODI1IDM0LjI5MTQwNiwyMS40MjkyMjMgTCAzNC4yOTE0MDYsMzEuNjQ3OTczIEwgNjEuMTAzOTA2LDMxLjY0Nzk3MyBMIDYxLjEwMzkwNiwzNS4wNTQyMjMgTCAzNC4yOTE0MDYsMzUuMDU0MjIzIEwgMjQuMjI4OTA2LDM1LjA1NDIyMyBDIDE2LjQzNjQ0NywzNS4wNTQyMjMgOS42MTMxNDY4LDM5LjczNzk0IDcuNDc4OTA1OCw0OC42NDc5NzMgQyA1LjAxNzA4NTgsNTguODYwOTM5IDQuOTA3ODkwNyw2NS4yMzM5OTYgNy40Nzg5MDU4LDc1Ljg5Nzk3MyBDIDkuMzg0ODM0MSw4My44MzU4MjUgMTMuOTM2NDQ5LDg5LjQ5MTcyMSAyMS43Mjg5MDYsODkuNDkxNzIzIEwgMzAuOTQ3NjU2LDg5LjQ5MTcyMyBMIDMwLjk0NzY1Niw3Ny4yNDE3MjMgQyAzMC45NDc2NTYsNjguMzkxODIxIDM4LjYwNDgsNjAuNTg1NDc1IDQ3LjY5NzY1Niw2MC41ODU0NzMgTCA3NC40Nzg5MDYsNjAuNTg1NDczIEMgODEuOTMzODU3LDYwLjU4NTQ3MyA4Ny44ODUxNTksNTQuNDQ3MzA5IDg3Ljg4NTE1Niw0Ni45NjA0NzMgTCA4Ny44ODUxNTYsMjEuNDI5MjIzIEMgODcuODg1MTU2LDE0LjE2Mjg4NCA4MS43NTUxNzYsOC43MDQ0NDU1IDc0LjQ3ODkwNiw3LjQ5MTcyMjkgQyA2OS44NzI5MTksNi43MjQ5OTc2IDY1LjA5MzgwOSw2LjM3NjY3NDYgNjAuNTEwMTU2LDYuMzk3OTcyOSB6IE0gNDYuMDEwMTU2LDE0LjYxNjcyMyBDIDQ4Ljc3OTcwMywxNC42MTY3MjMgNTEuMDQxNDA2LDE2LjkxNTM2OSA1MS4wNDE0MDYsMTkuNzQxNzIzIEMgNTEuMDQxNDA0LDIyLjU1ODA1OSA0OC43Nzk3MDMsMjQuODM1NDczIDQ2LjAxMDE1NiwyNC44MzU0NzMgQyA0My4yMzA2OCwyNC44MzU0NzIgNDAuOTc4OTA2LDIyLjU1ODA1OCA0MC45Nzg5MDYsMTkuNzQxNzIzIEMgNDAuOTc4OTA1LDE2LjkxNTM3IDQzLjIzMDY4LDE0LjYxNjcyMyA0Ni4wMTAxNTYsMTQuNjE2NzIzIHogIi8+CiAgICA8cGF0aCBpZD0icGF0aDE5NTAiIHN0eWxlPSJmaWxsOnVybCgjbGluZWFyR3JhZGllbnQxNDc1KTtmaWxsLW9wYWNpdHk6MSIgZD0iTSA5MS4yMjg5MDYsMzUuMDU0MjIzIEwgOTEuMjI4OTA2LDQ2Ljk2MDQ3MyBDIDkxLjIyODkwNiw1Ni4xOTEyMjggODMuNDAzMDExLDYzLjk2MDQ3MiA3NC40Nzg5MDYsNjMuOTYwNDczIEwgNDcuNjk3NjU2LDYzLjk2MDQ3MyBDIDQwLjM2MTgyMyw2My45NjA0NzMgMzQuMjkxNDA3LDcwLjIzODk1NiAzNC4yOTE0MDYsNzcuNTg1NDczIEwgMzQuMjkxNDA2LDEwMy4xMTY3MiBDIDM0LjI5MTQwNiwxMTAuMzgzMDYgNDAuNjA5OTk0LDExNC42NTcwNCA0Ny42OTc2NTYsMTE2Ljc0MTcyIEMgNTYuMTg0OTg3LDExOS4yMzczMyA2NC4zMjM4OTMsMTE5LjY4ODM1IDc0LjQ3ODkwNiwxMTYuNzQxNzIgQyA4MS4yMjkwNjEsMTE0Ljc4NzMzIDg3Ljg4NTE1OSwxMTAuODU0MTEgODcuODg1MTU2LDEwMy4xMTY3MiBMIDg3Ljg4NTE1Niw5Mi44OTc5NzMgTCA2MS4xMDM5MDYsOTIuODk3OTczIEwgNjEuMTAzOTA2LDg5LjQ5MTcyMyBMIDg3Ljg4NTE1Niw4OS40OTE3MjMgTCAxMDEuMjkxNDEsODkuNDkxNzIzIEMgMTA5LjA4Mzg3LDg5LjQ5MTcyMyAxMTEuOTg3NjYsODQuMDU2MzE1IDExNC42OTc2NSw3NS44OTc5NzMgQyAxMTcuNDk2OTgsNjcuNDk5MDg3IDExNy4zNzc4Nyw1OS40MjIxOTcgMTE0LjY5NzY1LDQ4LjY0Nzk3MyBDIDExMi43NzE4Nyw0MC44OTA1MzIgMTA5LjA5Mzc4LDM1LjA1NDIyMyAxMDEuMjkxNDEsMzUuMDU0MjIzIEwgOTEuMjI4OTA2LDM1LjA1NDIyMyB6IE0gNzYuMTY2NDA2LDk5LjcxMDQ3MyBDIDc4Ljk0NTg4NCw5OS43MTA0NzYgODEuMTk3NjU2LDEwMS45ODc4OSA4MS4xOTc2NTYsMTA0LjgwNDIyIEMgODEuMTk3NjU0LDEwNy42MzA1NyA3OC45NDU4ODEsMTA5LjkyOTIyIDc2LjE2NjQwNiwxMDkuOTI5MjIgQyA3My4zOTY4NTYsMTA5LjkyOTIyIDcxLjEzNTE1NiwxMDcuNjMwNTcgNzEuMTM1MTU2LDEwNC44MDQyMiBDIDcxLjEzNTE1OCwxMDEuOTg3ODkgNzMuMzk2ODUzLDk5LjcxMDQ3MyA3Ni4xNjY0MDYsOTkuNzEwNDczIHogIi8+CiAgICA8cGF0aCBpZD0idGV4dDMwMDQiIHN0eWxlPSJmb250LXNpemU6MTUuMTY0NDU4MjdweDtmb250LXN0eWxlOm5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7bGluZS1oZWlnaHQ6MTI1JTtmaWxsOiM2NDY0NjQ7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjFweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxO2ZvbnQtZmFtaWx5OkJpdHN0cmVhbSBWZXJhIFNhbnMiIGQ9Ik0gNDYzLjU1NDQsMjYuOTA5MzgzIEwgNDY1LjExNjM1LDI2LjkwOTM4MyBMIDQ2NS4xMTYzNSwxNy4xMTMxNDMgTCA0NjguODE2NDgsMTcuMTEzMTQzIEwgNDY4LjgxNjQ4LDE1Ljk0NTQ4MyBMIDQ1OS44NTQyNywxNS45NDU0ODMgTCA0NTkuODU0MjcsMTcuMTEzMTQzIEwgNDYzLjU1NDQsMTcuMTEzMTQzIEwgNDYzLjU1NDQsMjYuOTA5MzgzIE0gNDcwLjIwMTQyLDI2LjkwOTM4MyBMIDQ3MS41MzU4OSwyNi45MDkzODMgTCA0NzEuNTM1ODksMTcuOTYyMzUzIEwgNDc0LjQzMjMsMjYuOTA4MjU5IEwgNDc1LjkxNzk5LDI2LjkwODI1OSBMIDQ3OC45MzYxNSwxNy45OTI2ODMgTCA0NzguOTM2MTUsMjYuOTA5MzgzIEwgNDgwLjM5MTk0LDI2LjkwOTM4MyBMIDQ4MC4zOTE5NCwxNS45NDU0ODMgTCA0NzguNDY2MDUsMTUuOTQ1NDgzIEwgNDc1LjE2Nzc0LDI1LjMzODM0IEwgNDcyLjM1NDc3LDE1Ljk0NTQ4MyBMIDQ3MC4yMDE0MiwxNS45NDU0ODMgTCA0NzAuMjAxNDIsMjYuOTA5MzgzIi8+CiAgICA8cGF0aCBpZD0icGF0aDE4OTQiIHN0eWxlPSJvcGFjaXR5OjAuNDQzODIwMTk7ZmlsbDp1cmwoI3JhZGlhbEdyYWRpZW50MTQ4MCk7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjIwO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjEiIHRyYW5zZm9ybT0ibWF0cml4KDAuNzM0MDYsMCwwLDAuODA5NTI0LDE2LjI0OTU4LDI3LjAwOTM1KSIgZD0iTSAxMTAuNDY3MTcgMTMyLjI4NTc1IEEgNDguOTQ4Mjg0IDguNjA2Njc3MSAwIDEgMSAgMTIuNTcwNTk5LDEzMi4yODU3NSBBIDQ4Ljk0ODI4NCA4LjYwNjY3NzEgMCAxIDEgIDExMC40NjcxNyAxMzIuMjg1NzUgeiIvPgogIDwvZz4KPC9zdmc+" width="400px" title="Logo de Python" alt="Logo de Python">
+<p>Auteur : <a href="mailto:franck.chambon@ac-aix-marseille.fr">Franck CHAMBON</a>, enseignant au lyc&#xE9;e Lucie AUBRAC de Boll&#xE8;ne.</p>
+<img src="data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHN2ZyAgUFVCTElDICctLy9XM0MvL0RURCBTVkcgMS4xLy9FTicgICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDU3MCAyMDAiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDU3MCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdDB7ZmlsbDojQUJCMUFBO30gLnN0MXtmaWxsOiNGRkZGRkY7fSAuc3Qye2ZpbGw6I0ZGRkZGRjtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTQ7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fTwvc3R5bGU+CiA8cGF0aCBjbGFzcz0ic3QwIiBkPSJtNTYwIDE5Ny41aC01NTBjLTQuMiAwLTcuNS0zLjQtNy41LTcuNXYtMTgwYzAtNC4yIDMuNC03LjUgNy41LTcuNWg1NTBjNC4yIDAgNy41IDMuNCA3LjUgNy41djE4MGMwIDQuMS0zLjQgNy41LTcuNSA3LjV6Ii8+CiA8cGF0aCBkPSJNNTYwLDBIMTBDNC41LDAsMCw0LjUsMCwxMHYxODBjMCw1LjUsNC41LDEwLDEwLDEwaDU1MGM1LjUsMCwxMC00LjUsMTAtMTBWMTBDNTcwLDQuNSw1NjUuNSwwLDU2MCwweiBNMTAsNmg1NTAgYzIuMiwwLDQsMS44LDQsNHYxMzBINlYxMEM2LDcuOCw3LjgsNiwxMCw2eiIvPgogPGNpcmNsZSBjbGFzcz0ic3QwIiBjeD0iOTgiIGN5PSI5MyIgcj0iODYuNSIvPgogPHBhdGggY2xhc3M9InN0MSIgZD0ibTIzOC44IDE2Ny4yYzMuMy0xLjYgNS0zLjggNS02LjUgMC0yLjgtMS4yLTUtMy41LTYuNi0yLjMtMS41LTUuNS0yLjMtOS42LTIuMy0yLjEgMC01LjkgMC4xLTExLjIgMC4zdjM0LjZoMTIuMWM0LjMgMCA3LjgtMC45IDEwLjUtMi44czQuMS00LjMgNC4xLTcuNWMtMC4xLTQuNi0yLjUtNy43LTcuNC05LjJ6bS0xMi4zLTEwLjFjMS42LTAuMSAyLjktMC4xIDQtMC4xIDQuMSAwIDYuMiAxLjMgNi4yIDQgMCAzLTIuMyA0LjUtNi44IDQuNS0xLjIgMC0yLjMgMC0zLjQtMC4xdi04LjN6bTEwLjIgMjMuM2MtMS40IDAuOS0zLjcgMS40LTYuOCAxLjQtMC45IDAtMi0wLjEtMy40LTAuMnYtMTEuNGMxLjcgMCAyLjgtMC4xIDMuNS0wLjEgMy4zIDAgNS42IDAuNCA2LjkgMS4zczIgMi4zIDIgNC4zYy0wLjEgMi4yLTAuOCAzLjgtMi4yIDQuN3oiLz4KIDxwb2x5Z29uIGNsYXNzPSJzdDEiIHBvaW50cz0iMjcyLjEgMTUyLjIgMjYyLjcgMTY2LjkgMjUzLjQgMTUyLjIgMjQ1LjkgMTUyLjIgMjU5LjIgMTcyLjYgMjU5LjIgMTg2LjggMjY2LjIgMTg2LjggMjY2LjIgMTcyLjYgMjc5LjUgMTUyLjIiLz4KIDxwb2x5Z29uIGNsYXNzPSJzdDEiIHBvaW50cz0iMzYwLjEgMTcyLjggMzQxLjggMTUyLjQgMzM4LjUgMTUyLjQgMzM4LjUgMTg2LjMgMzQ1LjEgMTg2LjMgMzQ1LjEgMTY1LjMgMzYzLjkgMTg2LjcgMzY2LjcgMTg2LjcgMzY2LjcgMTUyLjQgMzYwLjEgMTUyLjQiLz4KIDxwYXRoIGNsYXNzPSJzdDEiIGQ9Im0zOTguMyAxNzguMWMtMi4xIDIuMy00LjkgMy40LTguNiAzLjQtMy4yIDAtNS43LTEuMS03LjYtMy4ycy0yLjktNS0yLjktOC42IDEtNi42IDMuMS05IDQuNy0zLjYgNy45LTMuNmMzLjQgMCA1LjkgMC43IDcuNCAybDIuOC01Yy0yLjctMS42LTYuMi0yLjQtMTAuNi0yLjQtNS4yIDAtOS40IDEuNy0xMi43IDUuMXMtNSA3LjYtNSAxMi42YzAgNS40IDEuNSA5LjYgNC41IDEyLjggMyAzLjEgNy4yIDQuNyAxMi42IDQuN3M5LjUtMS4zIDEyLjMtMy45bC0zLjItNC45eiIvPgogPHBhdGggY2xhc3M9InN0MSIgZD0ibTQ4Mi4zIDE2OS40Yy0xLjItMS0zLjEtMi01LjctMy4xLTUtMi4xLTcuNS00LjItNy41LTYuMiAwLTEuMiAwLjQtMi4yIDEuMy0yLjlzMi4xLTEuMSAzLjgtMS4xYzIuNyAwIDUuMyAwLjggNy44IDIuM2wyLjEtNS4zYy0yLjEtMS41LTUuNS0yLjItMTAuMS0yLjItMy41IDAtNi40IDAuOS04LjYgMi42cy0zLjQgNC0zLjQgNi43YzAgMS40IDAuMyAyLjcgMC44IDMuOSAwLjYgMS4yIDEuNCAyLjIgMi40IDMuMSAxLjEgMC45IDMuMSAyIDYuMSAzLjNzNSAyLjUgNiAzLjYgMS41IDIuMiAxLjUgMy40YzAgMi41LTIuMSAzLjgtNi4yIDMuOC0yLjcgMC01LjQtMC45LTguMi0yLjZsLTIuNiA1LjVjMyAxLjcgNi4zIDIuNSAxMCAyLjUgNC4yIDAgNy42LTAuOSAxMC4yLTIuNyAyLjUtMS44IDMuOC00LjEgMy44LTYuOSAwLTEuNi0wLjMtMy0wLjktNC4yLTAuNS0xLjQtMS40LTIuNS0yLjYtMy41eiIvPgogPHBhdGggY2xhc3M9InN0MSIgZD0ibTUwNi4xIDE1MWgtMy4xbC0xNS44IDM1LjFoNy44bDIuOC03aDEzLjVsMi45IDdoNy43bC0xNS44LTM1LjF6bS02LjMgMjMuNCA0LjctMTIuOCA0LjcgMTIuOGgtOS40eiIvPgogPGNpcmNsZSBjbGFzcz0ic3QxIiBjeD0iMjQ4IiBjeT0iNzAuNiIgcj0iNTAiLz4KIDxwYXRoIGQ9Im0yNDggMjUuNmMyNC44IDAgNDUgMjAuMiA0NSA0NXMtMjAuMiA0NS00NSA0NS00NS0yMC4yLTQ1LTQ1IDIwLjItNDUgNDUtNDVtMC0xMGMtMzAuNCAwLTU1IDI0LjYtNTUgNTVzMjQuNiA1NSA1NSA1NSA1NS0yNC42IDU1LTU1LTI0LjYtNTUtNTUtNTV6Ii8+CiA8Y2lyY2xlIGN4PSIyNDgiIGN5PSI0MyIgcj0iNy45Ii8+CiA8cGF0aCBkPSJtMjYxLjIgNTcuOWMwLTAuOCAwLjEtMi4zLTEuMS0zLjUtMS4xLTEuMS0yLjctMS4xLTMuNS0xLjFoLTE3LjNjLTAuOCAwLTIuMy0wLjEtMy41IDEuMS0xLjEgMS4xLTEuMSAyLjctMS4xIDMuNXYyMS45aDV2MjYuNGgxNi40di0yNi40aDVjMC4xIDAgMC4xLTE4LjkgMC4xLTIxLjl6Ii8+CiA8Y2lyY2xlIGNsYXNzPSJzdDIiIGN4PSI5OCIgY3k9IjkzIiByPSI2OC41Ii8+CiA8cGF0aCBkPSJtNzguOCAxMDYuM2MtNi45IDAtMTAuMS01LjctMTAuMS0xMy4zczIuNy0xMy4zIDEwLjEtMTMuM2MyIDAgNiAxLjEgOC4zIDYuMWwxMC01LjJjLTQuMi03LjctMTEuNS0xMC44LTE5LjktMTAuOC0xMi4yIDAtMjIgOC42LTIyIDIzLjMgMCAxNC45IDkuMiAyMy4zIDIyLjQgMjMuMyA4LjUgMCAxNS43LTQuNyAxOS43LTExLjdsLTkuMy00LjdjLTIgNC44LTUuMiA2LjMtOS4yIDYuM3oiLz4KIDxwYXRoIGQ9Im0xMzEuNCA5OS44Yy0yLjEgNS01LjIgNi41LTkuMiA2LjUtNi45IDAtMTAuMS01LjctMTAuMS0xMy4zczIuNy0xMy4zIDEwLjEtMTMuM2MyIDAgNiAxLjEgOC4zIDYuMWwxMC01LjJjLTQuMi03LjctMTEuNS0xMC44LTE5LjktMTAuOC0xMi4yIDAtMjIgOC42LTIyIDIzLjMgMCAxNC45IDkuMiAyMy4zIDIyLjQgMjMuMyA4LjUgMCAxNS43LTQuNyAxOS43LTExLjdsLTkuMy00Ljl6Ii8+CiA8Y2lyY2xlIGNsYXNzPSJzdDEiIGN4PSI0OTIiIGN5PSI3MC42IiByPSI1MCIvPgogPHBhdGggZD0ibTQ5MiAyNS42YzI0LjggMCA0NSAyMC4yIDQ1IDQ1cy0yMC4yIDQ1LTQ1IDQ1LTQ1LTIwLjItNDUtNDUgMjAuMi00NSA0NS00NW0wLTEwYy0zMC40IDAtNTUgMjQuNi01NSA1NXMyNC42IDU1IDU1IDU1IDU1LTI0LjYgNTUtNTUtMjQuNi01NS01NS01NXoiLz4KIDxwYXRoIGQ9Im00OTMuMiA0MC40aC0xLjdjLTkuOSAwLjItMjMuNCA3LjEtMjMuNCAyMC42aC00LjdsMTAuNyAxMiAxMC43LTEyaC0zLjljMC44LTUuOCA2LTkuNiAxMS45LTkuMWgwLjdjOS43IDAgMTMuNSA3LjMgMTMuOCAxOC4xIDAuMyAxMS4zLTYuMiAxOC4zLTEzLjggMTguMS04LTAuMi0xMS4xLTQtMTIuMi05LjhoLTE0LjNjMi40IDEzLjQgMTIuMiAyMS4zIDI2LjMgMjEuMyAxNS45IDAgMjcuMy0xMy4yIDI3LjMtMjkuNiAwLTE3LjQtMTEuNS0yOS42LTI3LjQtMjkuNnoiLz4KIDxjaXJjbGUgY2xhc3M9InN0MSIgY3g9IjM3MCIgY3k9IjcwLjYiIHI9IjUwIi8+CiA8cGF0aCBkPSJtMzcwIDI1LjZjMjQuOCAwIDQ1IDIwLjIgNDUgNDVzLTIwLjIgNDUtNDUgNDUtNDUtMjAuMi00NS00NSAyMC4yLTQ1IDQ1LTQ1bTAtMTBjLTMwLjQgMC01NSAyNC42LTU1IDU1czI0LjYgNTUgNTUgNTUgNTUtMjQuNiA1NS01NS0yNC42LTU1LTU1LTU1eiIvPgogPHBhdGggZD0ibTQyMCA4Ni42LTQuNSA5LjktOTUuNS00MyA0LjUtOS45IDk1LjUgNDN6Ii8+CiA8cGF0aCBkPSJtMzU4LjMgODEuOGMzLjUgNSAxNC40IDUuMyAxOC4xIDMuMiAxLjQtMC44IDEuNy0zIDEuNy00LjUgMC0xLTAuMy0xLjktMC44LTIuNS0wLjYtMC42LTItMi4xLTMuNy0yLjUtOC42LTIuMi0xNC42LTUtMTYuOS03LTIuOS0yLjUtMy40LTQuMi0zLjQtOC42czEuMy04LjEgNC4xLTEwLjdjMi45LTIuNiA3LTQgMTIuNC00IDUuMiAwIDEyLjUgMS40IDE2LjEgNS42bC01LjkgNi41Yy0zLjQtMi44LTUuOC0zLjEtOS45LTMuMS0yLjYgMC0zLjkgMC40LTUgMS4xcy0xLjYgMS42LTEuNiAyLjhjMCAxIDAuNSAxLjkgMS41IDIuNnMzLjYgMS44IDguOCAzLjJjNS45IDEuNiA5LjggMy41IDExLjkgNS44czMuMSA1LjMgMy4xIDkuMWMwIDQuNi0xLjYgOC4zLTQuOCAxMS4zcy03LjEgNS4zLTEyLjggNS4zYy03LjMgMC0xNy0yLjYtMTkuNy03LjMiLz4KIDxwYXRoIGQ9Im0zNjYuNCAzNi41djEyaDUuMnYtMTJoLTUuMnptMCA1Ni43djEwLjNoNS4ydi0xMC4zaC01LjJ6Ii8+Cjwvc3ZnPgo=" width="100px" title="Licence" alt="Licence CC-BY-NC-SA-4.0">
+<p>Les documents suivants sont plac&#xE9;s sous licence libre <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.fr">CC - BY-NC-SA 4.0</a> :</p>
+<ul>
+<li>Ils sont accessibles gratuitement.</li>
+<li>Ils peuvent &#xEA;tre modifi&#xE9;s, adapt&#xE9;s, &#xE9;toff&#xE9;s, quitte &#xE0; citer les diff&#xE9;rents auteurs.</li>
+<li>Leur utilisation commerciale n&apos;est pas accept&#xE9;e.</li>
+</ul>
+<h2 class="mume-header undefined" id="sommaire">Sommaire</h2>
+
+<ul>
+<li><a href="#fa-question-circle-pourquoi-python"><i class="fa fa-question-circle" aria-hidden="true"></i> Pourquoi Python</a></li>
+<li><a href="#fa-wifi-python-en-ou-hors-ligne"><i class="fa fa-wifi" aria-hidden="true"></i> Python, en ou hors ligne</a>
+<ul>
+<li><a href="#solutions-en-ligne">Solutions en Ligne</a></li>
+<li><a href="#solutions-hors-ligne">Solutions hors ligne</a></li>
+</ul>
+</li>
+<li><a href="#fa-android-python-avec-une-tablette-android"><i class="fa fa-android" aria-hidden="true"></i> Python avec une tablette Android</a></li>
+<li><a href="#fa-laptop-python-avec-un-ordinateur"><i class="fa fa-laptop" aria-hidden="true"></i> Python avec un ordinateur</a></li>
+<li><a href="#fa-graduation-cap-apprendre-python"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Apprendre Python</a>
+<ul>
+<li><a href="#un-programme-dapprentissage-local">Un programme d&apos;apprentissage local</a></li>
+<li><a href="#autres-programmes-dapprentissage-possibles">Autres programmes d&apos;apprentissage possibles</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="fa-question-circle-pourquoi-python"><i class="fa fa-question-circle" aria-hidden="true"></i> Pourquoi Python</h2>
+
+<p>Dans le <a href="https://cache.media.education.gouv.fr/file/SP1-MEN-22-1-2019/26/8/spe633_annexe_1063268.pdf">bulletin Officiel</a> du programme de NSI, on trouve une justification de ce choix pour <em>Python</em> :</p>
+<blockquote>
+<p><strong>Modalit&#xE9;s de mise en &#x153;uvre</strong></p>
+<blockquote>
+<p>Les activit&#xE9;s pratiques et la r&#xE9;alisation de projets supposent, pour chaque &#xE9;l&#xE8;ve, l&#x2019;acc&#xE8;s &#xE0; un &#xE9;quipement reli&#xE9; &#xE0; internet. Un langage de programmation est n&#xE9;cessaire pour l&#x2019;&#xE9;criture des programmes :  un  langage simple d&#x2019;usage, interpr&#xE9;t&#xE9;, concis, libre et gratuit, multiplateforme, largement r&#xE9;pandu, riche de biblioth&#xE8;ques adapt&#xE9;es et b&#xE9;n&#xE9;ficiant d&#x2019;une vaste communaut&#xE9; d&#x2019;auteurs dans le monde &#xE9;ducatif  est  &#xE0;  privil&#xE9;gier.  Au  moment  de  la  conception  de  ce  programme,  le  langage  choisi est Python version 3 (ou sup&#xE9;rieure). L&#x2019;expertise dans tel ou tel langage de programmation n&#x2019;est cependant pas un objectif de formation.</p>
+</blockquote>
+</blockquote>
+<p>L&apos;utilisation de <em>Python</em> au lyc&#xE9;e est retenue ou possible :</p>
+<ul>
+<li>en NSI (Num&#xE9;rique et Science de l&apos;Informatique),</li>
+<li>en maths, en particulier pour la partie algorithmique du programme,</li>
+<li>en SNT, pour les &#xE9;l&#xE8;ves de seconde,</li>
+<li>en sciences physiques, en chime,</li>
+<li>en SVT,</li>
+<li>en SES.</li>
+</ul>
+<p>Nous aborderons dans ce cours diff&#xE9;rents outils.</p>
+<ul>
+<li>La console, pour la d&#xE9;couverte de <a href="https://www.python.org/" title="Site officiel"><em>Python</em></a>.</li>
+<li>Un &#xE9;diteur de script, comme <a href="https://www.spyder-ide.org/" title="Site officiel">Spyder</a>.</li>
+<li><a href="https://jupyter.org/" title="Site officiel"><em>Jupyter</em></a>, pour la r&#xE9;alisation de documents.</li>
+<li><a href="https://matplotlib.org/" title="Site officiel"><em>Matplotlib</em></a>, pour la cr&#xE9;ation de graphiques.</li>
+<li><a href="https://pandas.pydata.org/" title="Site officiel"><em>Pandas</em></a>, pour l&apos;analyse de donn&#xE9;es.</li>
+</ul>
+<h2 class="mume-header" id="fa-wifi-python-en-ou-hors-ligne"><i class="fa fa-wifi" aria-hidden="true"></i> Python, en ou hors ligne</h2>
+
+<p>Voyons d&apos;abord comment utiliser Python avec une tablette ou un ordinateur, avec ou sans connexion internet.</p>
+<h3 class="mume-header" id="solutions-en-ligne">Solutions en Ligne</h3>
+
+<p>Avec un navigateur et une connexion internet ; il est inutile d&apos;installer un autre logiciel.</p>
+<ul>
+<li>Sans inscription : <a href="ideone.com" title="Site officiel">ideone</a>, un outil simple et complet. Id&#xE9;al pour exp&#xE9;rimenter un script, en mode nomade.</li>
+<li>Sans inscription : <a href="http://pythontutor.com/visualize.html#mode=edit">Python Tutor</a>, un outil pour visualiser l&apos;ex&#xE9;cution d&apos;un petit script.</li>
+<li>Avec inscription : <a href="http://cocalc.com">cocalc.com</a>, un outil puissant et tr&#xE8;s complet bas&#xE9; sur des logiciels libres. Il permet de stocker ses scripts dans un nuage, et de les lancer depuis toute machine. Un outil utile pour les enseignants qui ont un ordinateur ayant un manque de logiciels.</li>
+</ul>
+<p><a href="https://www.cnil.fr/fr/comprendre-le-rgpd" title="Explication par la CNIL">RGPD</a> oblige, on ne peut pas proposer toute solution avec inscription aux &#xE9;l&#xE8;ves. D&apos;autre part, l&apos;utilisation du r&#xE9;seau en classe peut ne pas &#xEA;tre garantie.</p>
+<blockquote>
+<p><strong>Il vaut mieux donc consid&#xE9;rer une solution hors ligne.</strong></p>
+</blockquote>
+<h3 class="mume-header" id="solutions-hors-ligne">Solutions hors ligne</h3>
+
+<p>Il est n&#xE9;cessaire d&apos;installer un logiciel s&apos;il n&apos;est pas d&#xE9;j&#xE0; pr&#xE9;sent. Une connexion &#xE0; internet n&apos;est plus ensuite requise <em>normalement</em> pour l&apos;utiliser.</p>
+<p>Les logiciels &#xE0; avoir sont :</p>
+<ul>
+<li>une version de l&apos;interpr&#xE9;teur Python (le noyau ou <em>kernel</em>) ;</li>
+<li>une console (terminal ou <em>shell</em>) pour entrer et ex&#xE9;cuter des commandes ;</li>
+<li>un &#xE9;diteur de scripts pour enregistrer des fichiers, &#xE0; ex&#xE9;cuter ;</li>
+<li>et &#xE9;ventuellement un carnet pour rassembler texte et code.</li>
+</ul>
+<blockquote>
+<p><strong>La distribution <a href="https://www.anaconda.com/distribution/">Anaconda</a> propose une solution compl&#xE8;te, libre et multiplateforme</strong>. C&apos;est id&#xE9;al pour d&#xE9;buter et aussi pour aller loin dans l&apos;utilisation scientifique, tr&#xE8;s loin. Le d&#xE9;faut qu&apos;on lui reproche est d&apos;&#xEA;tre parfois trop compl&#xE8;te et lourde.</p>
+</blockquote>
+<h2 class="mume-header" id="fa-android-python-avec-une-tablette-android"><i class="fa fa-android" aria-hidden="true"></i> Python avec une tablette Android</h2>
+
+<p>Les lyc&#xE9;ens et professeurs de la r&#xE9;gion disposent d&apos;une tablette.<br>
+Parmi les applications disponibles sur le PlayStore :</p>
+<ul>
+<li><a href="https://play.google.com/store/apps/details?id=com.termux&amp;hl=fr"><em>Termux</em></a>, qui sera minimaliste, pour travailler en console. Sans publicit&#xE9; ;</li>
+<li><a href="https://play.google.com/store/apps/details?id=ru.iiec.pydroid3&amp;hl=fr"><em>Pydroid3</em></a>, qui sera compl&#xE8;te, mais pourra proposer des publicit&#xE9;s.</li>
+<li><a href="https://play.google.com/store/apps/details?id=org.qpython.qpy3&amp;hl=fr"><em>QPython3</em></a>, interm&#xE9;diaire. Avec un clavier virtuel &#xE0; revoir.</li>
+</ul>
+<blockquote>
+<p><strong>Les applications Termux et Pydroid3 disposent d&apos;un clavier virtuel adapt&#xE9;</strong>,<br>
+ce qui permet de taper les symboles courants. Cela reste pr&#xE9;caire, et uniquement adapt&#xE9; &#xE0; de petites cr&#xE9;ations !</p>
+</blockquote>
+<dl>
+<dt><em>Jupyter</em></dt>
+<dd><em>Termux</em> et <em>Pydroid3</em> permettent aussi d&apos;utiliser <em>Jupyter</em>, pour faire tourner des carnets qui auront &#xE9;t&#xE9; pr&#xE9;par&#xE9;s plus facilement sur ordinateur, voire sur tablette avec clavier physique.
+<blockquote>
+<p><strong>Attention</strong>, le clavier virtuel de <em>Jupyter</em> sur tablette n&apos;est pas pratique du tout. Sans clavier physique, on ne fera que des modifications mineures.</p>
+</blockquote>
+</dd>
+</dl>
+<p><strong><i class="fa fa-check" aria-hidden="true"></i> Conclusion</strong><br>
+La tablette est un outil int&#xE9;ressant :</p>
+<ul>
+<li>pour cr&#xE9;er un script simple,</li>
+<li>pour ex&#xE9;cuter un code python d&#xE9;j&#xE0; cr&#xE9;&#xE9; par le professeur,</li>
+<li>pour modifier &#xE0; la marge un script ou un carnet,</li>
+<li>pour lire un carnet <em>Jupyter</em> en ligne avec <a href="https://mybinder.org/">mybinder</a>. Des exemples suivront.</li>
+</ul>
+<h2 class="mume-header" id="fa-laptop-python-avec-un-ordinateur"><i class="fa fa-laptop" aria-hidden="true"></i> Python avec un ordinateur</h2>
+
+<p>La solution compl&#xE8;te la plus simple est d&apos;utiliser la distribution <a href="https://www.anaconda.com/distribution/" title="Site officiel"><em>Anaconda</em></a>.<br>
+Elle offre Python facilement sur les syst&#xE8;mes d&apos;exploitation courants, et de nombreux outils performants, comme :</p>
+<ul>
+<li><a href="https://jupyter.org/" title="Site officiel"><em>JupyterLab</em></a>, un &#xE9;diteur de carnets (ou <em>notebooks</em>) ; tr&#xE8;s complet.</li>
+<li><a href="https://www.spyder-ide.org/" title="Site officiel"><em>Spyder</em></a>, un &#xE9;diteur de scripts, avec aussi une console Python, un terminal du syst&#xE8;me d&apos;exploitation, un suivi des variables ; tr&#xE8;s complet.</li>
+<li><a href="https://matplotlib.org/" title="Site officiel"><em>Matplotlib</em></a>, pour cr&#xE9;er des repr&#xE9;sentations graphiques.</li>
+<li><a href="https://pandas.pydata.org/" title="Site officiel"><em>Pandas</em></a> pour l&apos;analyse de donn&#xE9;es.</li>
+</ul>
+<p><img src="../assets/python_environment.png?0.6171826327821497" alt></p>
+<blockquote>
+<p>Cette image issue d&apos;un comic illustre la pagaille possible &#xE0; installer de multiples environnements de travail avec Python.</p>
+</blockquote>
+<p>Avant de cr&#xE9;er un premier script ou <em>notebook</em>, <strong>il faut d&#xE9;couvrir un peu la console</strong>. Elle sera toujours utile &#xE0; la marge.</p>
+<h2 class="mume-header" id="fa-graduation-cap-apprendre-python"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Apprendre Python</h2>
+
+<h3 class="mume-header" id="un-programme-dapprentissage-local">Un programme d&apos;apprentissage local</h3>
+
+<p>Lire &#xE0; son rythme ces premi&#xE8;res parties, en fonction des connaissances de chacun.<br>
+Plusieurs lectures rapides sont possibles.</p>
+<ol>
+<li>
+<p><a href="../Python-Console/Python-Console.html">D&#xE9;couverte de Python par la console</a></p>
+<ol>
+<li>Premier lancement</li>
+<li>Une calculatrice (entiers, flottants, variables)</li>
+<li>Un peu d&apos;anglais utile</li>
+<li>Exercices</li>
+</ol>
+</li>
+<li>
+<p><a href="../Python-Editeur/Python-Editeur.html">Cr&#xE9;ation d&apos;un script avec un &#xE9;diteur</a></p>
+<ol>
+<li>Premier lancement</li>
+<li>Cr&#xE9;ation et utilisation de fonctions</li>
+<li>Premi&#xE8;res boucles</li>
+<li>Corriger ses erreurs</li>
+<li>Structures conditionnelles</li>
+<li>Exercices</li>
+</ol>
+</li>
+<li>
+<p><a href="../Python-Carnets/Python-Jupyter-intro.html">&#xC9;criture d&apos;un carnet avec <em>Jupyter</em></a><br>
+<em>En construction</em></p>
+<ol>
+<li>Utilisations</li>
+<li>Cellules <em>Markdown</em></li>
+<li>Premiers graphiques</li>
+</ol>
+</li>
+<li>
+<p><a href="../Python-Carnets/Python-Jupyter-maths.html">&#xC9;crire des math&#xE9;matiques avec Jupyter</a></p>
+<ol>
+<li>Balises maths</li>
+<li>Nombres et les 4 op&#xE9;rations</li>
+<li>Calcul litt&#xE9;ral</li>
+<li>Fractions</li>
+<li>Parenth&#xE8;ses</li>
+<li>Puissances</li>
+<li>Indices</li>
+<li>&#xC9;criture scripte</li>
+<li>Toujours un peu plus loin</li>
+</ol>
+</li>
+<li>
+<p><a href>Relecture du niveau 1 sur FranceIOI</a><br>
+<em>En construction</em></p>
+<ol>
+<li>Texte</li>
+<li>Boucles <code>for</code></li>
+<li>Variables</li>
+<li>Lecture</li>
+<li>Conditions</li>
+<li>Structures avanc&#xE9;es</li>
+<li>Bool&#xE9;ens</li>
+<li>Boucles <code>while</code></li>
+</ol>
+</li>
+<li>
+<p><a href>Relecture du niveau 2 sur FranceIOI</a><br>
+<em>En construction</em></p>
+<ol>
+<li>Flottans</li>
+<li>Tableaux</li>
+<li>Cha&#xEE;nes de caract&#xE8;res</li>
+<li>Fonctions</li>
+</ol>
+</li>
+<li>
+<p><a href>Relecture du niveau 3 sur FranceIOI</a><br>
+<em>En construction</em></p>
+</li>
+<li>
+<p><a href>Des carnets d&apos;exercices avec Jupyter</a><br>
+<em>En construction</em></p>
+<ol>
+<li>Math&#xE9;matiques
+<ol>
+<li>Le second degr&#xE9; (niveau 1<sup>&#xE8;re</sup>)</li>
+<li>La conjecture de Syracuse (niveau 1<sup>&#xE8;re</sup>)</li>
+<li>Le crible d&apos;&#xC9;ratosth&#xE8;ne (niveau 1<sup>&#xE8;re</sup>)</li>
+<li>Les suites num&#xE9;riques (niveau 1<sup>&#xE8;re</sup>)</li>
+<li>Les nombres de Mersenne</li>
+<li>Quelques probl&#xE8;mes issus de <a href="https://projecteuler.net/">Project Euler</a></li>
+</ol>
+</li>
+<li>NSI
+<ol>
+<li>Les nombres en binaires</li>
+<li>Les bool&#xE9;ens</li>
+<li>Les ensembles</li>
+<li>Les dictionnaires</li>
+</ol>
+</li>
+<li>Sciences physiques</li>
+<li>Chimie</li>
+<li>SVT</li>
+<li>&#xC9;conomie</li>
+</ol>
+</li>
+<li>
+<p><a href="https://mybinder.org/v2/gh/FranckCHAMBON/L1-Math-Info---Arith/master?filepath=Sommaire.ipynb">Arithm&#xE9;tique modulaire</a> (niveau L1 maths-info ; <strong>avanc&#xE9;</strong>)</p>
+<ol>
+<li>D&#xE9;composition en facteurs premiers</li>
+<li>Divisibilit&#xE9; dans Z</li>
+<li>Th&#xE9;or&#xE8;me de Bachet-B&#xE9;zout</li>
+<li>Arithm&#xE9;tique modulaire</li>
+<li>Applications simples</li>
+<li>TD corrig&#xE9;s et &#xE9;valuation</li>
+<li><a href="https://www.spoj.com/problems/FRANCKY/">Liste compl&#xE9;mentaire de probl&#xE8;mes d&apos;algorithmique</a> ; <em>in english</em></li>
+</ol>
+</li>
+</ol>
+<h3 class="mume-header" id="autres-programmes-dapprentissage-possibles">Autres programmes d&apos;apprentissage possibles</h3>
+
+<p>Chacun ayant ses pr&#xE9;f&#xE9;rences en termes de style, ou d&apos;&#xE9;thique, on pourra aussi consulter d&apos;autres r&#xE9;f&#xE9;rences <strong>pour d&#xE9;buter</strong>.</p>
+<ul>
+<li>La <a href="https://docs.python.org/fr/3/">documentation officielle</a> ; tr&#xE8;s riche. Parties 1 &#xE0; 5 du tutoriel.</li>
+<li>Le livre <a href="https://inforef.be/swi/download/apprendre_python3_5.pdf">Apprendre &#xE0; programmer avec Python3</a> de G&#xE9;rard Swinnen. (Chapitres 1 &#xE0; 7, puis 10).</li>
+<li>Le livre <a href="https://perso.limsi.fr/pointal/_media/python:cours:courspython3.pdf">Une introduction &#xE0; Python 3</a> de Bob Cordeau &amp; Laurent Pointal (Chapitres 1 &#xE0; 5).</li>
+<li>Sur <a href="https://zestedesavoir.com/">Zeste de savoir</a>, <a href="https://zestedesavoir.com/tutoriels/799/apprendre-a-programmer-avec-python-3/">les bases</a> (3h30) puis <a href="https://zestedesavoir.com/tutoriels/954/notions-de-python-avancees/">parties avanc&#xE9;es</a> (12h).</li>
+<li>Sur <a href="https://openclassrooms.com/fr/">OpenClassRoom</a> la <a href="https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python">partie 1</a> du cours sur Python.</li>
+<li>Sur <a href="https://flossmanuals.developpez.com/tutoriels/debuter/initiation-python/">developpez.com</a>, un parmi <a href="https://python.developpez.com/cours/">d&apos;autres</a>.</li>
+</ul>
+<p>Ensuite, r&#xE9;soudre des exercices est le plus gros moteur de progr&#xE8;s. On en trouvera sur :</p>
+<ul>
+<li><a href="http://france-ioi.org">France IOI</a> ; tr&#xE8;s adapt&#xE9; aux &#xE9;l&#xE8;ves ; possible d&#xE8;s le coll&#xE8;ge.</li>
+<li>Sur le site tech&#x22C5;io : <a href="(https://tech.io/playgrounds/17176/recueil-dexercices-pour-apprendre-python-au-lycee/presentation-2)">Une pr&#xE9;sentation de Python au lyc&#xE9;e tr&#xE8;s acc&#xE8;s maths</a>.
+<ul>
+<li>recommand&#xE9; aux &#xE9;l&#xE8;ves de maths/NSI d&#xE9;brouillards,</li>
+<li>recommand&#xE9; aux enseignants de maths d&#xE9;butants Python,</li>
+<li>recommand&#xE9; aux jeunes &#xE9;tudiants.</li>
+</ul>
+</li>
+<li><a href="https://prologin.org/">Prologin</a> ; dans un second temps.</li>
+<li><a href="https://projecteuler.net/">Project Euler</a> ; en anglais. Contient certains probl&#xE8;mes d&apos;une extr&#xEA;me difficult&#xE9;. Les premiers sont abordables.</li>
+<li><a href="https://www.spoj.com/">SPOJ</a> ; en anglais. Contient une base colossale de probl&#xE8;mes, certains sont tr&#xE8;s faciles, d&apos;autres de difficult&#xE9; extr&#xEA;me.</li>
+<li><a href="https://www.codingame.com/start">Codin&apos;Game</a> ; contient des publicit&#xE9;s. Recommand&#xE9; aux gamers qui veulent progresser. Toutes difficult&#xE9;s.</li>
+</ul>
+<p>Enfin, chacun pourra &#xEA;tre autonome pour compl&#xE9;ter avec les aspects ou les modules qui l&apos;int&#xE9;resse le plus. D&#xE9;veloppement Web, sciences appliqu&#xE9;es, algorithmique, math&#xE9;matiques, ...</p>
+<p>Voici une s&#xE9;rie d&apos;articles r&#xE9;cents sur <a href="https://linuxfr.org/news/python-pour-la-rentree-2019-partie-1">linuxfr.org</a> pour les plus curieux sur Python.</p>
+<p>D&apos;autres liens en anglais en cliquant sur l&apos;image suivante. D&apos;abord pour tenter de r&#xE9;pondre &#xE0; la question :</p>
+<blockquote>
+<p><strong>Quel langage de programmation</strong> apprendre en premier ?</p>
+</blockquote>
+<p><a href="http://carlcheo.com/startcoding"><img src="../assets/choix-langage.png" alt></a></p>
+
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#fa-question-circle-pourquoi-python"><i class="fa fa-question-circle" aria-hidden="true"></i> Pourquoi Python</a></li>
+<li><a href="#fa-wifi-python-en-ou-hors-ligne"><i class="fa fa-wifi" aria-hidden="true"></i> Python, en ou hors ligne</a>
+<ul>
+<li><a href="#solutions-en-ligne">Solutions en Ligne</a></li>
+<li><a href="#solutions-hors-ligne">Solutions hors ligne</a></li>
+</ul>
+</li>
+<li><a href="#fa-android-python-avec-une-tablette-android"><i class="fa fa-android" aria-hidden="true"></i> Python avec une tablette Android</a></li>
+<li><a href="#fa-laptop-python-avec-un-ordinateur"><i class="fa fa-laptop" aria-hidden="true"></i> Python avec un ordinateur</a></li>
+<li><a href="#fa-graduation-cap-apprendre-python"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Apprendre Python</a>
+<ul>
+<li><a href="#un-programme-dapprentissage-local">Un programme d&apos;apprentissage local</a></li>
+<li><a href="#autres-programmes-dapprentissage-possibles">Autres programmes d&apos;apprentissage possibles</a></li>
+</ul>
+</li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+    
+    
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>
