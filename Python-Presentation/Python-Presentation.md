@@ -9,7 +9,8 @@ export_on_save:
 
 @import "../assets/Python.svg" {width="400px" title="Logo de Python" alt="Logo de Python"}
 
-Auteur : <a href="mailto:franck.chambon@ac-aix-marseille.fr">Franck CHAMBON</a>, enseignant au lycée Lucie AUBRAC de Bollène.
+Auteur : <a href="mailto:franck.chambon@académie-aix-marseille.france">Franck CHAMBON</a>
+, enseignant au lycée Lucie AUBRAC de Bollène.
 
 @import "../assets/CC-BY-NC-SA.svg" {width="100px" title="Licence" alt="Licence CC-BY-NC-SA-4.0"}
 
