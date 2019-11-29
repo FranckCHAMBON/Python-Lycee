@@ -97,7 +97,7 @@ Chacun ayant ses préférences en termes de style, ou d'éthique, on pourra auss
 Ensuite, résoudre des exercices est le plus gros moteur de progrès. On en trouvera sur :
 
 - [France IOI](http://france-ioi.org) ; très adapté aux élèves ; possible dès le collège.
-- Sur le site tech⋅io : [Une présentation de Python au lycée très accès maths]((https://tech.io/playgrounds/17176/recueil-dexercices-pour-apprendre-python-au-lycee/presentation-2)).
+- Sur le site tech⋅io : [Une présentation de Python au lycée très axée maths]((https://tech.io/playgrounds/17176/recueil-dexercices-pour-apprendre-python-au-lycee/presentation-2)).
   - recommandé aux élèves de maths/NSI débrouillards,
   - recommandé aux enseignants de maths débutants Python,
   - recommandé aux jeunes étudiants.
