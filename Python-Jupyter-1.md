@@ -62,7 +62,7 @@ Il est possible de sauvegarder en ligne vos carnets Jupyter sur la plateforme [G
 
 <!-- @import "assets/binder.svg" {width="200px"} -->
 
-[Cette solution](https://mybinder.org/) permet de rendre dynamique les carnets stockés sur *GitHub*.
+[Cette solution](https://mybinder.org/) permet de rendre dynamique les carnets stockés sur *GitHub*, *GitLab* et d'autres dépôts encore.
 
 L'exemple proposé par *Try Jupyter* repose sur *Binder*.
 **À vous** de créer vos propres carnets et les mettre en ligne !
@@ -106,7 +106,7 @@ On reprend ci-dessous l'essentiel.
 
 #### L'emphase faible et forte
 L'emphase
-: Dans un texte, on a souvent envie de mettre en ***relief*** *certains* **mots**. Il y a plusieurs possibilités : *italique*, **gras**, ~~barré~~, <sup>en haut</sup>, <sub>en bas</sub>, <kbd>cadre</kbd>, `police`, couleur, ou même un mélange. On peut aussi avoir envie de changer le style de tout un groupe de mots que l'on avait identifié. Cela se fait avec une feuille de style en cascade (CSS). Cela permet de faire évoluer la charte graphique d'un document d'un seul coup. C'est une bonne pratique. L'emphase faible sera pour mettre un peu de relief, par défaut c'est en *italique*. L'emphase forte, **par défaut est en gras**. Il est conseillé de limiter au maximum son utilisation hors des titres. L'emphase forte doit rester exceptionnelle, au prix de ne plus avoir d'impact.
+: Dans un texte, on a souvent envie de mettre en ***relief*** *certains* **mots**. Il y a plusieurs possibilités : *italique*, **gras**, ~~barré~~, <sup>en haut</sup>, <sub>en bas</sub>, <kbd>cadre</kbd>, `police`, couleur, ou même un mélange. On peut aussi avoir envie de changer le style de tout un groupe de mots que l'on avait identifié. Cela se fait avec une feuille de style en cascade (CSS). Cela permet de faire évoluer la charte graphique d'un document d'un seul coup. C'est une bonne pratique. L'emphase faible sera pour mettre un peu de relief, par défaut c'est en *italique*. L'emphase forte, **par défaut est en gras** ; il est conseillé de limiter au maximum son utilisation hors des titres. L'emphase forte doit rester exceptionnelle, au prix de ne plus avoir d'impact.
 ```
 Du _texte en italique_ entouré de la balise tiret bas *ou* une étoile.
 ```
@@ -212,8 +212,8 @@ Syntaxe :
 ```
 ![logo de Markdown](images/Markdown.svg)
 ```
-![logo de Markdown](images/Markdown.svg)
 
+<!-- @import "../assets/calcul1.png" -->
 
 ### Exercices de Markdown à réaliser avec JupyterLab
 #### Exercice 1 : modifier un carnet déjà créé
