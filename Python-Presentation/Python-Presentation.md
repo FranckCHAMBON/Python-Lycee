@@ -32,4 +32,4 @@ Les documents suivants sont placés sous licence libre [CC - BY-NC-SA 4.0](https
 
 @import "python_ordinateur.md"
 
-@import "python_cour.md"
+@import "python_cours.md"
