@@ -49,7 +49,7 @@ Plusieurs lectures rapides sont possibles.
 
 1. [Relecture du niveau 2 sur FranceIOI]()
 *En construction*
-    1. Flottans
+    1. Flottants
     1. Tableaux
     1. Chaînes de caractères
     1. Fonctions
