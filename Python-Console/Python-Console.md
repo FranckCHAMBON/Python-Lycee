@@ -420,8 +420,9 @@ Affectation
       - s'il n'y a qu'une variable et plusieurs résultats, le tuple des résultats est affecté à la variable ;
       - s'il y a autant de variables que de résultats, dans l'ordre chaque résultat est affecté à une variable ;
       - sinon, une `ValueError` se produit.
+      - Pour les utilisateurs avancés, il y a encore plus général, à coup de *pack/unpack* ; voir l'exemple 56, bien plus technique (et totalement hors programme NSI). Le *unpack* existe aussi pour les dictionnaires, souvent écrit `**kwargs`.
 
-Exemples simples :
+Exemples :
 
 ```python
 In [50]: a, b = 2, 3, 4
@@ -447,6 +448,9 @@ In [54]: a = 2, 3, 4
 
 In [55]: a[0], sum(a), a
 Out[55]: (2, 9, (2, 3, 4))
+
+In [56]: a, b, *c, d = 1, *a, 5, 6; print(a, b, c, d)
+Out[56]: 1 2 [3, 4, 5] 6
 ```
 
 Il est alors possible, en Python, de faire de [l'affectation parallèle](https://fr.wiktionary.org/wiki/affectation_parall%C3%A8le).
