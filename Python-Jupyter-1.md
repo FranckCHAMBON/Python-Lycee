@@ -213,7 +213,7 @@ Syntaxe :
 ![logo de Markdown](images/Markdown.svg)
 ```
 
-<!-- @import "../assets/calcul1.png" -->
+<!-- @import "assets/Markdown.svg" -->
 
 ### Exercices de Markdown à réaliser avec JupyterLab
 #### Exercice 1 : modifier un carnet déjà créé

@@ -18,7 +18,7 @@ Plusieurs lectures rapides sont possibles.
    1. Structures conditionnelles
    1. Exercices
 1. [Écriture d'un carnet avec *Jupyter*](../Python-Carnets/Python-Jupyter-intro.html)
-*En construction ; avancé*
+*En construction ; un peu avancé*
    1. Utilisations
    1. Cellules *Markdown*
    1. Premiers graphiques
@@ -59,7 +59,7 @@ Plusieurs lectures rapides sont possibles.
 
 1. [Des carnets d'exercices avec Jupyter]()
 *En construction*
-   1. Mathématiques
+   1. Mathématiques - lycée
       1. Le second degré (niveau 1^ère^)
       1. La conjecture de Syracuse (niveau 1^ère^)
       1. Le crible d'Ératosthène (niveau 1^ère^)
@@ -75,6 +75,9 @@ Plusieurs lectures rapides sont possibles.
    1. Chimie
    1. SVT
    1. Économie
+   1. [Mathématiques - supérieur](https://mybinder.org/v2/gh/FranckCHAMBON/Python-Lycee/master?filepath=Carnets%2Fmaths%2FSommaire.ipynb)
+      1. Un tour sur les tests de primalité
+      2. Un tour sur les méthodes de factorisation
 1. [Arithmétique modulaire](https://mybinder.org/v2/gh/FranckCHAMBON/L1-Math-Info---Arith/master?filepath=Sommaire.ipynb) (niveau L1 maths-info ; **avancé**)
     1. Décomposition en facteurs premiers
     1. Divisibilité dans Z
