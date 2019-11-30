@@ -3,7 +3,7 @@ export_on_save:
   html: true
 ---
 
-<!-- @import "../assets/python-java.jpg" title="Python vs Java - comic strip" -->
+<!-- @import "../assets/python-java.jpg" title="Extrait de https://twitter.com/martinrenaud/status/511606415837110272" -->
 
 # Découverte de Python en console {ignore=true}
 

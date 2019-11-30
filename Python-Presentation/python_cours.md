@@ -18,13 +18,14 @@ Plusieurs lectures rapides sont possibles.
    1. Structures conditionnelles
    1. Exercices
 1. [Écriture d'un carnet avec *Jupyter*](../Python-Carnets/Python-Jupyter-intro.html)
-*En construction*
+*En construction ; avancé*
    1. Utilisations
    1. Cellules *Markdown*
    1. Premiers graphiques
 
 
 1. [Écrire des mathématiques avec Jupyter](../Python-Carnets/Python-Jupyter-maths.html)
+*En construction ; presque fini*
    1. Balises maths
    1. Nombres et les 4 opérations
    1. Calcul littéral
