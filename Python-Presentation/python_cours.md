@@ -77,7 +77,7 @@ Plusieurs lectures rapides sont possibles.
    1. Économie
    1. [Mathématiques - supérieur](https://mybinder.org/v2/gh/FranckCHAMBON/Python-Lycee/master?filepath=Carnets%2Fmaths%2FSommaire.ipynb)
       1. Un tour sur les tests de primalité
-      2. Un tour sur les méthodes de factorisation
+      2. Un tour sur les méthodes de factorisation...
 1. [Arithmétique modulaire](https://mybinder.org/v2/gh/FranckCHAMBON/L1-Math-Info---Arith/master?filepath=Sommaire.ipynb) (niveau L1 maths-info ; **avancé**)
     1. Décomposition en facteurs premiers
     1. Divisibilité dans Z
