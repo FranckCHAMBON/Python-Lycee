@@ -475,7 +475,7 @@ x, y = y, x
 On ne peut pas choisir n’importe quel nom pour une variable.
 De manière synthétique, on a :
 
-- **Conseil important :** N’utiliser que les caractères : `a→z`, `A→Z` , `0→9` et `_`
+- **Conseil important :** N’utiliser que les caractères : `a→z`, `A→Z`, `0→9` et `_`
 - **Obligatoire :** Ne pas débuter par un chiffre
 - **Conseil :** `choisir_un_nom_de_variable_lisible`, `choisirUnNomDeVariablePlusLisible`, `nepaschoisirunnomdevariableillisible`, `JE_SUIS_UNE_JOLIE_CONSTANTE`
 - *Exemples :* `nombre_dOr`, `a15` sont valides et lisibles.

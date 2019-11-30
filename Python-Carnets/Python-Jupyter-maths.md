@@ -104,7 +104,7 @@ Dans une cellule Markdown, à l'intérieur de balises math,
 * La multiplication s'obtient avec `\times`
 * La division s'obtient avec `\div`
 
-> Remarque 1 : D'ici quelques ~~temps~~ années les claviers respectant la nouvelle norme AFNOR donneront accès rapidement à ×, ÷, et seront plus commodes pour écrire certaines lettres comme É, È, Ç, ...
+> Remarque 1 : D'ici quelque<u>s</u> ~~temps~~ années les claviers respectant la nouvelle norme AFNOR donneront accès rapidement à ×, ÷, et seront plus commodes pour écrire certaines lettres comme É, È, Ç, ...
 
 > Remarque 2 : Dans une cellule de code Python, c'est plus facile :
 * La multiplication s'obtient avec `*`

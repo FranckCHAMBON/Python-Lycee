@@ -263,7 +263,7 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <p><img src="../assets/xkeyboarcd.png" alt="XKeyboarCD" title="https://xkcd.com/2150/"></p>
+      <p><img src="../assets/xkeyboarcd.png" alt title="https://xkcd.com/2150/"></p>
 <h1 class="mume-header undefined" id="d%C3%A9couverte-dun-%C3%A9diteur-de-script">D&#xE9;couverte d&apos;un &#xE9;diteur de script</h1>
 
 <h2 class="mume-header undefined" id="sommaire">Sommaire</h2>
@@ -455,7 +455,7 @@ n <span class="token operator">=</span> <span class="token number">42</span>    
 <div class="code-chunk" data-id="code-chunk-id-2" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=2, .line-numbers cmd=&quot;python3&quot; output=&quot;text&quot;}" class="language-python line-numbers"><span class="token keyword">for</span> x<span class="token punctuation">,</span> d <span class="token keyword">in</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">3.14</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">2.718</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3.5</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">12345</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">12345.0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">9.8765e100</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;L&apos;arrondi de </span><span class="token interpolation"><span class="token punctuation">{</span>x<span class="token punctuation">}</span></span><span class="token string"> &#xE0; 10^</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token operator">-</span>d<span class="token punctuation">}</span></span><span class="token string"> pr&#xE8;s est </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">round</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> d<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><blockquote>
-<p>On vient de voir, au passage, une une <em>f-string</em> pour afficher du texte et des valeurs. Nous y reviendrons.</p>
+<p>On vient de voir, au passage, une <em>f-string</em> pour afficher du texte et des valeurs. Nous y reviendrons.</p>
 </blockquote>
 <blockquote>
 <p><strong><i class="fa fa-bolt" aria-hidden="true"></i> Attention</strong> : <a href="https://docs.python.org/fr/3/library/functions.html#round">le comportement avec les flottants</a> peut &#xEA;tre curieux, mais c&apos;est normal ! Les flottants ne sont pas les d&#xE9;cimaux !<br>
@@ -537,7 +537,7 @@ Ici on construit et on utilise la fonction <span class="katex"><span class="kate
 <span class="token keyword">print</span><span class="token punctuation">(</span>ma_fonction<span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>ma_fonction<span class="token punctuation">(</span><span class="token number">6125.7</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><blockquote>
-<p>On constate encore que les flottans <strong>ne sont pas</strong> les d&#xE9;cimaux.<br>
+<p>On constate encore que les flottants <strong>ne sont pas</strong> les d&#xE9;cimaux.<br>
 On constate aussi, ici, que notre fonction traite aussi bien un flottant qu&apos;un entier, une seule d&#xE9;finition suffit. Ce n&apos;est pas possible facilement avec d&apos;autres langages, voire interdit. C&apos;est une caract&#xE9;ristique du langage <em>Python</em> qui en facilite l&apos;utilisation, mais qui, parfois, peut conduire &#xE0; l&apos;&#xE9;criture de code difficilement debuggable.</p>
 </blockquote>
 <h4 class="mume-header" id="constructeur-def">Constructeur <code>def</code></h4>
@@ -803,7 +803,7 @@ Par exemple :</p>
 <code>truc[::-1]</code> donnera une copie de <code>truc</code> de bout en bout, mais &#xE0; l&apos;envers !</li>
 </ul>
 </blockquote>
-<p><i class="fa fa-key" aria-hidden="true"></i> Donner des expression sous forme de tranches pour obtenir une copie :</p>
+<p><i class="fa fa-key" aria-hidden="true"></i> Donner des expressions sous forme de tranches pour obtenir une copie :</p>
 <ol>
 <li>De tous &#xE9;l&#xE9;ments d&apos;index pair de <code>truc</code>.</li>
 <li>De tous &#xE9;l&#xE9;ments d&apos;index impair de <code>truc</code>.</li>
@@ -991,7 +991,7 @@ m_11 <span class="token operator">=</span> mersenne<span class="token punctuatio
 <li>Lignes 5 &#xE0; 9, on d&#xE9;finit une fonction <code>test_divisible</code>
 <ul>
 <li>on rappelle que <code>n%k</code> retourne le reste dans la division enti&#xE8;re de <code>n</code> par <code>k</code></li>
-<li>si <code>n%k == 0</code>, cela signifie que la division tombe juste, et que <code>n</code> est divisible par<code>k</code></li>
+<li>si <code>n%k == 0</code>, cela signifie que la division tombe juste, et que <code>n</code> est divisible par <code>k</code></li>
 </ul>
 </li>
 <li>On remarque que le TEST1 ne s&apos;affiche pas. (Rappel <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><mn>5</mn></msub><mo>=</mo><mn>31</mn></mrow><annotation encoding="application/x-tex">M_5 = 31</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">1</span></span></span></span>)
@@ -1068,7 +1068,7 @@ m_11 <span class="token operator">=</span> mersenne<span class="token punctuatio
     <span class="token keyword">pass</span>
 </pre><ol>
 <li>Compl&#xE9;ter le code ci-dessus et l&apos;inclure dans votre fichier <code>outils.py</code></li>
-<li>La fonctions <code>diviseurs</code> doit retourner la liste des diviseurs de l&apos;entier <code>n</code></li>
+<li>La fonction <code>diviseurs</code> doit retourner la liste des diviseurs de l&apos;entier <code>n</code></li>
 <li>La fonction <code>est_premier</code> doit retourner un bool&#xE9;en, sur la primalit&#xE9; ou non de <code>n</code></li>
 <li>Effectuer les tests suivants dans un nouveau fichier <code>test_outils.py</code> du m&#xEA;me r&#xE9;pertoire que <code>outils.py</code>.</li>
 </ol>

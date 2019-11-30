@@ -152,7 +152,7 @@ for x, d in [(3.14, 1), (2.718, 2), (3.5, 2), (4, 2), (12345, -2), (12345.0, -2)
     print(f"L'arrondi de {x} à 10^{-d} près est {round(x, d)}")
 ```
 
-> On vient de voir, au passage, une une *f-string* pour afficher du texte et des valeurs. Nous y reviendrons.
+> On vient de voir, au passage, une *f-string* pour afficher du texte et des valeurs. Nous y reviendrons.
 
 > **:fa-bolt: Attention** : [le comportement avec les flottants](https://docs.python.org/fr/3/library/functions.html#round) peut être curieux, mais c'est normal ! Les flottants ne sont pas les décimaux !
 > On a constaté également que le comportement de `round` est différent en fonction du nombre de paramètres.
@@ -245,7 +245,7 @@ ma_fonction = lambda x: (x+5) * (x-5)
 print(ma_fonction(15))
 print(ma_fonction(6125.7))
 ```
-> On constate encore que les flottans **ne sont pas** les décimaux.
+> On constate encore que les flottants **ne sont pas** les décimaux.
 > On constate aussi, ici, que notre fonction traite aussi bien un flottant qu'un entier, une seule définition suffit. Ce n'est pas possible facilement avec d'autres langages, voire interdit. C'est une caractéristique du langage *Python* qui en facilite l'utilisation, mais qui, parfois, peut conduire à l'écriture de code difficilement debuggable.
 
 #### Constructeur `def`
@@ -491,7 +491,7 @@ truc[0] == truc[-l]
 > - `truc[11:20:3]` donnera les éléments d'index 11, 14 et 17 de `truc`, mais pas le 20.
 > `truc[::-1]` donnera une copie de `truc` de bout en bout, mais à l'envers !
 
-:fa-key: Donner des expression sous forme de tranches pour obtenir une copie :
+:fa-key: Donner des expressions sous forme de tranches pour obtenir une copie :
 1. De tous éléments d'index pair de `truc`.
 2. De tous éléments d'index impair de `truc`.
 3. De tous les éléments de `truc`, sauf les deux derniers, et rangés dans l'ordre inverse.
@@ -693,7 +693,7 @@ Explications :
   - On l'a déjà vu précédemment, et on va s'en servir encore...
 - Lignes 5 à 9, on définit une fonction `test_divisible`
   - on rappelle que `n%k` retourne le reste dans la division entière de `n` par `k`
-  - si `n%k == 0`, cela signifie que la division tombe juste, et que `n` est divisible par`k`
+  - si `n%k == 0`, cela signifie que la division tombe juste, et que `n` est divisible par `k`
 - On remarque que le TEST1 ne s'affiche pas. (Rappel $M_5 = 31$)
   - En effet, `49 < 31` est faux, donc l'instruction ligne 14 n'est pas interprétée.
 - On remarque que le TEST2 s'affiche. (Rappel $M_{11} = 2047$)
@@ -749,7 +749,7 @@ def est_premier(n):
 ```
 
 1. Compléter le code ci-dessus et l'inclure dans votre fichier `outils.py`
-  1. La fonctions `diviseurs` doit retourner la liste des diviseurs de l'entier `n`
+  1. La fonction `diviseurs` doit retourner la liste des diviseurs de l'entier `n`
   2. La fonction `est_premier` doit retourner un booléen, sur la primalité ou non de `n`
 2. Effectuer les tests suivants dans un nouveau fichier `test_outils.py` du même répertoire que `outils.py`.
 
