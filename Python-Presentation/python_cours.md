@@ -25,8 +25,7 @@ Plusieurs lectures rapides sont possibles.
    1. Premiers graphiques
 
 
-1. [Écrire des mathématiques avec Jupyter](../Python-Carnets/Python-Jupyter-maths.html)
-*presque fini*
+1. [Écrire des mathématiques avec Jupyter](https://mybinder.org/v2/gh/FranckCHAMBON/Python-Lycee/master?filepath=Python-Carnets%2FJupyter-math.ipynb)
    1. Balises maths
    1. Nombres et les 4 opérations
    1. Calcul littéral
@@ -35,6 +34,7 @@ Plusieurs lectures rapides sont possibles.
    1. Puissances
    1. Indices
    1. Écriture scripte
+   1. Lettres grecques
    1. Toujours un peu plus loin
 
 1. [Fonctions natives de *Python*]()
