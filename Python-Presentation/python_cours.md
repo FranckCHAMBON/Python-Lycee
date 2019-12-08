@@ -7,7 +7,8 @@ Plusieurs lectures rapides sont possibles.
 
 1. [Découverte de Python par la console](../Python-Console/Python-Console.html)
    1. Premier lancement
-   1. Une calculatrice (entiers, flottants, variables)
+   1. Une calculatrice (entiers, flottants)
+   1. Les variables
    1. Un peu d'anglais utile
    1. Exercices
 1. [Création d'un script avec un éditeur](../Python-Editeur/Python-Editeur.html)
@@ -17,15 +18,15 @@ Plusieurs lectures rapides sont possibles.
    1. Corriger ses erreurs
    1. Structures conditionnelles
    1. Exercices
-1. [Écriture d'un carnet avec *Jupyter*](../Python-Carnets/Python-Jupyter-intro.html)
-*En construction ; un peu avancé*
+1. [Écriture d'un carnet avec *Jupyter*](../Python-Carnets/Python-Jupyter-1.html)
+*En construction ; bien avancé*
    1. Utilisations
    1. Cellules *Markdown*
    1. Premiers graphiques
 
 
 1. [Écrire des mathématiques avec Jupyter](../Python-Carnets/Python-Jupyter-maths.html)
-*En construction ; presque fini*
+*presque fini*
    1. Balises maths
    1. Nombres et les 4 opérations
    1. Calcul littéral
@@ -35,6 +36,9 @@ Plusieurs lectures rapides sont possibles.
    1. Indices
    1. Écriture scripte
    1. Toujours un peu plus loin
+
+1. [Fonctions natives de *Python*]()
+*En construction*
 
 1. [Des carnets d'exercices avec Jupyter]()
 *En construction*
