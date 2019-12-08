@@ -1,17 +1,17 @@
-### Variables et affectation
+## Variables et affectation
 
-#### Présentation de l'affectation
+### Présentation de l'affectation
 
 Nous avons vu que l'on pouvait utiliser des variables avec des noms plus longs qu'une lettre à l'opposé de ce que l'on voit souvent en maths ou en sciences. C'est une bonne pratique.
 
-Variable
+Variable *Python*
 : - Une variable possède un nom.
   - Une variable pointe vers un objet, (une donnée) (*cet objet est peut être partagé*).
   - L'objet possède parfois une valeur (ou plusieurs, et des méthodes).
   - Par abus de langage on dit souvent qu'elle a une valeur. C'est pourtant faux en Python !
   - Dans d'autres langages c'est vrai, d'où la confusion.
 
-Affectation
+Affectation simple
 : - L'opérateur `=` réalise l'affectation, il n'est pas symétrique.
   - En pseudo-code `a = 5` se note $a \leftarrow 5$.
   - L'affectation désigne ce vers quoi la variable pointe.
@@ -23,7 +23,7 @@ Affectation
 ```python
 In [40]: a = 3         #  un entier de valeur 3 est affecté à a,
 
-In [41]: x = 20 - a*5  # 5 est affecté à x (plus simplement)
+In [41]: x = 20 - a*5  # 5 est affecté à x
 
 In [42]: x = 2*x + 1   # 11 est affecté à x
 
@@ -42,9 +42,9 @@ Out[44]: 120
   - Croisillon n'est pas un dièse, et en anglais on dit *sharp*, ou aussi parfois *hash*.
   - Un commentaire n'est pas interprété par Python.
 
-#### Affectation plus précisément
+### Affectation plus précisément
 
-Pour une seconde lecture
+Pour une seconde lecture !
 
 Affectation
 :  - Le membre de gauche doit être une ou plusieurs variables.
@@ -57,7 +57,7 @@ Affectation
       - s'il n'y a qu'une variable et plusieurs résultats, le tuple des résultats est affecté à la variable ;
       - s'il y a autant de variables que de résultats, dans l'ordre chaque résultat est affecté à une variable ;
       - sinon, une `ValueError` se produit.
-      - Pour les utilisateurs avancés, il y a encore plus général, à coup de *pack/unpack* ; voir l'exemple 56, bien plus technique (et totalement hors programme NSI). Le *unpack* existe aussi pour les dictionnaires, souvent écrit `**kwargs`.
+      - Pour les utilisateurs avancés, il y a encore plus général, à coup de *pack/unpack* ; voir l'exemple 56, bien plus technique (et totalement hors programme NSI). Encore plus général, le *unpack* existe aussi pour les dictionnaires, souvent écrit `**kwargs` ; un exemple sera donné après la présentation des dictionnaires.
 
 Exemples :
 
@@ -90,8 +90,10 @@ In [56]: a, b, *c, d = 1, *a, 5, 6; print(a, b, c, d)
 Out[56]: 1 2 [3, 4, 5] 6
 ```
 
+**Utilisations pratiques** :
+
 Il est alors possible, en Python, de faire de [l'affectation parallèle](https://fr.wiktionary.org/wiki/affectation_parall%C3%A8le).
-> C'est particulièrement pratique pour échanger le contenu de deux variables.
+> 1] C'est particulièrement pratique pour échanger le contenu de deux variables `x` et `y`.
 
 ```python
 temp = x
@@ -105,7 +107,7 @@ Le code ci-dessus peut être remplacé par :
 x, y = y, x
 ```
 
->Il est possible aussi, en Python, de faire de [l'affectation multiple](https://fr.wiktionary.org/wiki/affectation_multiple) `c = b = a`
+> 2] Il est possible aussi, en Python, de faire de [l'affectation multiple](https://fr.wiktionary.org/wiki/affectation_multiple) `c = b = a`
 
 #### Le nom d'une variable
 
@@ -127,7 +129,7 @@ De manière synthétique, on a :
 value = 42
 valuе = 1000
 print(value)
-# on s'attend à un affichage de 1000, logique ! Et NON !!!
+# on s'attend à un affichage de 1000 ; logique ! Et NON !!!
 ```
 
 **Explication :**
@@ -135,9 +137,19 @@ print(value)
 - le second `valuе` se termine par un 'е' cyrillique dont le code est 1077. Visuellement identique, ce n'est pas le même caractère, et donc il y a deux variables différentes.
 - le 'print' agit sur la première variable... **Le piège est redoutable et totalement invisible.**
 
-*Further reading : [WTFPython](https://github.com/satwikkansal/wtfpython)*
+*Further reading : [WTFPython](https://github.com/satwikkansal/wtfpython).* ***Warning*** *very difficult.*
 
-#### Les mots réservés de Python3
+Ceci constitue probablement une raison (pour certains) de déconseiller l'utilisation de variables avec lettres Unicode. La véritable raison est ailleurs. Écrire un code qui a vocation a rester dans un cercle restreint - éducatif par exemple, une classe - peut parfaitement utiliser des variables avec des noms qui ont un sens en français et même avec accents. Pour se prémunir du piège précédent, il suffit d'utiliser un explorateur de variables (inclus dans *Spyder*) ; cela aide beaucoup à identifier des noms de variables proches (et qui ne le devraient pas) !
+
+Par contre, un code qui a vocation a être utilisé et partagé largement **doit** :
+
+* Avoir des noms de variables qui ont un sens en anglais.
+* N'utiliser que les caractères `a→z`, `A→Z`, `0→9` et `_` dans les noms de variables.
+* Avoir des commentaires en anglais.
+
+L'objectif étant d'avoir un code qui soit compris et utilisable par la communauté ; et l'anglais est la norme !
+
+### Les mots réservés de Python3
 
 Il y a **35 mots réservés** (dont deux récents) qui ne peuvent pas être utilisés pour des variables.
 
@@ -155,7 +167,7 @@ Il y a **35 mots réservés** (dont deux récents) qui ne peuvent pas être util
 
 Nous avons déjà vu :
 
-- `False` et `True` : les booléens faux et vrai.
+- `False` et `True` : les booléens Faux et Vrai.
 - `from` et `import` : pour importer **à partir** d'un module.
 - `is` : test d'identité entre objets.
 
@@ -165,7 +177,7 @@ Nous allons bientôt voir :
 - `del` : pour détruire (*<b>del</b>ete*) une variable et/ou des données.
 - `and`, `or`, `not` : opérateurs sur les booléens : **et**, **ou**, **non**.
 - `def` ou `lambda`, `return` : pour définir une fonction.
-- `pass` : pour une instruction qui ne fait rien.
+- `pass` : une instruction qui ne fait rien.
 - `if`, `elif`, `else` : pour les structures conditionnelles.
 - `for`, `while` : pour créer des boucles.
 - `break`, `continue` : pour des boucles plus complexes.
@@ -176,3 +188,8 @@ Nous verrons plus tard certains mots réservés parmi ceux qui restent.
 - `assert` : pour le débogage facile.
 - `try`, `except`, `raise` : pour la gestion des erreurs.
 - `with`, `as` : pour la lecture de module ou de fichier.
+
+Pour les utilisateurs avancés :
+- `class` : pour la programmation orientée objet (POO).
+- `global`, `nonlocal` : pour modifier la portée d'une variable.
+- `yield` : pour la construction d'itérateur.

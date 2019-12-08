@@ -82,7 +82,7 @@ Out[6]: False
 
 ### Travail avec les flottants
 
-> :fa-bolt: Les [flottants](https://fr.wikipedia.org/wiki/IEEE_754) ressemblent à des nombres à virgules, mais n'en sont pas du tout !
+> :fa-bolt: Les [flottants](https://fr.wikipedia.org/wiki/IEEE_754) (_**float**ing point numbers_) ressemblent à des nombres décimaux, mais n'en sont pas du tout !
 
 #### Les choses simples avec les flottants
 
@@ -90,6 +90,7 @@ Out[6]: False
 - Ces nombres sont stockés en binaire (et non en décimal) avec une précision un peu meilleure qu'avec une calculatrice, mais pas arbitraire non plus.
 - On peut entrer directement un nombre en écriture scientifique en utilisant la notation [e](https://en.wikipedia.org/wiki/Scientific_notation#E-notation)
   - exemple : `-1.602e-19` pour $-1,602 \times 10^{-19}$, la charge en coulomb d'un électron.
+  - **Attention**, le nombre stocké sera l'approximation binaire du nombre décimal entré, et sera souvent différent !
 
 ```python
 In [7]: from math import pi
@@ -113,16 +114,16 @@ Out[12]: 2.990033222591362e-23
 > Une approximation de $\frac \pi 2$ donnée avec une quinzaine de chiffres décimaux significatifs.
 > La [division](https://fr.wikipedia.org/wiki/Division) entre flottants s'obtient avec l'opérateur `/`
 > Un calcul d'une puissance d'un flottant. Le résultat est donné en écriture scientifique $\approx 1,\!5179\times10^{79}$
-> On peut mélanger les entiers et flottants  dans les opérations, le résultat sera en flottant.
-> Si on utilise l'opérateur `/`, le résultat sera un flottant, même si la division entière a un reste nul.
+> On peut mélanger un entier et un flottant  dans une opération, l'entier sera d'abord converti en flottant avant le calcul.
+> Si on utilise l'opérateur `/`, les opérandes entières sont converties en flottant avant le calcul, et le résultat sera un flottant, même si la division entière a un reste nul.
 > Le dernier exemple donne [le calcul du volume moyen d'une molécule d'eau](https://en.wikipedia.org/wiki/Avogadro_constant) en ml, soit environ  30 Å^3^.
 
 #### Les points plus délicats
 
 On retrouve comme sur de nombreuses calculatrice (et c'est normal) les points suivants :
 
-- Il existe des limites aux nombres flottants, avec un plus petit strictement positif, un plus grand positif, et de même avec les négatifs.
-- Le nombre affiché n'est souvent pas égal au nombre représenté en machine !
+- Il existe des limites aux nombres flottants, avec un plus petit flottant strictement positif, un plus grand flottant positif, et de même avec les négatifs.
+- Le nombre affiché (un décimal) n'est souvent pas égal au nombre représenté en machine, et parfois différent du nombre entré au départ !
 - Pour simplifier, il y a, en gros, une quinzaine de chiffres significatifs, et des exposants entre -1000 et +1000, environ.
 
 ```python
@@ -144,9 +145,9 @@ OverflowError: (34, 'Numerical result out of range')
 ```
 
 > La première opération donne un résultat très petit.
-> La deuxième, tellement petit, qu'il est assimilé à zéro.
+> La deuxième, tellement petit, qu'il est arrondi à exactement zéro.
 > La troisième donne un résultat très grand, écrit en écriture scientifique.
-> La quatrième provoque une erreur, le résultat étant trop grand. Notons que `2**2000` ne provoque pas d'erreur.
+> La quatrième provoque une erreur, le résultat étant trop grand. Notons que `2**2000` ne provoque pas d'erreur ; c'est un entier qui, lui, dispose de toute la mémoire de l'ordinateur et pourrait être bien plus grand encore sans perdre de précision.
 
 #### Les points techniques
 
@@ -160,7 +161,16 @@ Out[17]: False
 
 > - $0.1$ est stocké en machine par un nombre qui n'est pas exactement égal à $0.1$, mais par un nombre en binaire très proche. De même pour $0.2$ et $0.3$.
 > - Le test d'égalité est réalisé sur les nombres binaires, pas sur les nombres affichés en décimal !
-> - Une calculatrice a normalement le même comportement, sauf si elle travaille avec les nombres réellement décimaux.
+> - Une calculatrice a normalement le même comportement, sauf si elle travaille avec les nombres réellement décimaux (sauf bug).
+
+Ci-dessous deux calculatrices ayant apparemment la même version de *MicroPython*.
+
+@import "assets/Mathice1a.jpeg" {height="200px" title="Casio 35+" alt="MicroPython mis à jour"}
+@import "assets/Mathice2.png" {height="200px" title="Casio 90+" alt="MicroPython buggé"}
+
+Pourtant, celle de droite (réponse *True*) se trompe. L'erreur a probablement été corrigée. La bonne réponse, étonnante certes, est *False*.
+
+Regardons comment obtenir le type d'un objet.
 
 ```python
 In [18]: type(1)
@@ -181,9 +191,11 @@ Out[21]: True
 > - `1` est de type entier, (*<b>int</b>eger*)
 > - `1.` ou bien `1.0` est de type flottant, (*<b>float</b>ing point number*)
 > - Ce **ne sont pas** les mêmes objets en interne pour Python. *is* répond alors *False* pour faux.
-> - À la comparaison, il se passe un phénomène de changement de type (transtypage). Pour être comparé à un flottant, un entier est automatiquement changé en flottant. Et là, la comparaison s'avère égale, donc le test d'égalité renvoie *True* (pour vrai).
+> - À la comparaison, il se passe un phénomène de changement de type (transtypage). Pour être comparé à un flottant, un entier est automatiquement changé en flottant. Et là, la comparaison s'avère égale, donc le test d'égalité renvoie *True* (pour vrai). Nous avons aussi évoqué ce phénomène pour une opération entre un flottant et un entier.
 
-Les opérateurs de Python travaillent avec différents objets, de type différent. En fonction du type utilisé, l'opération effective sera différente. Ainsi, on retrouvera les opérateurs `+` `-` `*` `**` `<` `<=` `==` `<>` `!=` `>=` `>` qui fonctionnent aussi avec les flottants. On y ajoute `/` pour la division, faite en binaire, .
+Les opérateurs de Python travaillent avec différents objets, de type différent. En fonction du type utilisé, l'opération effective sera différente. Ainsi, on retrouvera les opérateurs `+` `-` `*` `**` `<` `<=` `==` `<>` `!=` `>=` `>` qui fonctionnent aussi avec les flottants. On y ajoute `/` pour la division, faite entre flottants (ou complexes).
+
+> Pour ceux qui savent ce qu'est un nombre complexe, les mêmes opérateurs fonctionnent avec les nombres complexes. Si une opérande est complexe, alors l'autre est transtypée avant calcul en complexe.
 
 ```python
 In [22]: 0.1 + 0.0045
@@ -196,11 +208,12 @@ In [24]: 5,4 + 2,7
 Out[24]: (5, 6, 7)
 ```
 
-- Le premier exemple montre ce qu'il se passe fréquemment, l'affichage décimal de la somme de deux représentations binaires de flottants (issus de décimaux) est égal à la somme des décimaux d'origine. Cette phrase était complexe. Dit autrement : l'addition de deux décimaux, provoque en machine l'addition de deux nombres binaires qui ne sont pas égaux aux décimaux, mais la somme calculée (qui sera un nombre en binaire) peut s'écrire en décimal comme la somme des décimaux d'origine.
+- Le premier exemple montre ce qu'il se passe fréquemment : l'affichage décimal de la somme de deux représentations binaires de flottants (issus de décimaux) est égal à la somme des décimaux d'origine. *Cette phrase était complexe ; reformulons*. Dit autrement : l'addition de deux décimaux, provoque en machine l'addition de deux nombres binaires qui ne sont pas égaux aux décimaux, mais la somme calculée (qui sera un nombre en binaire) peut s'écrire souvent en décimal comme la somme des décimaux d'origine.
 - Dans le second exemple, on constate que ce n'est pas une généralité.
 - Dans le troisième exemple, Python a affiché les trois éléments d'un *tuple*, le second étant 4+2, égal à 6. Nous verrons les tuples plus tard. Ici, il n'y a pas d'erreur à l'exécution, on parlera éventuellement d'erreur sémantique.
 
 #### :fa-key: Nombre de particules dans l'Univers visible
+Une introduction aux variables en *Python* !
 
 Cet exercice résolu a pour but de montrer quelques bonnes pratiques et possibilités.
 
@@ -215,7 +228,7 @@ On fera les approximations suivantes :
 - un proton (constituant essentiel des étoiles) a une masse de 1,7×10^-24^ g.
 - Notre propre Galaxie (la Voie Lactée, une galaxie moyenne) contient environ 100 milliards d'étoiles.
 - La masse d'une galaxie provient essentiellement des étoiles.
-- On estime à mille milliards le nombre de galaxie de l'Univers visible.
+- On estime à mille milliards le nombre de galaxies de l'Univers visible.
 
 > Quel est l'estimation du nombre de protons de l'Univers visible ?
 
@@ -247,6 +260,5 @@ Out[37]: "Il y a environ 1.18e+80 protons dans l'Univers visible."
 
 > **Commentaires :**
 >
-> - Nous voyons l'intérêt d'utiliser des variables avec un nom qui a du sens. C'est l'objet de notre prochaine partie.
-> - La dernière instruction montre une façon moderne d'afficher les variables au sein de texte formaté, les *f-string*. **Il faudra d'abord étudier les chaînes de caractères simples**. La précision à trois chiffres significatifs n'est donnée uniquement que pour montrer la syntaxe.
-> - Raisonnablement la réponse étant un ordre de grandeur comparable à 10^80^.
+> - Nous voyons l'intérêt d'utiliser des variables avec un nom qui a du sens. C'est l'objet de notre prochaine partie. En mathématiques, on utilise souvent des variables à une lettre, parfois d'un autre alphabet, parfois indicée. Cette pratique est à bannir en *Python*.
+> - La dernière instruction montre une façon moderne d'afficher les variables au sein de texte formaté, les *f-string*. **Il faudra d'abord étudier les chaînes de caractères simples**. La précision à trois chiffres significatifs n'est donnée uniquement que pour montrer la syntaxe. Raisonnablement la réponse étant un ordre de grandeur comparable à 10^80^.
