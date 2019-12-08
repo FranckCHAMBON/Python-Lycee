@@ -36,27 +36,6 @@ Plusieurs lectures rapides sont possibles.
    1. Écriture scripte
    1. Toujours un peu plus loin
 
-1. [Relecture du niveau 1 sur FranceIOI]()
-*En construction*
-   1. Texte
-   1. Boucles `for`
-   1. Variables
-   1. Lecture
-   1. Conditions
-   1. Structures avancées
-   1. Booléens
-   1. Boucles `while`
-
-1. [Relecture du niveau 2 sur FranceIOI]()
-*En construction*
-    1. Flottants
-    1. Tableaux
-    1. Chaînes de caractères
-    1. Fonctions
-
-1. [Relecture du niveau 3 sur FranceIOI]()
-    *En construction*
-
 1. [Des carnets d'exercices avec Jupyter]()
 *En construction*
    1. Mathématiques - lycée
