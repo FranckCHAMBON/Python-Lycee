@@ -76,11 +76,11 @@ L'exemple proposé par *Try Jupyter* repose sur *Binder*.
 - Le moyen le plus simple d'obtenir JupyterLab est de passer par la [distribution Anaconda](https://www.anaconda.com/distribution/).
 - Il faut bien suivre [les étapes d'installation](https://docs.anaconda.com/anaconda/).
 
-### Premiers exemples simples.
+### Des exemples de carnets
 
 Voici deux exemples de carnets, un mélange de cours, exercices et codes
-- un qui présente [Python comme une calculatrice](TODO)
-- un qui présente [???](TODO)
+- un qui présente [les nombres de Mersenne](https://mybinder.org/v2/gh/FranckCHAMBON/Python-Lycee/master?filepath=Carnets%2Fmaths%2FNombre_de_Mersenne_premier.ipynb)
+- un qui présente [la simulation de la loi binomiale](https://mybinder.org/v2/gh/FranckCHAMBON/Python-Lycee/master?filepath=Carnets%2Fmaths%2FSimulation%20binomiale.ipynb)
 
 
 ## :fa-list: Découvrir le *Markdown*, avec quelques exemples
@@ -219,7 +219,13 @@ Votre fichier image doit être accessible en local ou sur Internet.
 ### Exercices de Markdown à réaliser avec JupyterLab
 #### Exercice 1 : modifier un carnet déjà créé
 
-[Ouvrir ce carnet](TODO) et suivre les instructions.
+[Ouvrir ce carnet](https://mybinder.org/v2/gh/FranckCHAMBON/Python-Lycee/master?filepath=Carnets%2Fmaths%2FSyracuse.ipynb) (sur les suites de Syracuse) et le compléter en puisant des informations sur Internet.
+
+On pourra ajouter des images.
+
+On pourra ajouter des listes numérotées ou non, d'autres titres, mettre de l'emphase.
+
+
 
 #### Exercice 2 : la création d'un premier carnet
 
@@ -231,7 +237,77 @@ Votre fichier image doit être accessible en local ou sur Internet.
 - Dans une ou plusieurs cellules de code, écrire une solution.
 - Ajouter des cellules de textes si nécessaire.
 - En cas de manque d'inspiration, jeter un œil à [Project Euler](https://projecteuler.net/archives) et proposer une traduction française d'un exercice simple à résoudre.
+- **Conseil** : Créer un carnet qui reprend vos brouillons de recherche pour l'exercice (Nombre d'écritures d'un entier comme une somme) qui se trouve presque à la fin du cours sur (Python et éditeur). Cet exercice  ne nécessite pas d'écriture mathématique complexe, mais se révèle riche à la réflexion.
+
+Le carnet vous permet d'organiser vos différentes pistes de recherche, inclure des résultats, faire des tests de code. C'est la force et la faiblesse des carnets ; un brouillon peut rester brouillon, mais peut aussi montrer une belle évolution.
 
 
 ## :fa-object-group: Premiers graphiques
-TODO
+
+On utilise [*matplotlib*](https://matplotlib.org/) pour tracer des graphiques de qualité dans *Jupyter*.
+
+Il faut commencer par une cellule de code avec
+
+```python
+%matplotlib inline
+```
+
+Cette ligne permet d'insérer les graphiques dans le carnet. Il serait aussi possible d'avoir les graphiques dans une boîte de dialogue.
+
+```python {cmd}
+import matplotlib.pyplot as plt
+```
+
+Cette seconde ligne importe le module et le renomme `plt` pour plus de simplicité, ensuite, dans notre carnet seulement. On aurait techniquement pu choisir un autre nom que `plt`.
+
+### Représentation d'une suite
+
+```python {cmd continue matplotlib}
+def suivant(u):
+    if u % 2 == 0:
+        return u // 2
+    else:
+        return 3 * u + 1
+
+u = 121
+liste_u = [u]
+while u != 1:
+  u = suivant(u)
+  liste_u.append(u)
+
+plt.plot(liste_u, "ro")
+plt.show()
+```
+
+On a définit une fonction `suivant` et une suite définie par récurrence.
+
+Deux lignes ont suffit à avoir le graphique.
+* La première construit le graphique dont les points ont les ordonnées passées en paramètre ; une liste. Ensuite, `"ro"` correspond à rouge ( _**r**_*ed* ), et des p**o**ints. On peut choisir `"bx"` pour des croix bleues.
+* La seconde affiche le graphique.
+
+Il est possible d'ajouter des titres aux axes, ainsi qu'une légende au graphique.
+
+### Représentation d'une fonction
+
+Le plus simple est de construire une liste d'abscisses et de calculer ensuite la liste des ordonnées associées. Voici un exemple.
+
+
+
+```python {cmd matplotlib}
+from math import cos, sqrt
+def f(x):
+  return cos(sqrt(20 + x))
+
+x_min = -20.0
+x_max = 60.0
+nb_points = 100
+
+X = [x_min + (x_max - x_min) * i / n for i in range(n)]
+Y = [f(x) for x in X]
+plt.plot(X, Y)
+plt.show()
+```
+
+Il suffira de copier le code ci-dessus, modifier votre fonction, ainsi que l'intervalle de définition et le nombre de points.
+
+Pour aller plus loin : un premier tutoriel [en anglais](https://matplotlib.org/tutorials/introductory/pyplot.html#sphx-glr-tutorials-introductory-pyplot-py).
