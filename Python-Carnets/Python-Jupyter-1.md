@@ -219,11 +219,12 @@ Votre fichier image doit être accessible en local ou sur Internet.
 ### Exercices de Markdown à réaliser avec JupyterLab
 #### Exercice 1 : modifier un carnet déjà créé
 
-[Ouvrir ce carnet](https://mybinder.org/v2/gh/FranckCHAMBON/Python-Lycee/master?filepath=Carnets%2Fmaths%2FSyracuse.ipynb) (sur les suites de Syracuse) et le compléter en puisant des informations sur Internet.
-
-On pourra ajouter des images.
-
-On pourra ajouter des listes numérotées ou non, d'autres titres, mettre de l'emphase.
+1. [Ouvrir ce carnet](https://mybinder.org/v2/gh/FranckCHAMBON/Python-Lycee/master?filepath=Carnets%2Fmaths%2FSyracuse.ipynb) sur les suites de Syracuse.
+2.  Le compléter en puisant des informations sur Internet.
+3. Ajouter des images.
+4. Ajouter des listes numérotées ou non, d'autres titres (*header*), mettre de l'emphase.
+5. Étudier comment ajouter une cellule, lui faire changer de status (code ou Markdown).
+6. Étudier comment couper une cellule en deux (*split cell*).
 
 
 
