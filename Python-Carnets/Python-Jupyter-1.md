@@ -279,9 +279,9 @@ plt.plot(liste_u, "ro")
 plt.show()
 ```
 
-On a définit une fonction `suivant` et une suite définie par récurrence.
+On a défini une fonction `suivant` et une suite définie par récurrence.
 
-Deux lignes ont suffit à avoir le graphique.
+Deux lignes ont suffi à avoir le graphique.
 * La première construit le graphique dont les points ont les ordonnées passées en paramètre ; une liste. Ensuite, `"ro"` correspond à rouge ( _**r**_*ed* ), et des p**o**ints. On peut choisir `"bx"` pour des croix bleues.
 * La seconde affiche le graphique.
 
