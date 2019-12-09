@@ -3,7 +3,7 @@ export_on_save:
   html: true
 ---
 
-![Humans outnumbered by Lego people](assets/minifigs.png "https://xkcd.com/1281/")
+![Humans outnumbered by Lego people](../assets/minifigs.png "https://xkcd.com/1281/")
 
 # Découverte de Jupyter {ignore=true}
 
@@ -20,19 +20,19 @@ Ces carnets sont très utiles et commodes en sciences.
 
 Ci-dessous un document en cours d'élaboration.
 
-![](assets/jupyexemple.png "Exemple avec Jupyter")
+![](../assets/jupyexemple.png "Exemple avec Jupyter")
 
 ## Sommaire {ignore=true}
 
 [TOC]
 
-## Comment utiliser Jupyter
+## :fa-cog: Comment utiliser Jupyter
 
 ### Utilisation en ligne
 
 #### Avec *Try Jupyter*
 
-<!-- @import "assets/try-jupyter.png" {width="200px" title="Logo de l'Éducation Nationale" alt="Un logo de Jupyter Lab"}-->
+<!-- @import "../assets/try-jupyter.png" {width="200px" title="Logo de l'Éducation Nationale" alt="Un logo de Jupyter Lab"}-->
 
 
 Il est possible d'essayer Jupyter avec une feuille par défaut.
@@ -48,7 +48,7 @@ Il est possible d'essayer Jupyter avec une feuille par défaut.
 
 #### Avec *GitHub*
 
-<!-- @import "assets/github-logo.png" {width="200px" title="Logo de GitHub" alt="Un logo de GitHub"}-->
+<!-- @import "../assets/github-logo.png" {width="200px" title="Logo de GitHub" alt="Un logo de GitHub"}-->
 
 
 Il est possible de sauvegarder en ligne vos carnets Jupyter sur la plateforme [GitHub](https://github.com/), et ainsi de les partager facilement.
@@ -60,7 +60,7 @@ Il est possible de sauvegarder en ligne vos carnets Jupyter sur la plateforme [G
 
 #### Avec *My Binder*
 
-<!-- @import "assets/binder.svg" {width="200px"} -->
+<!-- @import "../assets/binder.svg" {width="200px"} -->
 
 [Cette solution](https://mybinder.org/) permet de rendre dynamique les carnets stockés sur *GitHub*, *GitLab* et d'autres dépôts encore.
 
@@ -71,7 +71,7 @@ L'exemple proposé par *Try Jupyter* repose sur *Binder*.
 
 #### Avec Anaconda
 
-<!-- @import "assets/anaconda.png" {width="200px" title="Logo d'Anaconda" alt="Un logo d'Anaconda"} -->
+<!-- @import "../assets/anaconda.png" {width="200px" title="Logo d'Anaconda" alt="Un logo d'Anaconda"} -->
 
 - Le moyen le plus simple d'obtenir JupyterLab est de passer par la [distribution Anaconda](https://www.anaconda.com/distribution/).
 - Il faut bien suivre [les étapes d'installation](https://docs.anaconda.com/anaconda/).
@@ -83,14 +83,14 @@ Voici deux exemples de carnets, un mélange de cours, exercices et codes
 - un qui présente [???](TODO)
 
 
-## Découvrir le *Markdown*, avec quelques exemples
+## :fa-list: Découvrir le *Markdown*, avec quelques exemples
 
 ### Motivation
 Jupyter propose ses zones de texte en [Markdown](https://fr.wikipedia.org/wiki/Markdown) ; ce qui permet une saisie de texte rapide avec une qualité de rendu HTML. En fait, on peut écrire aussi quelques balises HTML lorsque les balises Markdown sont limitées.
 > En particulier, pour insérer des images et choisir des attributs, on utilisera la balise html `<img>`.
 > Le Markdown est volontairement limité à l'essentiel pour rester simple.
 
-### Liste de tutoriels pour écrire en Markdown :
+### Liste de tutoriels pour écrire en Markdown
 Suivant votre goût pour l'anglais et votre temps :
 * https://www.markdowntutorial.com/ _in english by GitHub_
 * [Syntaxe assez complète](https://michelf.ca/projets/php-markdown/syntaxe/)
@@ -209,6 +209,7 @@ Syntaxe :
 > Pour l'insertion d'images avec plus de réglages, on utilise les balises HTML.
 
 **Exemple :**
+Votre fichier image doit être accessible en local ou sur Internet.
 ```
 ![logo de Markdown](images/Markdown.svg)
 ```
@@ -222,14 +223,15 @@ Syntaxe :
 
 #### Exercice 2 : la création d'un premier carnet
 
-<!-- @import "assets/notebook-py3.png" {width="200px" title="Notebook Python3" alt="Notebook Python3"} -->
+<!-- @import "../assets/notebook-py3.png" {width="200px" title="Notebook Python3" alt="Notebook Python3"} -->
 
 - Lancer JupyterLab
 - Créer un nouveau carnet : **Notebook Python 3**
-- TODO
+- Dans une ou plusieurs cellules Markdown, écrire un énoncé d'exercice qui peut nécessiter un code pour sa résolution.
+- Dans une ou plusieurs cellules de code, écrire une solution.
+- Ajouter des cellules de textes si nécessaire.
+- En cas de manque d'inspiration, jeter un œil à [Project Euler](https://projecteuler.net/archives) et proposer une traduction française d'un exercice simple à résoudre.
 
 
-TODO --revoir la mise en page--
-
-## Premiers graphiques
+## :fa-object-group: Premiers graphiques
 TODO
