@@ -300,7 +300,7 @@ def f(x):
 
 x_min = -20.0
 x_max = 60.0
-nb_points = 100
+n = 100 #nb de points
 
 X = [x_min + (x_max - x_min) * i / n for i in range(n)]
 Y = [f(x) for x in X]
