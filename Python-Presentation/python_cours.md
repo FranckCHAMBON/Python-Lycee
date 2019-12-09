@@ -19,12 +19,9 @@ Plusieurs lectures rapides sont possibles.
    1. Structures conditionnelles
    1. Exercices
 1. [Écriture d'un carnet avec *Jupyter*](../Python-Carnets/Python-Jupyter-1.html)
-*En construction ; bien avancé*
    1. Utilisations
    1. Cellules *Markdown*
    1. Premiers graphiques
-
-
 1. [Écrire des mathématiques avec Jupyter](https://mybinder.org/v2/gh/FranckCHAMBON/Python-Lycee/master?filepath=Python-Carnets%2FJupyter-math.ipynb)
    1. Balises maths
    1. Nombres et les 4 opérations
