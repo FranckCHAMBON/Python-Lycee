@@ -497,6 +497,9 @@ truc[0] == truc[-l]
 3. De tous les éléments de `truc`, sauf les deux derniers, et rangés dans l'ordre inverse.
 
 #### :fa-key: Conjugaisons
+
+@import "assets/zola.jpg"
+
 1. Choisir un modèle de conjugaison de verbe. (Exemple : le verbe aimer)
 2. Choisir un temps et un mode. (Exemple : le présent de l'indicatif)
 3. Créer une fonction `ma_conjuguaison`
