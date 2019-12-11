@@ -35,7 +35,7 @@ On ne listera ici que des éditeurs libres et multiplateformes, du plus simple a
 - [Eclipse+PyDev](http://www.pydev.org/index.html "Site officiel") ; pour les professionnels.
 
 
-[Visual Studio code - OSS](https://flathub.org/apps/details/com.visualstudio.code.oss "Site officiel de la version libre") est la version libre d'un éditeur populaire ; attention à la télémétrie sur la version compilée de la maison mère... Dans le même genre, Atom est plus clair à ce propos.
+[VSCodium](https://vscodium.com/ "Site officiel de la version libre") est la version libre d'un éditeur populaire ; attention à la télémétrie sur la version compilée de la maison mère... Dans le même genre, Atom est plus clair à ce propos.
 [PyCharm](https://www.jetbrains.com/pycharm/) possède une version libre, cependant ...
 
 ### Exemple avec *Spyder*
