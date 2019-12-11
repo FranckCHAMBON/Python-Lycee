@@ -90,7 +90,13 @@ Ensuite, résoudre des exercices est le plus gros moteur de progrès. On en trou
 
 Enfin, chacun pourra être autonome pour compléter avec les aspects ou les modules qui l'intéresse le plus. Développement Web, sciences appliquées, algorithmique, mathématiques, ...
 
+#### Liens variés, *serious game*
+
 Voici une série d'articles récents sur [linuxfr.org](https://linuxfr.org/news/python-pour-la-rentree-2019-partie-1) pour les plus curieux sur Python.
+
+Pour jouer, et apprendre à programmer ; des jeux intelligents :
+* [RoboZZle](http://www.robozzle.com/beta/index.html)
+* [CargoBot](http://www-verimag.imag.fr/~wack/CargoBot/)
 
 D'autres liens en anglais en cliquant sur l'image suivante. D'abord pour tenter de répondre à la question :
 > **Quel langage de programmation** apprendre en premier ?
