@@ -78,9 +78,11 @@ L'exemple proposé par *Try Jupyter* repose sur *Binder*.
 
 ### Des exemples de carnets
 
-Voici deux exemples de carnets, un mélange de cours, exercices et codes
-- un qui présente [les nombres de Mersenne](https://mybinder.org/v2/gh/FranckCHAMBON/Python-Lycee/master?filepath=Carnets%2Fmaths%2FNombre_de_Mersenne_premier.ipynb)
-- un qui présente [la simulation de la loi binomiale](https://mybinder.org/v2/gh/FranckCHAMBON/Python-Lycee/master?filepath=Carnets%2Fmaths%2FSimulation%20binomiale.ipynb)
+Voici [des exemples de carnets](https://mybinder.org/v2/gh/FranckCHAMBON/Python-Lycee/master?filepath=Carnets), un mélange de cours, exercices et codes. Il y a, par exemple :
+- un qui présente les nombres de Mersenne ;
+- un qui présente la simulation de la loi binomiale ;
+- un sur la méthode de Héron
+- ...
 
 
 ## :fa-list: Découvrir le *Markdown*, avec quelques exemples
