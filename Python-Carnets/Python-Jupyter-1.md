@@ -84,9 +84,13 @@ Voici [des exemples de carnets](https://mybinder.org/v2/gh/FranckCHAMBON/Python-
 - un sur la méthode de Héron
 - ...
 
+Here is a [huge list of notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks).
+
 ### A tour of possibilities
 
-[A curated list of awesome Jupyter projects, libraries and resources.](https://github.com/markusschanta/awesome-jupyter)
+* [Un aperçu rapide des possibilités](https://nbviewer.jupyter.org/github/ipython/ipython/blob/2.x/examples/Notebook/Display%20System.ipynb)
+
+* [A curated list of awesome Jupyter projects, libraries and resources.](https://github.com/markusschanta/awesome-jupyter)
 
 ## :fa-list: Découvrir le *Markdown*, avec quelques exemples
 
