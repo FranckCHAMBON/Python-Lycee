@@ -1,0 +1,68 @@
+Au programme ce vendredi :
+- Quelques minutes individuelles sur FranceIOI ; je passerai voir chacun d'entre vous pour répondre à vos questions et difficultés sur FranceIOI.
+- Je choisirai un (ou deux) problème (probablement les gardes "amis" / "pas amis", voire un autre de votre choix) et vous proposerai une solution avec plusieurs variantes d'écriture. Ces variantes permettront d'aborder des points clés du langage Python.
+(pompiers) +> http://www.france-ioi.org/algo/task.php?idChapter=648&idTask=1979
+(pyramide) +> http://www.france-ioi.org/algo/task.php?idChapter=649&idTask=2052
+
+- Nous regarderons Spyder ensemble, en corrigeant les énigmes que je vous ai soumis avant de partir.
+ + son explorateur de variables
+ + son système d'aide
+ + ses qualités d'éditeur dédié Python
+- Nous parlerons des dictionnaires en Python. (juste un peu ; la seule partie un peu théorique.)
+
+- Nous jetterons un œil à Python Tutor
+http://pythontutor.com/
+https://jupyter.brynmawr.edu/services/public/dblank/Examples/Tutor%20Magic%20in%20IPython.ipynb
+
+- Nous reprendrons la création de carnets avec Jupyter.
+ + l'intégration de Python Tutor
+ https://github.com/lgpage/nbtutor
+ 
+ + un exemple simple de carnet sera refait ensemble.
+ + Nous travaillerons à reprendre un exercice de FranceIOI et le transformer en carnet à compléter par un élève. Objectif : zéro `print` et zéro `input`. (C'est important)
+  * nous fabriquerons et utiliserons un jeu de tests, avec `assert`
+ 
+ + l'utilisation de curseur pour des objets interactifs.
+https://ipywidgets.readthedocs.io/en/latest/examples/Using%20Interact.html
+https://towardsdatascience.com/interactive-controls-for-jupyter-notebooks-f5c94829aee6
+
+- Vous travaillerez ensuite par groupe d'intérêt à créer un carnet à destination d'élèves de lycée.
+(Pour les enseignants en collège ; la règle reste la même ; création à destination d'élèves du lycée. Considérez-vous comme futurs probables enseignants en lycée ; cette possibilité est réelle.)
+- Nous verrons comment :
+ + créer un dépôt github
+ + y placer ses carnets (ou autre fichiers)
+ + le rendre dynamique avec mybinder, même avec des graphiques matplotlib ;-)
+ + raccourcir un lien complexe avec frama.link ; pratique pour les élèves.
+ + exporter un carnet en version HTML, ou bien en PDF (même si c'est mal d'imprimer)
+
+- Nous aborderons (ou pas) d'autres possibilités avancées de Jupyter :
+ + le module display (pour un affichage facile) de données riches.
+ + le module chempy pour la chime ; et pour aller plus loin : voir https://github.com/jckantor/CBE20255/blob/master/notebooks/02.01-Balancing-Reactions.ipynb
+
+ + le module chem lab : https://chemlab.readthedocs.io/en/latest/core.html
+ + pour les SVT, (OK personne ici) vous serez ravi de voir ce à quoi vous échappez : https://biopython.org/ (voir le tutorial !!! Ça vaut le détour !!! À partager.)
+- Nous travaillerons sur les problèmes classiques de project Euler pour finir cette journée de Python.
+
+
+https://github.com/mauhai/awesome-jupyterlab
+https://github.com/markusschanta/awesome-jupyter
+
+===
+mouvement physique
+http://sciences-physiques.ac-besancon.fr/2019/05/19/1ere-pc-etudier-le-mouvement-dun-systeme-avec-python/
+https://physlets.org/tracker/
+
+Chimie
+https://nbviewer.jupyter.org/github/lmmentel/ase-jnb/blob/master/ase-html.ipynb
+http://wwwtyro.github.io/speck/
+
+
+termRecord
+https://github.com/theonewolf/TermRecord
+
+Ajustement affine
+https://fr.wikipedia.org/wiki/Ajustement_affine
+
+
+Autres acti lycée
+https://www.math93.com/divers/enseignants/python-au-lycee/activites-algorithmiques-au-lycee.html
