@@ -325,7 +325,8 @@ Nous venons de voir que l'on peut créer une fonction auto-documentée avec sa `
 ```python
 In [1]: import math
 
-In [2]: help(math.exp)
+In [2]: help(math.factorial)
+Out[2]:
 Help on built-in function factorial in module math:
 
 factorial(x, /)
