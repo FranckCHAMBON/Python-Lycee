@@ -17,11 +17,11 @@ https://jupyter.brynmawr.edu/services/public/dblank/Examples/Tutor%20Magic%20in%
 - Nous reprendrons la création de carnets avec Jupyter.
  + l'intégration de Python Tutor
  https://github.com/lgpage/nbtutor
- 
+
  + un exemple simple de carnet sera refait ensemble.
  + Nous travaillerons à reprendre un exercice de FranceIOI et le transformer en carnet à compléter par un élève. Objectif : zéro `print` et zéro `input`. (C'est important)
   * nous fabriquerons et utiliserons un jeu de tests, avec `assert`
- 
+
  + l'utilisation de curseur pour des objets interactifs.
 https://ipywidgets.readthedocs.io/en/latest/examples/Using%20Interact.html
 https://towardsdatascience.com/interactive-controls-for-jupyter-notebooks-f5c94829aee6
@@ -62,6 +62,7 @@ https://github.com/theonewolf/TermRecord
 
 Ajustement affine
 https://fr.wikipedia.org/wiki/Ajustement_affine
+https://stackoverflow.com/questions/477486/how-to-use-a-decimal-range-step-value
 
 
 Autres acti lycée
