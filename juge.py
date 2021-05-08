@@ -15,7 +15,7 @@ def test_factorielle():
     """
     fact_mem = [1]
     for n in range(1, 100):
-        fact_mem.append(fact_mem[-1] * n))
+        fact_mem.append(fact_mem[-1] * n)
     def ref(i):
         return fact_mem[i]
 
